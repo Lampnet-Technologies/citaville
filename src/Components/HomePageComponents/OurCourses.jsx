@@ -553,3 +553,22 @@ export const Faqs = () => {
     </section>
   );
 };
+
+export const Investing = () => {
+  return (
+    <section 
+    style={{
+        backgroundImage: "url('/investing.svg')",
+        padding: "20px",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="w-full bg-gray-800 py-12 text-white flex justify-center items-center"
+    >
+        <div>
+        
+        </div>
+    </section>
+  )
+}
