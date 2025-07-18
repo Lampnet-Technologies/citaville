@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export const OurCourses = () => {
   const [activeButton, setActveButton] = useState("Design & Digital Marketing");
@@ -131,61 +132,112 @@ export const OurCourses = () => {
 
   return (
     <section className="w-full bg-gray-800 py-12">
-      <div>
+      {/* Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className="text-center text-[#39B54A] capitalize font-extrabold text-4xl">
           Our courses
         </h2>
-      </div>
+      </motion.div>
+
       {/* Button Grids */}
-      <div className="flex justify-center items-center gap-6 w-10/12 mx-auto py-4">
-        {buttons.map((btn) => (
-          <button
+      <motion.div
+        className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 w-11/12 mx-auto py-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: 0.1,
+            },
+          },
+        }}
+      >
+        {buttons.map((btn, i) => (
+          <motion.button
             key={btn}
             onClick={() => handleButtonClick(btn)}
-            className={`px-6 py-6 rounded-lg text-2xl font-bold transition-colors duration-700 ${
+            className={`px-6 py-4 rounded-lg text-lg sm:text-2xl font-bold transition-colors duration-700 ${
               activeButton === btn
                 ? "bg-white text-[#39B54A]"
                 : " text-white hover:bg-white hover:text-[#39B54A]"
             }`}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
           >
             {btn}
-          </button>
+          </motion.button>
         ))}
-      </div>
+      </motion.div>
 
       {/* Display Cards */}
-      <div className="grid grid-cols-3 gap-10 justify-between items-center w-10/12 mx-auto py-12">
-        {itemsToShow.map((items) => (
-          <div key={items.id} className="space-y-4 text-white w-full">
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-between items-center w-11/12 mx-auto py-12"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: 0.15,
+            },
+          },
+        }}
+      >
+        {itemsToShow.map((items, i) => (
+          <motion.div
+            key={items.id}
+            className="space-y-4 text-white w-full"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             <img
               src={items.image}
               alt={items.title}
               className="w-full h-full"
             />
-            <h3 className="uppercase font-semibold text-3xl">{items.title}</h3>
+            <h3 className="uppercase font-semibold text-2xl sm:text-3xl">
+              {items.title}
+            </h3>
             <p className="text-justify">{items.description}</p>
-            <button className="w-full  bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
+            <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
               {items.buttonText}
             </button>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* See more Button */}
       {visibleCount < data[activeButton]?.length && (
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <button
             onClick={handlemore}
             className="mt-4 px-6 py-2 bg-green-700 text-white rounded hover:bg-green-800 transition"
           >
-            see more
+            See more
           </button>
-        </div>
+        </motion.div>
       )}
     </section>
   );
 };
 
+
+
+//  Learning Latest Skils
 export const LearnLatestSkill = () => {
   return (
     <section
@@ -567,7 +619,7 @@ export const Investing = () => {
       className="w-full bg-gray-800 py-12 text-white flex justify-center items-center"
     >
         <div>
-        
+
         </div>
     </section>
   )
