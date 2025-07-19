@@ -235,8 +235,6 @@ export const OurCourses = () => {
   );
 };
 
-
-
 //  Learning Latest Skils
 export const LearnLatestSkill = () => {
   return (
@@ -583,7 +581,9 @@ export const Faqs = () => {
     <section className="bg-gray-800 text-white  w-full ">
       <div className="w-10/12 mx-auto py-12 space-y-12">
         <div>
-          <h1 className="text-[#39b54a] font-extrabold text-center text-3xl">Frequently Asked Questions</h1>
+          <h1 className="text-[#39b54a] font-extrabold text-center text-3xl">
+            Frequently Asked Questions
+          </h1>
         </div>
         <div>
           {frequentlyAskedQuestions.map((faq) => (
@@ -608,19 +608,22 @@ export const Faqs = () => {
 
 export const Investing = () => {
   return (
-    <section 
-    style={{
-        backgroundImage: "url('/investing.svg')",
-        padding: "20px",
+    <section
+      style={{
+        backgroundImage: "url('/Frame 1000001375.png')",
+
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full bg-gray-800 py-12 text-white flex justify-center items-center"
+      className="w-full bg-gray-800 py-20  text-white "
     >
-        <div>
-
-        </div>
+      <div className="w-10/12 mx-auto space-y-8">
+        <h2 className="font-extrabold text-3xl w-96 ">Start investing in yourself today!</h2>
+        <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
+          Apply now
+        </button>
+      </div>
     </section>
-  )
-}
+  );
+};
