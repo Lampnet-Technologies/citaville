@@ -3,11 +3,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export const OurCourses = () => {
-  const [activeButton, setActveButton] = useState("Design & Digital Marketing");
+  const [activeButton, setActiveButton] = useState("Design & Digital Marketing");
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleButtonClick = (button) => {
-    setActveButton(button);
+    setActiveButton(button);
     setVisibleCount(3);
   };
 
@@ -128,6 +128,7 @@ export const OurCourses = () => {
     "Networking & Hardware",
     "Data Science/Ai",
   ];
+  
   const itemsToShow = data[activeButton].slice(0, visibleCount) || [];
 
   return (
