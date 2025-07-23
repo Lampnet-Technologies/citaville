@@ -5,6 +5,9 @@ import HomePage from './Pages/HomePage'
 import { About } from './Pages/About'
 import Courses from './Pages/Courses'
 import CourseDetail from './Pages/CourseDetail'
+import Blog from './Components/Blog-Page/Blog'
+import SinglePost from './Components/Blog-Page/SinglePost'
+import Error from './Components/Blog-Page/Error'
 
 function App() {
  
@@ -15,10 +18,12 @@ function App() {
         <Navbar/>
         <Routes> 
           <Route path="/" element={<HomePage/>} />
-          <Route path="/blog" element={<h1>Blog Page</h1>} />
           <Route path="/about" element={<About/>} />
           <Route path='/courses' element={<Courses/>}/>
          <Route path="/CourseDetail/:slug" element={<CourseDetail />} />
+         <Route path="/blog" element={<Blog/>} />
+         <Route path="/blog/:slug" element={<SinglePost/>} />
+          <Route path="*" element={<Error/>} />
         </Routes>
 
       </Router>

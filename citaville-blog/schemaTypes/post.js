@@ -25,6 +25,7 @@ export default defineType({
       type: 'reference',
       to: {type: 'author'},
     }),
+    
     defineField({
       name: 'mainImage',
       title: 'Main image',
@@ -33,6 +34,7 @@ export default defineType({
         hotspot: true,
       },
     }),
+
     defineField({
       name: 'bodyImage',
       title: 'body image',
@@ -41,6 +43,7 @@ export default defineType({
         hotspot: true,
       },
     }),
+
     defineField({
       name: 'categories',
       title: 'Categories',
