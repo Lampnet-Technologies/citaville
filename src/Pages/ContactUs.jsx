@@ -8,46 +8,76 @@ const styles = {
 };
 
 export const ContactUs = () => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.5,
+        type: "spring",
+      },
+    }),
+  };
+
   return (
-    <section className="w-full bg-gray-800">
-      <div className="w-10/12 mx-auto py-20">
-        <div>
-          <img src="/course-details.svg" alt="course details" />
+    <section className="w-full bg-[#363636]">
+      <div className="w-10/12  mx-auto py-20">
+        {/* Top Image */}
+        <div className="flex justify-center">
+          <img
+            src="/course-details.svg"
+            alt="course details"
+            className="w-full"
+          />
         </div>
 
-        <div className="rounded-3xl px-10 py-5 w-8/12 mx-auto flex justify-between items-center -translate-y-1/2 flex-wrap gap-4">
-          {/* Phone */}
-          <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 rounded-md py-3 items-center gap-3">
-            <FiPhone className="text-white text-2xl" />
-            <div className="text-white">
-              <p>Call Us</p>
-              <p>+2340000000</p>
-            </div>
-          </div>
-
-          {/* Email */}
-          <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 rounded-md py-3 items-center gap-3">
-            <FiInbox className="text-white text-2xl" />
-            <div className="text-white">
-              <p>Email Us</p>
-              <p>your@email.com</p>
-            </div>
-          </div>
-
-          {/* Location */}
-          <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 rounded-md py-3 items-center gap-3">
-            <HiLocationMarker className="text-white text-2xl" />
-            <div className="text-white">
-              <p>Location</p>
-              <p>Lagos, Nigeria</p>
-            </div>
-          </div>
-        </div>
+        {/* Contact Info Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="rounded-3xl px-10 py-5 w-full md:w-8/12 mx-auto grid grid-cols-2 md:grid-cols-3  justify-between items-center md:-translate-y-1/2  gap-4"
+        >
+          {[
+            {
+              icon: <FiPhone className="text-white text-2xl" />,
+              title: "Call Us",
+              value: "+2340000000",
+            },
+            {
+              icon: <FiInbox className="text-white text-2xl" />,
+              title: "Email Us",
+              value: "your@email.com",
+            },
+            {
+              icon: <HiLocationMarker className="text-white text-2xl" />,
+              title: "Location",
+              value: "Lagos, Nigeria",
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+              className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex p-2 md:px-4 md:py-3 rounded-md items-center gap-3 w-full md:w-auto"
+            >
+              {item.icon}
+              <div className="text-white text-sm">
+                <p className="font-medium">{item.title}</p>
+                <p className="text-white/90">{item.value}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
 };
-
 import { useState } from "react";
 
 const formStyles = {
@@ -101,15 +131,35 @@ export const ContactForm = () => {
     }
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    }),
+  };
+
   return (
-    <div className="flex flex-col gap-10 md:flex-row w-10/12 mx-auto rounded-2xl overflow-hidden">
-      {/* Left Side - Social (no forced height) */}
-      <div className="text-white bg-black w-full md:w-1/2 flex h-72 flex-col space-y-5 p-10">
-        <h2 className="font-semibold text-4xl">Still have any Questions</h2>
-        <p className="text-xl text-white/80">
+    <motion.div
+      className="flex flex-col gap-10 md:flex-row w-11/12 max-w-6xl mx-auto rounded-2xl overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      {/* Left Side */}
+      <motion.div
+        variants={fadeInUp}
+        custom={1}
+        className="text-white bg-black w-full md:w-1/2 flex flex-col justify-center h-72 space-y-5 p-6 sm:p-8 md:p-10"
+      >
+        <h2 className="font-semibold text-3xl sm:text-4xl leading-tight">
+          Still have any Questions
+        </h2>
+        <p className="text-lg sm:text-xl text-white/80">
           Reach out to us, Let's clear your doubt
         </p>
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-4 mt-2">
           <span className={formStyles.icons}>
             <LiaLinkedin />
           </span>
@@ -120,72 +170,56 @@ export const ContactForm = () => {
             <LiaTwitter />
           </span>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Right Side - Form */}
-      <div className="w-full md:w-1/2 bg-gray-800">
+      {/* Right Side */}
+      <motion.div
+        variants={fadeInUp}
+        custom={2}
+        className="w-full md:w-1/2 bg-[#363636] p-6 sm:p-8"
+      >
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-col space-y-6 ">
+          <div className="flex flex-col space-y-6">
             {/* Name Fields */}
             <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex-1">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-white text-white placeholder-white/80 bg-transparent rounded-md"
-                />
-                {errors.firstName && (
-                  <p className="text-red-400 text-sm mt-1">
-                    {errors.firstName}
-                  </p>
-                )}
-              </div>
-              <div className="flex-1">
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-white text-white placeholder-white/80 bg-transparent rounded-md"
-                />
-                {errors.lastName && (
-                  <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>
-                )}
-              </div>
+              {["firstName", "lastName"].map((field, i) => (
+                <div className="flex-1" key={field}>
+                  <input
+                    type="text"
+                    name={field}
+                    placeholder={
+                      field === "firstName" ? "First Name" : "Last Name"
+                    }
+                    value={formData[field]}
+                    onChange={handleChange}
+                    className="w-full p-3 border border-white text-white placeholder-white/80 bg-transparent rounded-md"
+                  />
+                  {errors[field] && (
+                    <p className="text-red-400 text-sm mt-1">{errors[field]}</p>
+                  )}
+                </div>
+              ))}
             </div>
 
             {/* Email and Phone */}
             <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex-1">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-white text-white placeholder-white/80 bg-transparent rounded-md"
-                />
-                {errors.email && (
-                  <p className="text-red-400 text-sm mt-1">{errors.email}</p>
-                )}
-              </div>
-              <div className="flex-1">
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-white text-white placeholder-white/80 bg-transparent rounded-md"
-                />
-                {errors.phone && (
-                  <p className="text-red-400 text-sm mt-1">{errors.phone}</p>
-                )}
-              </div>
+              {["email", "phone"].map((field) => (
+                <div className="flex-1" key={field}>
+                  <input
+                    type={field === "email" ? "email" : "tel"}
+                    name={field}
+                    placeholder={
+                      field === "email" ? "Your Email" : "Phone Number"
+                    }
+                    value={formData[field]}
+                    onChange={handleChange}
+                    className="w-full p-3 border border-white text-white placeholder-white/80 bg-transparent rounded-md"
+                  />
+                  {errors[field] && (
+                    <p className="text-red-400 text-sm mt-1">{errors[field]}</p>
+                  )}
+                </div>
+              ))}
             </div>
 
             {/* Message */}
@@ -203,24 +237,99 @@ export const ContactForm = () => {
             </div>
 
             {/* Submit Button */}
-            <button
+            <motion.button
               type="submit"
+              whileTap={{ scale: 0.97 }}
+              whileHover={{ scale: 1.03 }}
               className="px-6 py-3 font-semibold rounded bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white"
             >
               Send Message
-            </button>
+            </motion.button>
           </div>
         </form>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+import { motion, AnimatePresence } from "framer-motion";
+import { FiChevronDown } from "react-icons/fi";
+
+const faqs = [
+  {
+    question: "What is UX design?",
+    answer:
+      "We offer a full refund within 14 days of purchase if you are not satisfied with our service.",
+  },
+  {
+    question: "What are the key principles of UX design?",
+    answer:
+      "Yes, we offer 24/7 customer support via email, chat, and phone. Our team is always ready to help.",
+  },
+  {
+    question: "What is the difference between UX and UI design?",
+    answer:
+      "Absolutely. You can upgrade or downgrade your plan at any time through your dashboard.",
+  },
+];
+
+export const Accordion = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+
+  return (
+    <section className="w-full px-4 py-8 max-w-3xl mx-auto">
+      <h2 className="text-3xl font-bold text-center text-white mb-6">
+        Frequently Asked Questions
+      </h2>
+      <div className="space-y-4">
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            className="bg-[#363636] border border-gray-600 rounded-xl overflow-hidden"
+          >
+            <button
+              onClick={() => toggleAccordion(index)}
+              className="w-full flex items-center justify-between px-4 py-4 text-left text-white font-semibold focus:outline-none"
+            >
+              {faq.question}
+              <motion.span
+                animate={{ rotate: activeIndex === index ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <FiChevronDown className="text-xl" />
+              </motion.span>
+            </button>
+            <AnimatePresence initial={false}>
+              {activeIndex === index && (
+                <motion.div
+                  key="content"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="px-4 pb-4 text-white/90 text-sm"
+                >
+                  <p>{faq.answer}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
 export const ContactUsPage = () => {
   return (
-    <div className="bg-gray-800">
+    <div className="bg-[#363636]">
       <ContactUs />
       <ContactForm />
+      <Accordion />
     </div>
   );
 };

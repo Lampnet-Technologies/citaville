@@ -76,7 +76,7 @@ export const BlogDetails = () => {
       : date.toLocaleString("default", { month: "long" });
   };
   return (
-    <div className="bg-gray-800 text-white">
+    <div className="bg-[#363636] text-white">
       {isLoading ? (
         <p>Loading...</p>
       ) : (
@@ -124,7 +124,7 @@ export const BlogDetails = () => {
 
 export const YouMayAlsoLike = ({ posts }) => {
   return (
-    <section className="w-full bg-gray-800">
+    <section className="w-full bg-[#363636]">
       <div className="w-10/12 mx-auto py-20 ">
         <h2 className="text-3xl font-bold mb-6 text-white">You may also like</h2>
         <LatestNews/>
@@ -134,7 +134,7 @@ export const YouMayAlsoLike = ({ posts }) => {
 };
 export const PopularCourses = ({ posts }) => {
   return (
-    <section className="w-full bg-gray-800">
+    <section className="w-full bg-[#363636]">
       <div className="w-10/12 mx-auto py-20 ">
         <h2 className="text-3xl font-bold mb-6 text-white">Popular Courses</h2>
         <OurCourses />

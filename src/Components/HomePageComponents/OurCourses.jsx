@@ -3,7 +3,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export const OurCourses = () => {
-  const [activeButton, setActiveButton] = useState("Design & Digital Marketing");
+  const [activeButton, setActiveButton] = useState(
+    "Design & Digital Marketing"
+  );
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleButtonClick = (button) => {
@@ -128,11 +130,11 @@ export const OurCourses = () => {
     "Networking & Hardware",
     "Data Science/Ai",
   ];
-  
+
   const itemsToShow = data[activeButton].slice(0, visibleCount) || [];
 
   return (
-    <section className="w-full bg-gray-800 py-12">
+    <section className="w-full bg-[#363636] py-12">
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
@@ -162,6 +164,8 @@ export const OurCourses = () => {
           <motion.button
             key={btn}
             onClick={() => handleButtonClick(btn)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className={`px-6 py-4 rounded-lg text-lg sm:text-2xl font-bold transition-colors duration-700 ${
               activeButton === btn
                 ? "bg-white text-[#39B54A]"
@@ -195,6 +199,8 @@ export const OurCourses = () => {
           <motion.div
             key={items.id}
             className="space-y-4 text-white w-full"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
@@ -209,9 +215,13 @@ export const OurCourses = () => {
               {items.title}
             </h3>
             <p className="text-justify">{items.description}</p>
-            <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
+            <motion.button
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl"
+            >
               {items.buttonText}
-            </button>
+            </motion.button>
           </motion.div>
         ))}
       </motion.div>
@@ -224,12 +234,14 @@ export const OurCourses = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <button
+          <motion.button
             onClick={handlemore}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className="mt-4 px-6 py-2 bg-green-700 text-white rounded hover:bg-green-800 transition"
           >
             See more
-          </button>
+          </motion.button>
         </motion.div>
       )}
     </section>
@@ -247,25 +259,43 @@ export const LearnLatestSkill = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full bg-gray-800 py-12 text-white flex justify-center items-center"
+      className="w-full bg-[#363636] py-12 text-white flex justify-center items-center"
     >
-      <div className="w-10/12  space-y-4 bg-opacity-50 py-20  rounded-lg">
-        <h2 className="text-4xl font-bold">Learn Latest Skills</h2>
-        <p className="text-lg w-7/12">
+      <motion.div
+        className="w-11/12 md:w-10/12 space-y-4 bg-opacity-50 py-20 px-4 md:px-10 rounded-lg text-center md:text-left"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold"
+          whileHover={{ scale: 1.02 }}
+        >
+          Learn Latest Skills
+        </motion.h2>
+        <motion.p
+          className="text-base md:text-lg md:w-7/12 mx-auto md:mx-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
           Embark on a journey of knowledge, and unlock a multitude of
           opportunities, influencing your future in several ways. Whether you
           are advancing or a total new-bie, our courses and resources are
-          crafted to suit your need Join Citaville and see your tech journey
+          crafted to suit your need. Join Citaville and see your tech journey
           take the right direction!
-        </p>
-        <button className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white">
+        </motion.p>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white"
+        >
           Register now
-        </button>
-      </div>
+        </motion.button>
+      </motion.div>
     </section>
   );
 };
-
 import { FiCalendar } from "react-icons/fi";
 
 const latestNewsData = [
@@ -296,38 +326,78 @@ const latestNewsData = [
 ];
 export const LatestNews = () => {
   const [visibleCount, setVisibleCount] = useState(2);
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
   return (
-    <section className="w-full bg-gray-800 py-12">
-      <div className="w-10/12 mx-auto space-y-10">
-        <h2 className="text-center text-[#39B54A] capitalize font-extrabold text-4xl">
+    <section className="w-full bg-[#363636] py-12">
+      <div className="w-11/12 md:w-10/12 mx-auto space-y-10">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center text-[#39B54A] capitalize font-extrabold text-4xl"
+        >
           Latest News
-        </h2>
-        <div className="grid grid-cols-2 gap-10 justify-between items-center">
-          {latestNewsData.slice(0, visibleCount).map((item) => (
-            <div key={item.id} className="space-y-4 text-white w-full">
+        </motion.h2>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-10 justify-between items-center"
+          initial="hidden"
+          animate="visible"
+        >
+          {latestNewsData.slice(0, visibleCount).map((item, index) => (
+            <motion.div
+              key={item.id}
+              className="space-y-4 text-white w-full cursor-pointer bg-[#2e2e2e] p-4 rounded-xl shadow-md"
+              custom={index}
+              variants={cardVariants}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+            >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full"
+                className="w-full h-48 object-cover rounded-md"
               />
-              <h3 className="uppercase font-semibold text-3xl">{item.title}</h3>
+              <h3 className="uppercase font-semibold text-2xl md:text-3xl">
+                {item.title}
+              </h3>
               <p className="text-justify">{item.description}</p>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 text-sm text-gray-300">
                 <FiCalendar size={20} />
                 <span>{item.year}</span>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
+
         {visibleCount < latestNewsData.length && (
-          <div className="text-center mt-6">
-            <button
+          <motion.div
+            className="text-center mt-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.button
               onClick={() => setVisibleCount((prev) => prev + 1)}
-              className="px-6 py-2 bg-green-700 text-white rounded hover:bg-green-800 transition"
+              className="px-6 py-2 bg-green-700 text-white rounded-xl font-semibold hover:bg-green-800 transition"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               See more
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         )}
       </div>
     </section>
@@ -340,91 +410,112 @@ export const OurOfferings = () => {
     p1: "font-bold text-2xl text-white",
     p2: "font-medium text-xl text-white",
   };
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: "easeOut" },
+    viewport: { once: true },
+  };
   return (
-    <section className="bg-gradient-to-br from-[#446E40]  to-[#83D47B]  w-full">
+    <section className="bg-gradient-to-br from-[#446E40] to-[#83D47B] w-full">
       <div className="w-9/12 mx-auto py-20">
-        <h1 className="text-center mb-20 font-extrabold capitalize text-white text-3xl">
+        <motion.h1
+          {...fadeInUp}
+          className="text-center mb-20 font-extrabold capitalize text-white text-3xl"
+        >
           Our Offering
-        </h1>
+        </motion.h1>
+
         <div className="space-y-10">
-          {/* items one */}
-          <div className="space-y-2">
-            <div className="flex gap-10  items-center ">
+          {/* Item One */}
+          <motion.div {...fadeInUp} className="space-y-2">
+            <div className="flex gap-10 items-center">
               <img
                 src="/learn-anywhere-icon.svg"
                 alt="Learn Anywhere"
-                className={style.image}
+                className="w-14 h-14 object-contain"
               />
-              <p className="flex flex-col">
-                <span className={style.p1}>Expert tutors</span>
-                <span className={style.p2}>
+              <p className="flex flex-col text-white">
+                <span className="text-xl font-semibold">Expert tutors</span>
+                <span className="text-sm">
                   Our courses are taught by people who know their onions and
                   ready to give a beautiful learning experience
                 </span>
               </p>
             </div>
             <div className="bg-white w-full h-0.5"></div>
-          </div>
+          </motion.div>
 
-          {/* items two */}
-          <div className="space-y-2">
-            <div className="flex gap-10  items-center ">
+          {/* Item Two */}
+          <motion.div {...fadeInUp} className="space-y-2">
+            <div className="flex gap-10 items-center">
               <img
                 src="/Tutor-icon.svg"
                 alt="Expert Tutor"
-                className={style.image}
+                className="w-14 h-14 object-contain"
               />
-              <p className="flex flex-col">
-                <span className={style.p1}>Learn anywhere </span>
-                <span className={style.p2}>
+              <p className="flex flex-col text-white">
+                <span className="text-xl font-semibold">Learn anywhere</span>
+                <span className="text-sm">
                   You can learn from home, at your shop or even during your
                   break at work
                 </span>
               </p>
             </div>
             <div className="bg-white w-full h-0.5"></div>
-          </div>
-          {/* items three */}
-          <div className="space-y-2">
-            <div className="flex gap-10  items-center ">
+          </motion.div>
+
+          {/* Item Three */}
+          <motion.div {...fadeInUp} className="space-y-2">
+            <div className="flex gap-10 items-center">
               <img
                 src="/Certificate-icon.svg"
                 alt="Expert Tutor"
-                className={style.image}
+                className="w-14 h-14 object-contain"
               />
-              <p className="flex flex-col">
-                <span className={style.p1}>Course Certificate </span>
-                <span className={style.p2}>
-                  our students undergo project based learning where they produce
+              <p className="flex flex-col text-white">
+                <span className="text-xl font-semibold">
+                  Course Certificate
+                </span>
+                <span className="text-sm">
+                  Our students undergo project-based learning where they produce
                   and build what they are learning and get a certificate at the
                   end
                 </span>
               </p>
             </div>
             <div className="bg-white w-full h-0.5"></div>
-          </div>
-          {/* items Four */}
-          <div className="space-y-2">
-            <div className="flex gap-10  items-center ">
+          </motion.div>
+
+          {/* Item Four */}
+          <motion.div {...fadeInUp} className="space-y-2">
+            <div className="flex gap-10 items-center">
               <img
                 src="/Best-price-icon.svg"
                 alt="Expert Tutor"
-                className={style.image}
+                className="w-14 h-14 object-contain"
               />
-              <p className="flex flex-col">
-                <span className={style.p1}>Affordable prices</span>
-                <span className={style.p2}>
+              <p className="flex flex-col text-white">
+                <span className="text-xl font-semibold">Affordable prices</span>
+                <span className="text-sm">
                   Our courses are for everybody because of this we offer them at
                   discounted prices and still deliver quality teaching.
                 </span>
               </p>
             </div>
             <div className="bg-white w-full h-0.5"></div>
-          </div>
+          </motion.div>
 
-          <button className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
-            Explore Courses
-          </button>
+          <div className="text-center pt-6">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl shadow-md transition duration-300"
+            >
+              Explore Courses
+            </motion.button>
+          </div>
         </div>
       </div>
     </section>
@@ -508,99 +599,55 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="bg-gray-800 text-white w-full">
+    <section className="bg-[#363636] text-white w-full">
       <div className="w-10/12 mx-auto py-20 space-y-10">
-        <h1 className="text-[#39b54a] font-extrabold text-center text-3xl ">
+        <motion.h1
+          className="text-[#39b54a] font-extrabold text-center text-3xl"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           Hear from our learners
-        </h1>
-        <div className="">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-10/12 mx-auto ">
+        </motion.h1>
+
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-10/12 mx-auto">
             {testimonialsToShow.map((testimonials) => (
-              <div
+              <motion.div
                 key={testimonials.id}
-                className="flex flex-col items-center  p-6 rounded-lg space-y-4 mb-6"
+                className="flex flex-col items-center p-6 rounded-lg space-y-4 mb-6"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
               >
                 <div className="bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] text-white p-4 rounded-lg mb-4 space-y-5 h-44 text-balance">
                   <p>{testimonials.feedback}</p>
                   <p className="text-end">{testimonials.name}</p>
                 </div>
-                <div className="rounded-full w-20 h-20 bg-gray-200">
+                <div className="rounded-full w-20 h-20 bg-gray-200 overflow-hidden">
                   <img src={testimonials.image} alt={testimonials.image} />
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* The Dot */}
-          <div className="flex gap-4 items-center justify-center">
+          <div className="flex gap-4 items-center justify-center mt-6">
             {Array.from({ length: totalSlides }).map((_, index) => (
-              <button
+              <motion.button
                 key={index}
                 onClick={() => handleDotClick(index)}
-                className={`w-6 h-2 rounded-4xl ${
+                className={`w-6 h-2 rounded-4xl transition-all duration-300 ${
                   index === currentIndex
                     ? "bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B]"
                     : "bg-gray-400"
                 }`}
-              ></button>
+                whileTap={{ scale: 1.2 }}
+              ></motion.button>
             ))}
           </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export const Faqs = () => {
-  const frequentlyAskedQuestions = [
-    {
-      id: 1,
-      title: "What is UX design?",
-      description:
-        "The key principles of UX design include simplicity, consistency, clarity, and empathy. A good UX design should be simple and easy to use, consistent across different devices and platforms, clear in its messaging and instructions, and empathetic to the user’s needs and goals.",
-    },
-    {
-      id: 2,
-      title: "What are the key principles of UX design?",
-      description:
-        "The key principles of UX design include simplicity, consistency, clarity, and empathy. A good UX design should be simple and easy to use, consistent across different devices and platforms, clear in its messaging and instructions, and empathetic to the user’s needs and goals.",
-    },
-    {
-      id: 3,
-      title: "What is the difference between UX and UI design?",
-      description:
-        "UX design focuses on the overall experience of the user, including the ease of use, functionality, and emotional response to the product. UI design, on the other hand, focuses on the visual and interactive elements of the product, such as the layout, typography, and color scheme.",
-    },
-  ];
-
-  const [activeId, setActiveId] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setActiveId(activeId === index ? null : index);
-  };
-  return (
-    <section className="bg-gray-800 text-white  w-full ">
-      <div className="w-10/12 mx-auto py-12 space-y-12">
-        <div>
-          <h1 className="text-[#39b54a] font-extrabold text-center text-3xl">
-            Frequently Asked Questions
-          </h1>
-        </div>
-        <div>
-          {frequentlyAskedQuestions.map((faq) => (
-            <div key={faq.id} className="mb-4 border-b pb-2 space-y-8">
-              <button
-                onClick={() => toggleAccordion(faq.id)}
-                className="w-full text-left text-lg font-semibold flex justify-between items-center mb-4"
-              >
-                {faq.title}
-                <span>{activeId === faq.id ? "-" : "+"}</span>
-              </button>
-              {activeId === faq.id && (
-                <p className="mt-2 text-gray-200">{faq.description}</p>
-              )}
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -617,10 +664,12 @@ export const Investing = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full bg-gray-800 py-20  text-white "
+      className="w-full bg-[#363636] py-20  text-white "
     >
       <div className="w-10/12 mx-auto space-y-8">
-        <h2 className="font-extrabold text-3xl w-96 ">Start investing in yourself today!</h2>
+        <h2 className="font-extrabold text-3xl w-96 ">
+          Start investing in yourself today!
+        </h2>
         <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
           Apply now
         </button>

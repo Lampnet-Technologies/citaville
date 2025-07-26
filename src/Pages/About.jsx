@@ -74,7 +74,7 @@ export const Subscribe = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full bg-gray-800 py-20  text-white "
+      className="w-full bg-[#363636] py-20  text-white "
     >
       <div className="w-10/12 mx-auto space-y-8">
         <h2 className="font-extrabold text-3xl w-96 ">
@@ -145,7 +145,7 @@ export const WhatWeDo = () => {
 
 export const About = () => {
   return (
-    <main className="bg-gray-800">
+    <main className="bg-[#363636]">
       <Hero />
       <WhoWeAre />
       < WhatWeDo />

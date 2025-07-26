@@ -9,6 +9,7 @@ import Blog from "./Components/Blog-Page/Blog";
 import { SinglePost } from "./Components/Blog-Page/SinglePost";
 import Error from "./Components/Blog-Page/Error";
 import { ContactUsPage } from "./Pages/ContactUs";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/blog/:slug" element={<SinglePost />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer/>
       </Router>
     </>
   );

@@ -51,7 +51,7 @@ const Blog = () => {
 
   return (
     <>
-      <section className="bg-gray-800 py-20 space-y-12">
+      <section className="bg-[#363636] py-20 space-y-12">
         <div
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/bodyImagePro.jpg')`,

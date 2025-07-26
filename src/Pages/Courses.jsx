@@ -199,7 +199,7 @@ const Courses = () => {
   const cardToShow = data[activeTab];
 
   return (
-    <section className="bg-gray-800 py-20">
+    <section className="bg-[#363636] py-20">
       <div
         style={{
           backgroundImage:

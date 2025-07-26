@@ -55,7 +55,7 @@ const OurSchool = () => {
   };
 
   return (
-    <section className="w-full bg-gray-800 py-12">
+    <section className="w-full bg-[#363636] py-12">
       <div className="w-10/12 mx-auto space-y-10">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -75,6 +75,8 @@ const OurSchool = () => {
               initial="hidden"
               animate="visible"
               variants={cardVariants}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
             >
               <img
                 src={item.image}
@@ -83,9 +85,13 @@ const OurSchool = () => {
               />
               <h3 className="uppercase font-semibold text-3xl">{item.title}</h3>
               <p className="text-justify">{item.description}</p>
-              <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl"
+              >
                 {item.buttonText}
-              </button>
+              </motion.button>
             </motion.div>
           ))}
         </div>
