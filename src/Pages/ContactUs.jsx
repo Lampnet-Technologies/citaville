@@ -1,6 +1,7 @@
 import { FiInbox, FiPhone } from "react-icons/fi";
 import { HiLocationMarker } from "react-icons/hi";
 import { LiaInstagram, LiaLinkedin, LiaTwitter } from "react-icons/lia";
+import emailjs from "emailjs-com";
 
 const styles = {
   icons:
@@ -48,7 +49,7 @@ export const ContactUs = () => {
   );
 };
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const formStyles = {
   icons:
@@ -56,6 +57,7 @@ const formStyles = {
 };
 
 export const ContactForm = () => {
+  const formRef = useRef(null);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -65,6 +67,7 @@ export const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -89,8 +92,17 @@ export const ContactForm = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      console.log("Form submitted successfully:", formData);
+      emailjs
+        .sendForm(
+          "service_qkx572v", // the service ID
+          "template_4etzm1h", // the template ID
+          formRef.current,
+          "S232evyeiRVGwFbXN" // my user ID
+        )
+
       // Reset form or perform API call
+      .then(() => {
+          setSuccessMessage("Message sent successfully!");
       setFormData({
         firstName: "",
         lastName: "",
@@ -98,6 +110,12 @@ export const ContactForm = () => {
         phone: "",
         message: "",
       });
+      setTimeout(() => setSuccessMessage(""), 5000);
+    })
+        .catch((err) => {
+          console.error("EmailJS error:", err);
+          alert("An error has occurred. Please try again later.");
+        });
     }
   };
 
@@ -124,7 +142,7 @@ export const ContactForm = () => {
 
       {/* Right Side - Form */}
       <div className="w-full md:w-1/2 bg-gray-800">
-        <form onSubmit={handleSubmit}>
+        <form ref={formRef} onSubmit={handleSubmit}>
           <div className="flex flex-col space-y-6 ">
             {/* Name Fields */}
             <div className="flex flex-col md:flex-row gap-4">
@@ -201,6 +219,13 @@ export const ContactForm = () => {
                 <p className="text-red-400 text-sm mt-1">{errors.message}</p>
               )}
             </div>
+
+            {/* Success Message */}
+            {successMessage && (
+              <p className="text-green-400 text-sm mt-1">
+                {successMessage}
+              </p>
+            )}
 
             {/* Submit Button */}
             <button

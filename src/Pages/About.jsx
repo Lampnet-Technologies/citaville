@@ -81,7 +81,7 @@ export const Subscribe = () => {
           subscribe to be the first to hear about our juicy offers
         </h2>
         <form className="flex flex-col gap-6 w-96">
-          <label htmlFor="">Email Address</label>
+          <label htmlFor="mailto:info.laptopcityonline@gmail.com">Email Address</label>
           <input type="email" className="bg-white" />
           <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
             submit

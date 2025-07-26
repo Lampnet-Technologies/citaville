@@ -8,7 +8,7 @@ const data = {
       slug: "product-design",
       title: "Product Desgin",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -17,7 +17,7 @@ const data = {
       slug: "digital-marketing",
       title: "Digital Marketing",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The digital marketing landscape is constantly changing, and our courses are designed to keep you ahead of the curve. From mastering SEO techniques to understanding social media strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive digital world.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -26,7 +26,7 @@ const data = {
       slug: "product-design-3",
       title: "Product Desgin",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -35,7 +35,7 @@ const data = {
       slug: "product-design-4",
       title: "Product Desgin",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -44,7 +44,7 @@ const data = {
       slug: "product-design-5",
       title: "Product Desgin",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -53,7 +53,7 @@ const data = {
       slug: "product-design-6",
       title: "Product Desgin",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -62,7 +62,7 @@ const data = {
       slug: "product-design-7",
       title: "Product Desgin",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -73,7 +73,7 @@ const data = {
       slug: "software-engineering-1",
       title: "Software Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -82,7 +82,7 @@ const data = {
       slug: "software-engineering-2",
       title: "Software Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -91,7 +91,7 @@ const data = {
       slug: "software-engineering-3",
       title: "Software Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -100,7 +100,7 @@ const data = {
       slug: "software-engineering-4",
       title: "Software Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -109,7 +109,7 @@ const data = {
       slug: "software-engineering-5",
       title: "Software Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -118,7 +118,7 @@ const data = {
       slug: "software-engineering-6",
       title: "Software Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -130,7 +130,7 @@ const data = {
       slug: "hardware-engineering-1",
       title: "Hardware Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -139,7 +139,7 @@ const data = {
       slug: "hardware-engineering-2",
       title: "Hardware Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -148,7 +148,7 @@ const data = {
       slug: "hardware-engineering-3",
       title: "Hardware Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -157,7 +157,7 @@ const data = {
       slug: "hardware-engineering-4",      
       title: "Hardware Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -166,7 +166,7 @@ const data = {
       slug: "hardware-engineering-5",
       title: "Hardware Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -175,7 +175,7 @@ const data = {
       slug: "hardware-engineering-6",
       title: "Hardware Engineering",
       description:
-        "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },

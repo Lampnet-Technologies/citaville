@@ -62,7 +62,7 @@ export const data = {
         id: 1,
         title: "Software Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "Master the art of coding and software development with our comprehensive courses designed for all skill levels. Transform your career with hands-on projects and expert guidance that will take you from beginner to professional.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -70,7 +70,7 @@ export const data = {
         id: 2,
         title: "Software Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "Master the art of coding and software development with our comprehensive courses designed for all skill levels. Transform your career with hands-on projects and expert guidance that will take you from beginner to professional.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -78,7 +78,7 @@ export const data = {
         id: 3,
         title: "Software Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "Master the art of coding and software development with our comprehensive courses designed for all skill levels. Transform your career with hands-on projects and expert guidance that will take you from beginner to professional.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -86,7 +86,7 @@ export const data = {
         id: 4,
         title: "Software Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "Master the art of coding and software development with our comprehensive courses designed for all skill levels. Transform your career with hands-on projects and expert guidance that will take you from beginner to professional.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -94,7 +94,7 @@ export const data = {
         id: 5,
         title: "Software Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "Master the art of coding and software development with our comprehensive courses designed for all skill levels. Transform your career with hands-on projects and expert guidance that will take you from beginner to professional.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -102,7 +102,7 @@ export const data = {
         id: 6,
         title: "Software Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "Master the art of coding and software development with our comprehensive courses designed for all skill levels. Transform your career with hands-on projects and expert guidance that will take you from beginner to professional.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -113,7 +113,7 @@ export const data = {
         id: 1,
         title: "Hardware Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "The future of technology starts here. Dive into the world of hardware engineering with our specialized courses that cover everything from circuit design to embedded systems. Equip yourself with the skills needed to innovate and excel in the tech industry.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -121,7 +121,7 @@ export const data = {
         id: 2,
         title: "Hardware Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "The future of technology starts here. Dive into the world of hardware engineering with our specialized courses that cover everything from circuit design to embedded systems. Equip yourself with the skills needed to innovate and excel in the tech industry.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -129,7 +129,7 @@ export const data = {
         id: 3,
         title: "Hardware Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "The future of technology starts here. Dive into the world of hardware engineering with our specialized courses that cover everything from circuit design to embedded systems. Equip yourself with the skills needed to innovate and excel in the tech industry.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -137,7 +137,7 @@ export const data = {
         id: 4,
         title: "Hardware Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "The future of technology starts here. Dive into the world of hardware engineering with our specialized courses that cover everything from circuit design to embedded systems. Equip yourself with the skills needed to innovate and excel in the tech industry.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -145,7 +145,7 @@ export const data = {
         id: 5,
         title: "Hardware Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "The future of technology starts here. Dive into the world of hardware engineering with our specialized courses that cover everything from circuit design to embedded systems. Equip yourself with the skills needed to innovate and excel in the tech industry.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
@@ -153,7 +153,7 @@ export const data = {
         id: 6,
         title: "Hardware Engineering",
         description:
-          "Your learning  path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth, your learning path to endless growth.",
+          "The future of technology starts here. Dive into the world of hardware engineering with our specialized courses that cover everything from circuit design to embedded systems. Equip yourself with the skills needed to innovate and excel in the tech industry.",
         buttonText: "Learn more",
         image: "/product-design.svg",
       },
