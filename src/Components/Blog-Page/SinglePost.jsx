@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import client from "../../client";
 import { toPlainText } from "@portabletext/react";
+import { LatestNews, OurCourses } from "../HomePageComponents/OurCourses";
 
-const SinglePost = () => {
+export const BlogDetails = () => {
   const [singlePost, setSinglePost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams();
@@ -17,9 +18,14 @@ const SinglePost = () => {
     slug,
     body,
     publishedAt,
-    author->{
+     author->{
       name,
-      image
+      image{
+        asset->{
+          _id,
+          url
+        }
+      }
     },
     mainImage{
       asset->{
@@ -80,9 +86,10 @@ const SinglePost = () => {
             {/* Author side */}
             <div className=" flex gap-4 " style={{ margin: "20px 0" }}>
               <img
-                src={singlePost.author.image}
+                src={singlePost?.author?.image?.asset?.url}
                 alt={singlePost.author.name}
                 style={{ width: "60px", borderRadius: "50%" }}
+                className="h-16 w-16 object-cover"
               />
               <div>
                 <p>{singlePost.author.name}</p>
@@ -95,7 +102,7 @@ const SinglePost = () => {
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-4">{singlePost.title}</h1>
-            <p className="text-gray-400 mb-6">
+            <p className="text-white/80 mb-6">
               {getPreviewText(singlePost.body)}
             </p>
             {singlePost.bodyImage?.asset?.url && (
@@ -105,7 +112,7 @@ const SinglePost = () => {
                 className="w-full my-6 rounded"
               />
             )}
-            <p className="text-gray-400 mb-6">
+            <p className="text-white/80 mb-6">
               {getPreviewText2(singlePost.body)}{" "}
             </p>
           </div>
@@ -115,4 +122,33 @@ const SinglePost = () => {
   );
 };
 
-export default SinglePost;
+export const YouMayAlsoLike = ({ posts }) => {
+  return (
+    <section className="w-full bg-gray-800">
+      <div className="w-10/12 mx-auto py-20 ">
+        <h2 className="text-3xl font-bold mb-6 text-white">You may also like</h2>
+        <LatestNews/>
+      </div>
+    </section>
+  );
+};
+export const PopularCourses = ({ posts }) => {
+  return (
+    <section className="w-full bg-gray-800">
+      <div className="w-10/12 mx-auto py-20 ">
+        <h2 className="text-3xl font-bold mb-6 text-white">Popular Courses</h2>
+        <OurCourses />
+      </div>
+    </section>
+  );
+};
+
+export const SinglePost = () => {
+  return (
+    <div>
+      <BlogDetails />
+      <YouMayAlsoLike /> 
+      <PopularCourses />
+    </div>
+  );
+};
