@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { u } from "framer-motion/client";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const data = {
   "Design & Digital Marketing": [
@@ -23,19 +25,19 @@ const data = {
     },
     {
       id: 3,
-      slug: "product-design-3",
-      title: "Product Desgin",
+      slug: "graphic-design",
+      title: "Graphic Design",
       description:
-        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
+        "Graphic design is an essential skill in today's visual-driven world. Our courses are designed to provide you with a solid foundation in graphic design principles, from typography to color theory. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the creative industry.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
-    {
+    /*  {
       id: 4,
       slug: "product-design-4",
       title: "Product Desgin",
       description:
-        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
+        "Text goes here...",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -44,7 +46,7 @@ const data = {
       slug: "product-design-5",
       title: "Product Desgin",
       description:
-        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
+        "Text goes here...",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -53,7 +55,7 @@ const data = {
       slug: "product-design-6",
       title: "Product Desgin",
       description:
-        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
+        "Text goes here...",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
@@ -62,12 +64,13 @@ const data = {
       slug: "product-design-7",
       title: "Product Desgin",
       description:
-        "The world of design and digital marketing is ever-evolving, and our courses are designed to keep you at the forefront of this dynamic field. From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
+        "Text goes here...",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
-    },
+    }, */
   ],
-  "Software Engineering": [
+
+  "Software & Cloud Engineering": [
     {
       id: 1,
       slug: "software-engineering-1",
@@ -79,37 +82,37 @@ const data = {
     },
     {
       id: 2,
-      slug: "software-engineering-2",
-      title: "Software Engineering",
+      slug: "web-development",
+      title: "Web Development",
       description:
-        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
+        "The web is the backbone of modern technology, and our web development courses are designed to equip you with the skills needed to build dynamic and responsive websites. From front-end design to back-end development, we provide a comprehensive learning experience that prepares you for a successful career in web development.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
     {
       id: 3,
-      slug: "software-engineering-3",
-      title: "Software Engineering",
+      slug: "cloud-computing",
+      title: "Cloud Computing",
       description:
-        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
+        "Harness the power of the cloud with our cloud computing courses. Learn how to deploy, manage, and scale applications in cloud environments like AWS and Azure. Our curriculum is designed to provide you with the skills needed to excel in the rapidly growing field of cloud computing.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
     {
       id: 4,
-      slug: "software-engineering-4",
-      title: "Software Engineering",
+      slug: "mobile-app-development",
+      title: "Mobile App Development",
       description:
-        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
+        "As mobile devices continue to dominate the tech landscape, our mobile app development courses are designed to equip you with the skills needed to create innovative and user-friendly applications. From iOS to Android development, we provide a comprehensive learning experience that prepares you for a successful career in mobile app development.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
-    {
+    /*  {
       id: 5,
       slug: "software-engineering-5",
       title: "Software Engineering",
       description:
-        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
+        "Text goes here...",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
@@ -118,13 +121,13 @@ const data = {
       slug: "software-engineering-6",
       title: "Software Engineering",
       description:
-        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
+        "Text goes here...",
       buttonText: "Learn more",
       image: "/product-design.svg",
-    },
+    }, */
   ],
 
-  "Hardware Engineering": [
+  "Networking & Hardware": [
     {
       id: 1,
       slug: "hardware-engineering-1",
@@ -136,67 +139,95 @@ const data = {
     },
     {
       id: 2,
-      slug: "hardware-engineering-2",
-      title: "Hardware Engineering",
+      slug: "network-administration",
+      title: "Network Administration",
       description:
-        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
+        "Staying connected is crucial in today's digital world, and our network administration courses are designed to equip you with the skills needed to manage and maintain computer networks. From configuring routers to troubleshooting network issues, we provide a comprehensive learning experience that prepares you for a successful career in network administration.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
     {
       id: 3,
-      slug: "hardware-engineering-3",
-      title: "Hardware Engineering",
+      slug: "cybersecurity",
+      title: "Cybersecurity",
       description:
-        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
+        "Join the fight against cyber threats with our cybersecurity courses. Learn how to protect systems, networks, and data from cyber attacks. Our curriculum is designed to provide you with the skills needed to excel in the rapidly growing field of cybersecurity.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
+  ],
+
+  "Data Science & AI": [
+    {
+      id: 1,
+      slug: "data-analysis",
+      title: "Data Analysis",
+      description:
+        "In a data-driven world, the ability to analyze and interpret data is crucial. Our data analysis courses are designed to provide you with the skills needed to turn raw data into actionable insights. From statistical analysis to data visualization techniques, we equip you with the tools to excel in this rapidly growing field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
     {
-      id: 4,
-      slug: "hardware-engineering-4",      
-      title: "Hardware Engineering",
+      id: 2,
+      slug: "machine-learning",
+      title: "Machine Learning",
       description:
-        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
+        "Power your career with our machine learning courses. Learn how to build intelligent systems that can learn from data and make predictions. Our curriculum is designed to provide you with a solid foundation in machine learning algorithms and techniques, preparing you for a successful career in this exciting field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
     {
-      id: 5,
-      slug: "hardware-engineering-5",
-      title: "Hardware Engineering",
+      id: 3,
+      slug: "artificial-intelligence",
+      title: "Artificial Intelligence",
       description:
-        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
-      buttonText: "Learn more",
-      image: "/product-design.svg",
-    },
-    {
-      id: 6,
-      slug: "hardware-engineering-6",
-      title: "Hardware Engineering",
-      description:
-        "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
+        "Explore the future of technology with our artificial intelligence courses. Learn how to create intelligent systems that can mimic human behavior and decision-making. Our curriculum is designed to provide you with a deep understanding of AI concepts and applications, preparing you for a successful career in this cutting-edge field.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
   ],
 };
 
-const Courses = () => {
-  const [activeTab, setActiveTab] = useState("Design & Digital Marketing");
+const coursesTab = [
+  "Design & Digital Marketing",
+  "Software & Cloud Engineering",
+  "Networking & Hardware",
+  "Data Science & AI",
+];
 
-  const coursesTab = [
-    "Design & Digital Marketing",
-    "Software Engineering",
-    "Hardware Engineering",
-  ];
+const Courses = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const queryTab = queryParams.get("tab");
+
+  useEffect(() => {
+    if (location.state?.from === "ourschool") {
+  window.scrollTo(0, 0);
+}
+}, [location.state]);
+
+
+  const [activeTab, setActiveTab] = useState(() => {
+    const match = coursesTab.find(
+      (tab) => tab.toLowerCase() === queryTab?.toLowerCase()
+    );
+    return match || "Design & Digital Marketing";
+  });
 
   const handleTabClick = (course) => {
     setActiveTab(course);
-    setVisibleCourse(3);
   };
 
   const cardToShow = data[activeTab];
+
+  useEffect(() => {
+    const match = coursesTab.find(
+      (tab) => tab.toLowerCase() === queryTab?.toLowerCase()
+    );
+    if (match) {
+      setActiveTab(match);
+    }
+  }, [queryTab]);
 
   return (
     <section className="bg-gray-800 py-20">

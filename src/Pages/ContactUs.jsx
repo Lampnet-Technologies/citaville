@@ -2,6 +2,7 @@ import { FiInbox, FiPhone } from "react-icons/fi";
 import { HiLocationMarker } from "react-icons/hi";
 import { LiaInstagram, LiaLinkedin, LiaTwitter } from "react-icons/lia";
 import emailjs from "emailjs-com";
+import Footer from "../Components/Footer"
 
 const styles = {
   icons:
@@ -31,7 +32,7 @@ export const ContactUs = () => {
             <FiInbox className="text-white text-2xl" />
             <div className="text-white">
               <p>Email Us</p>
-              <p>your@email.com</p>
+              <p>info.laptopcityonline@gmail.com</p>
             </div>
           </div>
 
@@ -246,6 +247,7 @@ export const ContactUsPage = () => {
     <div className="bg-gray-800">
       <ContactUs />
       <ContactForm />
+      <Footer/>
     </div>
   );
 };

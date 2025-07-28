@@ -32,11 +32,11 @@ const Navbar = () => {
           <button className="bg-gradient-to-br from-green-900 to-green-600 hover:from-green-700 hover:to-green-400 px-3 py-2 text-white rounded-sm font-semibold transition-colors duration-700 cursor-pointer">
             Register now
           </button>
-          <div className="cursor-pointer">
+          <div className="cursor-pointer text-green-700 rounded-full p-1 hover:bg-green-400 transition-colors duration-300">
             {isMenuOpen ? (
-              <RiCloseLargeFill size={40} onClick={toggleMenu} />
+              <RiCloseLargeFill size={30} onClick={toggleMenu} />
             ) : (
-              <GiHamburgerMenu size={40} onClick={toggleMenu} />
+              <GiHamburgerMenu size={30} onClick={toggleMenu} />
             )}
           </div>
           {isMenuOpen && (

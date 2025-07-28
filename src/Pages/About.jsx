@@ -2,6 +2,8 @@
 
 import { div, section } from "framer-motion/client";
 import { OurOfferings } from "../Components/HomePageComponents/OurCourses";
+import { Link } from "react-router-dom";
+import Footer from "../Components/Footer"
 
 export const Hero = () => {
   return (
@@ -51,9 +53,8 @@ export const WhoWeAre = () => {
         {/* The right side */}
         <div className="w-1/2 space-y-12">
           <h2 className="font-extrabold text-3xl ">Who we are</h2>
-          <p className="w-3/6">
-            We believe that when you are properly trained, you are able to
-            perform diligently. our organization is here to fill that gap
+          <p className="w-4/6">
+            At Citaville, we are a forward-thinking tech education hub committed to empowering individuals with industry-relevant digital skills. Through innovative learning experiences and hands-on training, we prepare learners to thrive in today’s fast-evolving digital world
           </p>
           <button className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white bg-gradient-to-tr from-[#446e40] to-[#83D47B]">
             Register now
@@ -109,10 +110,11 @@ export const WhatWeDo = () => {
               </li>
             ))}
           </ul>
-
+          <Link to="/courses">
           <button className="self-start mt-4 bg-gradient-to-tr from-[#446e40] to-[#83D47B] px-6 py-2 rounded font-semibold text-white hover:opacity-90 transition">
             See our Courses
           </button>
+          </Link>
         </div>
 
         {/* Left Side - 2x2 Image Grid */}
@@ -151,6 +153,7 @@ export const About = () => {
       < WhatWeDo />
       <OurOfferings />
       <Subscribe />
+      <Footer/>
     </main>
   );
 };

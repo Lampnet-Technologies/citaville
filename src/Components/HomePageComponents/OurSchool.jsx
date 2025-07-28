@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const OurSchool = () => {
   const schoolItems = [
@@ -7,37 +8,37 @@ const OurSchool = () => {
       id: 1,
       title: "software & cloud engineering",
       description:
-        "Your learning path to endless growth our learning path to endless growth ",
+        "Build scalable applications and master cloud platforms like AWS and Azure to power the tech of tomorrow",
       image: "/our-school-01.svg",
       buttonText: "Learn more",
-      path: "",
+      path: "/courses?tab=Software%20&%20Cloud%20Engineering",
     },
     {
       id: 2,
-      title: "networking hardware",
+      title: "networking & hardware",
       description:
-        "Your learning path to endless growth our learning path to endless growth ",
+        "Learn the essentials of computer networks, routers, and hardware systems that keep devices and data connected",
       image: "/our-school-02.svg",
       buttonText: "Learn more",
-      path: "",
+      path: "/courses?tab=Networking%20&%20Hardware",
     },
     {
       id: 3,
       title: "design & digital marketing",
       description:
-        "Your learning path to endless growth our learning path to endless growth ",
+        "Explore visual design, branding, and digital strategies to create impactful campaigns that engage and convert",
       image: "/our-school-03.svg",
       buttonText: "Learn more",
-      path: "",
+      path: "/courses?tab=Design%20&%20Digital%20Marketing",
     },
     {
       id: 4,
       title: "data science",
       description:
-        "Your learning path to endless growth our learning path to endless growth ",
+        "Turn raw data into powerful insights with tools like Python, SQL, and machine learning—fuel smarter decisions",
       image: "/our-school-04.svg",
       buttonText: "Learn more",
-      path: "",
+      path: "/courses?tab=Data%20Science%20&%20AI",
     },
   ];
 
@@ -55,7 +56,7 @@ const OurSchool = () => {
   };
 
   return (
-    <section className="w-full bg-gray-800 py-12">
+    <section id="our-school" className="w-full bg-gray-800 py-12">
       <div className="w-10/12 mx-auto space-y-10">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -83,9 +84,11 @@ const OurSchool = () => {
               />
               <h3 className="uppercase font-semibold text-3xl">{item.title}</h3>
               <p className="text-justify">{item.description}</p>
+              <Link to={item.path} state={{ from: "ourschool" }} className="w-full">
               <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
                 {item.buttonText}
               </button>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 const Hero = () => {
   return (
@@ -25,7 +27,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Your learning path to endless growth
+            Unlock your full potential with courses designed to guide you step by step. Whether you're just starting out or leveling up your skills, our learning paths help you grow with confidence, clarity, and purpose
           </motion.p>
           <motion.div
             className="space-x-6"
@@ -33,9 +35,11 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7 }}
           >
+            <Link to="/courses">
             <button className="px-6 py-2 font-semibold rounded bg-gradient-to-tr from-[#fff] to-[#fff] text-[#446e40]">
-              Explore courses
+             Explore courses
             </button>
+            </Link>
             <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] to-[#83D47B]">
               Register now
             </button>

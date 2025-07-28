@@ -3,7 +3,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export const OurCourses = () => {
-  const [activeButton, setActiveButton] = useState("Design & Digital Marketing");
+  const [activeButton, setActiveButton] = useState(
+    "Design & Digital Marketing"
+  );
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleButtonClick = (button) => {
@@ -21,7 +23,7 @@ export const OurCourses = () => {
         id: 1,
         title: "Product Design",
         description:
-          "Learn the principles of product design, from user research to prototyping.",
+          "Master the art of user-centered design through research, wireframing, and interactive prototyping to create impactful digital products.",
         image: "/courses-01.svg",
         buttonText: "Learn more",
       },
@@ -29,7 +31,7 @@ export const OurCourses = () => {
         id: 2,
         title: "Graphic Design",
         description:
-          "Learn the principles of product design, from user research to prototyping.",
+          "Build strong visual communication skills through color theory, typography, layout design, and real-world branding projects.",
         image: "/courses-02.svg",
         buttonText: "Learn more",
       },
@@ -37,7 +39,7 @@ export const OurCourses = () => {
         id: 3,
         title: "Digital Marketing",
         description:
-          "Learn the principles of product design, from user research to prototyping.",
+          "Learn how to grow brands online with SEO, content strategy, social media campaigns, and performance marketing techniques.",
         image: "/courses-03.svg",
         buttonText: "Learn more",
       },
@@ -47,7 +49,7 @@ export const OurCourses = () => {
         id: 1,
         title: "Web Development",
         description:
-          "Learn the principles of web development, from HTML to JavaScript.",
+          "Learn to build responsive websites using HTML, CSS, JavaScript, and modern frameworks like React and Node.js.",
         image: "/courses-01.svg",
         buttonText: "Learn more",
       },
@@ -55,7 +57,7 @@ export const OurCourses = () => {
         id: 2,
         title: "Cloud Computing",
         description:
-          "Learn the principles of cloud computing, from AWS to Azure.",
+          "Explore cloud platforms like AWS and Azure while learning to deploy, scale, and secure cloud-based applications.",
         image: "/courses-02.svg",
         buttonText: "Learn more",
       },
@@ -63,7 +65,7 @@ export const OurCourses = () => {
         id: 3,
         title: "Mobile App Development",
         description:
-          "Learn the principles of mobile app development, from Android to iOS.",
+          "Design and develop mobile apps for Android and iOS using tools like Flutter, React Native, or Swift.",
         image: "/courses-03.svg",
         buttonText: "Learn more",
       },
@@ -73,7 +75,7 @@ export const OurCourses = () => {
         id: 1,
         title: "Network Administration",
         description:
-          "Learn the principles of network administration, from routing to switching.",
+          "Learn to configure, monitor, and troubleshoot computer networks using routers, switches, and network protocols.",
         image: "/courses-01.svg",
         buttonText: "Learn more",
       },
@@ -81,7 +83,7 @@ export const OurCourses = () => {
         id: 2,
         title: "Cybersecurity",
         description:
-          "Learn the principles of cybersecurity, from ethical hacking to penetration testing.",
+          "Protect systems and data by learning ethical hacking, threat detection, penetration testing, and security best practices.",
         image: "/courses-02.svg",
         buttonText: "Learn more",
       },
@@ -89,17 +91,17 @@ export const OurCourses = () => {
         id: 3,
         title: "Hardware Engineering",
         description:
-          "Learn the principles of hardware engineering, from circuit design to PCB layout.",
+          "Understand computer hardware systems, from basic circuit design and microcontrollers to assembling and testing devices.",
         image: "/courses-03.svg",
         buttonText: "Learn more",
       },
     ],
-    "Data Science/Ai": [
+    "Data Science & AI": [
       {
         id: 1,
         title: "Data Analysis",
         description:
-          "Learn the principles of data analysis, from data cleaning to visualization.",
+          "Gain insights from data by learning to clean, analyze, and visualize datasets using Excel, Python, and Tableau.",
         image: "/courses-01.svg",
         buttonText: "Learn more",
       },
@@ -107,7 +109,7 @@ export const OurCourses = () => {
         id: 2,
         title: "Machine Learning",
         description:
-          "Learn the principles of machine learning, from supervised to unsupervised learning.",
+          "Learn to build predictive models using algorithms like regression, decision trees, and clustering with Python.",
         image: "/courses-02.svg",
         buttonText: "Learn more",
       },
@@ -115,7 +117,7 @@ export const OurCourses = () => {
         id: 3,
         title: "Artificial Intelligence",
         description:
-          "Learn the principles of artificial intelligence, from neural networks to natural language processing.",
+          "Explore how AI powers real-world applications using neural networks, computer vision, and natural language processing.",
         image: "/courses-03.svg",
         buttonText: "Learn more",
       },
@@ -126,9 +128,9 @@ export const OurCourses = () => {
     "Design & Digital Marketing",
     "Software & Cloud Engineering",
     "Networking & Hardware",
-    "Data Science/Ai",
+    "Data Science & AI",
   ];
-  
+
   const itemsToShow = data[activeButton].slice(0, visibleCount) || [];
 
   return (
@@ -209,9 +211,14 @@ export const OurCourses = () => {
               {items.title}
             </h3>
             <p className="text-justify">{items.description}</p>
-            <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
-              {items.buttonText}
-            </button>
+            <Link
+              to={`/courses?tab=${encodeURIComponent(activeButton)}`}
+              className="w-full inline-block"
+            >
+              <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
+                {items.buttonText}
+              </button>
+            </Link>
           </motion.div>
         ))}
       </motion.div>
@@ -267,13 +274,14 @@ export const LearnLatestSkill = () => {
 };
 
 import { FiCalendar } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const latestNewsData = [
   {
     id: 1,
     title: "Graphic Design",
     description:
-      "Explore the latest advancements in artificial intelligence and how they are shaping the future.",
+      "Explore the latest advancements in artificial intelligence and how they are shaping the future. Dive into modern design trends and discover how visual storytelling is evolving in the digital age.",
     image: "/latest-news-01.svg",
     year: "2025",
   },
@@ -281,7 +289,7 @@ const latestNewsData = [
     id: 2,
     title: "Digital Marketing",
     description:
-      "Discover the latest trends in digital marketing and how to leverage them for your business.",
+      "Discover the latest trends in digital marketing and how to leverage them for your business. Uncover how brands are using AI, short-form video, and data-driven strategies to boost engagement.",
     image: "/latest-news-02.svg",
     year: "2025",
   },
@@ -289,7 +297,7 @@ const latestNewsData = [
     id: 3,
     title: "Data Science",
     description:
-      "Learn about the latest tools and techniques in data science and how they can be applied to real-world problems.",
+      "Learn about the latest tools and techniques in data science and how they can be applied to real-world problems. Explore how emerging tools and machine learning are transforming industries through smart data insights.",
     image: "/latest-news-02.svg",
     year: "2025",
   },
@@ -557,7 +565,7 @@ export const Faqs = () => {
       id: 1,
       title: "What is UX design?",
       description:
-        "The key principles of UX design include simplicity, consistency, clarity, and empathy. A good UX design should be simple and easy to use, consistent across different devices and platforms, clear in its messaging and instructions, and empathetic to the user’s needs and goals.",
+        "UX (User Experience) design focuses on creating products that are useful, easy to use, and enjoyable for people to interact with. It involves understanding user needs and behaviors to design meaningful and positive experiences, from initial interaction to overall satisfaction. UX design is a multidisciplinary field, encompassing user research, information architecture, interaction design, and visual design. ",
     },
     {
       id: 2,
@@ -620,7 +628,9 @@ export const Investing = () => {
       className="w-full bg-gray-800 py-20  text-white "
     >
       <div className="w-10/12 mx-auto space-y-8">
-        <h2 className="font-extrabold text-3xl w-96 ">Start investing in yourself today!</h2>
+        <h2 className="font-extrabold text-3xl w-96 ">
+          Start investing in yourself today!
+        </h2>
         <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
           Apply now
         </button>

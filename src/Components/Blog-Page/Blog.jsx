@@ -3,6 +3,7 @@ import client from "../../client";
 import { FiCalendar } from "react-icons/fi";
 import { toPlainText } from "@portabletext/react";
 import { Link } from "react-router-dom";
+import Footer from "../Footer"
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -92,6 +93,7 @@ const Blog = () => {
             ))}
           </div>
         </Link>
+        <Footer/>
       </section>
     </>
   );

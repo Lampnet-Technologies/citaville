@@ -57,7 +57,7 @@ export const data = {
         image: "/digital-marketing.svg",
       },
     ],
-    "Software Engineering": [
+    "Software & Cloud Engineering": [
       {
         id: 1,
         title: "Software Engineering",
