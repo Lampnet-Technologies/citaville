@@ -73,7 +73,7 @@ const data = {
   "Software & Cloud Engineering": [
     {
       id: 1,
-      slug: "software-engineering-1",
+      slug: "software-engineering",
       title: "Software Engineering",
       description:
         "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
@@ -130,7 +130,7 @@ const data = {
   "Networking & Hardware": [
     {
       id: 1,
-      slug: "hardware-engineering-1",
+      slug: "hardware-engineering",
       title: "Hardware Engineering",
       description:
         "The backbone of technology lies in hardware engineering. Our courses are designed to provide you with a deep understanding of hardware systems, from circuit design to embedded systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
