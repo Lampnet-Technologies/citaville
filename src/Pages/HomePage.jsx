@@ -5,13 +5,14 @@ import {Faqs, Investing, LatestNews, LearnLatestSkill, OurCourses, OurOfferings,
 import { Fa0 } from 'react-icons/fa6'
 import Footer from '../Components/Footer'
 
-const HomePage = () => {
+
+const HomePage = ({ onRegisterClick }) => {
   return (
     <main>
-      <Hero/>
+      <Hero onRegisterClick={onRegisterClick} />
       <OurSchool />
       <OurCourses/>
-      <LearnLatestSkill />
+      <LearnLatestSkill onRegisterClick={onRegisterClick} />
       <LatestNews />
       <OurOfferings />
       <Testimonials />

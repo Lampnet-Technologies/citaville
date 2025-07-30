@@ -9,15 +9,22 @@ import Blog from "./Components/Blog-Page/Blog";
 import { SinglePost } from "./Components/Blog-Page/SinglePost";
 import Error from "./Components/Blog-Page/Error";
 import { ContactUsPage } from "./Pages/ContactUs";
+import Register from "./Components/Register";
+import { useState } from "react";
 
 function App() {
+  const [showRegister, setShowRegister] = useState(false);
+
+  const openRegisterModal = () => setShowRegister(true);
+  const closeRegisterModal = () => setShowRegister(false);
+
   return (
     <>
       <Router>
-        <Navbar />
+        <Navbar onRegisterClick={openRegisterModal} />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<HomePage onRegisterClick={openRegisterModal} />} />
+          <Route path="/about" element={<About onRegisterClick={openRegisterModal} />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/contact" element={<ContactUsPage />} />
           <Route path="/CourseDetail/:slug" element={<CourseDetail />} />
@@ -26,6 +33,8 @@ function App() {
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
+
+      {showRegister && <Register onClose={closeRegisterModal} />}
     </>
   );
 }

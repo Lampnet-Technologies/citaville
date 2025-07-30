@@ -244,7 +244,7 @@ export const OurCourses = () => {
 };
 
 //  Learning Latest Skils
-export const LearnLatestSkill = () => {
+export const LearnLatestSkill = ({ onRegisterClick }) => {
   return (
     <section
       style={{
@@ -265,7 +265,9 @@ export const LearnLatestSkill = () => {
           crafted to suit your need Join Citaville and see your tech journey
           take the right direction!
         </p>
-        <button className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white">
+        <button
+        onClick={onRegisterClick}
+        className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white">
           Register now
         </button>
       </div>
@@ -430,9 +432,12 @@ export const OurOfferings = () => {
             <div className="bg-white w-full h-0.5"></div>
           </div>
 
+          <Link to="/courses">
           <button className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
             Explore Courses
           </button>
+          </Link>
+
         </div>
       </div>
     </section>
@@ -631,9 +636,11 @@ export const Investing = () => {
         <h2 className="font-extrabold text-3xl w-96 ">
           Start investing in yourself today!
         </h2>
+        <Link to="/courses">
         <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
           Apply now
         </button>
+        </Link>
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ export const Hero = () => {
   );
 };
 
-export const WhoWeAre = () => {
+export const WhoWeAre = ({ onRegisterClick }) => {
   return (
     <section className="w-full py-12 ">
       <div className=" flex items-center gap-12 w-10/12 text-white mx-auto ">
@@ -56,7 +56,9 @@ export const WhoWeAre = () => {
           <p className="w-4/6">
             At Citaville, we are a forward-thinking tech education hub committed to empowering individuals with industry-relevant digital skills. Through innovative learning experiences and hands-on training, we prepare learners to thrive in today’s fast-evolving digital world
           </p>
-          <button className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white bg-gradient-to-tr from-[#446e40] to-[#83D47B]">
+          <button
+          onClick={onRegisterClick}
+          className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white bg-gradient-to-tr from-[#446e40] to-[#83D47B]">
             Register now
           </button>
         </div>
@@ -79,12 +81,14 @@ export const Subscribe = () => {
     >
       <div className="w-10/12 mx-auto space-y-8">
         <h2 className="font-extrabold text-3xl w-96 ">
-          subscribe to be the first to hear about our juicy offers
+          Subscribe to be the first to hear about our juicy offers
         </h2>
         <form className="flex flex-col gap-6 w-96">
           <label htmlFor="mailto:info.laptopcityonline@gmail.com">Email Address</label>
           <input type="email" className="bg-white" />
-          <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
+          <button
+          htmlFor="mailto:info.laptopcityonline@gmail.com"
+          className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
             submit
           </button>
         </form>
@@ -145,11 +149,11 @@ export const WhatWeDo = () => {
   );
 };
 
-export const About = () => {
+export const About = ({ onRegisterClick }) => {
   return (
     <main className="bg-gray-800">
       <Hero />
-      <WhoWeAre />
+      <WhoWeAre onRegisterClick={onRegisterClick} />
       < WhatWeDo />
       <OurOfferings />
       <Subscribe />

@@ -2,8 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-
-const Hero = () => {
+const Hero = ({ onRegisterClick }) => {
   return (
     <section className="bg-gray-800 w-full">
       <div className="w-10/12 mx-auto flex justify-between items-center p-8 text-white">
@@ -40,9 +39,13 @@ const Hero = () => {
              Explore courses
             </button>
             </Link>
-            <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] to-[#83D47B]">
+
+            <button
+            onClick={onRegisterClick}
+            className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] to-[#83D47B]">
               Register now
             </button>
+
           </motion.div>
         </motion.div>
 

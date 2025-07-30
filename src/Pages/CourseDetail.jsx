@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import CongratsPopup from "../Components/CongratsPopup";
 
 const data = [
   {
@@ -180,10 +181,11 @@ const data = [
 const CourseDetail = () => {
   const { slug } = useParams();
   const [course, setCourse] = useState(null);
+  const [showCongrats, setShowCongrats] = useState(false);
 
   useEffect(() => {
     if (slug) {
-      const allCourses = Object.values(data).flat(); 
+      const allCourses = Object.values(data).flat();
       const selected = allCourses.find((c) => c.slug === slug);
       setCourse(selected);
     }
@@ -205,7 +207,10 @@ const CourseDetail = () => {
           <span className="bg-white w-80 py-2 p-2 rounded-md shadow font-medium text-black">{course.currentStudents}</span>
           <span className="bg-white w-44 py-2 p-2 rounded-md shadow font-medium text-black">{course.duration}</span>
         </div>
-        <button className="bg-[#39B54A] text-white px-8 py-3 rounded-lg font-semibold">
+        {/* Enroll Button */}
+        <button
+        onClick={() => setShowCongrats(true)}
+        className="bg-[#39B54A] text-white px-8 py-3 rounded-lg font-semibold">
           {course.enrollButton}
         </button>
 
@@ -227,6 +232,15 @@ const CourseDetail = () => {
           </div>
         </div>
       </div>
+
+      {/* Congrats Modal */}
+      {showCongrats && (
+        <CongratsPopup
+        type="enroll"
+        course={course.title}
+        onClose={() => setShowCongrats(false)}
+        />
+      )}
     </div>
   );
 };
