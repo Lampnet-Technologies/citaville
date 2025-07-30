@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import CongratsPopup from "../Components/CongratsPopup";
 
 const data = [
-
   /* Detailed Data For Design & Digital Marketing Courses */
   {
     slug: "digital-marketing",
@@ -179,7 +178,7 @@ const data = [
     ],
   },
 
-   {
+  {
     slug: "graphic-design",
     title: "Graphic Design",
     description:
@@ -262,10 +261,343 @@ const data = [
       },
     ],
   },
-   /* Add more courses for design & digital marketing here */
+  {
+    slug: "social-media-marketing",
+    title: "Social Media Marketing",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "brand-strategy-identity",
+    title: "Brand Strategy & Identity",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "copywriting-for-conversion",
+    title: "Copywriting For Conversion",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "seo-content-strategy",
+    title: "SEO & Content Strategy",
+    description:
+      " This course Equip learners with the skills to SEO & Content Strategy",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+
+  /* Add more courses for design & digital marketing here */
 
   /* Detailed Data For Software & Cloud Engineering Courses */
-   {
+  {
     slug: "software-engineering",
     title: "Software Engineering",
     description:
@@ -348,7 +680,7 @@ const data = [
       },
     ],
   },
-   {
+  {
     slug: "web-development",
     title: "Web Development",
     description:
@@ -431,7 +763,7 @@ const data = [
       },
     ],
   },
-   {
+  {
     slug: "cloud-computing",
     title: "Cloud Computing",
     description:
@@ -514,7 +846,7 @@ const data = [
       },
     ],
   },
-   {
+  {
     slug: "mobile-app-development",
     title: "Mobile App Development",
     description:
@@ -597,9 +929,342 @@ const data = [
       },
     ],
   },
-   /* Add more courses for software and cloud engineering here */
+  {
+    slug: "devops-ci/cd-fundamentals",
+    title: "DevOps & CI/CD Fundamentals",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "version-control",
+    title: "Version Control With Git & GitHub",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "software-testing",
+    title: "Software Testing & QA Basics",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "backend-development",
+    title: "Backend Development",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+
+  /* Add more courses for software and cloud engineering here */
   /* Detailed Data For Networking and Hardware Engineering Courses */
-   {
+  {
     slug: "hardware-engineering",
     title: "Hardware Engineering",
     description:
@@ -682,7 +1347,7 @@ const data = [
       },
     ],
   },
-   {
+  {
     slug: "network-administration",
     title: "Network Administration",
     description:
@@ -765,7 +1430,7 @@ const data = [
       },
     ],
   },
-   {
+  {
     slug: "cybersecurity",
     title: "Cybersecurity",
     description:
@@ -848,9 +1513,342 @@ const data = [
       },
     ],
   },
+  {
+    slug: "internet-of-things-basics",
+    title: "Internet of Things (IoT) Basics",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "it-support-help-desk-skills",
+    title: "IT Support & Help Desk Skills",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "wireless-network-setup-security",
+    title: "Wireless Network Setup & Security",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "network-troubleshooting-techniques",
+    title: "Network Troubleshooting Techniques",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+
   /* Add more courses for networking & hardware here */
   /* Detailed Data For Data Science & AI Courses */
-   {
+  {
     slug: "data-analysis",
     title: "Data Analysis",
     description:
@@ -933,7 +1931,7 @@ const data = [
       },
     ],
   },
-   {
+  {
     slug: "machine-learning",
     title: "Machine Learning",
     description:
@@ -1016,7 +2014,7 @@ const data = [
       },
     ],
   },
-   {
+  {
     slug: "artificial-intelligence",
     title: "Artificial Intelligence",
     description:
@@ -1099,6 +2097,256 @@ const data = [
       },
     ],
   },
+  {
+    slug: "sql-for-data-exploration",
+    title: "SQL for Data Exploration",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "big-data-fundamentals",
+    title: "Big Data Fundamentals",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "natural-language-processing",
+    title: "Natural Language Processing (NLP)",
+    description:
+      " This course Equip learners with the skills to design user-centered products, focusing on UX/UI principles, prototyping, and usability testing.",
+    currentStudents: "180 students currently taking this course",
+    duration: "Duration 6-8 weeks",
+    enrollButton: "Enroll Now",
+    CourseTitle: "Curriculum Outline",
+    curriculum: [
+      {
+        step: "1. Introduction to No-Code Development",
+        bullets: [
+          "What is no-code? Benefits and limitations",
+          "Overview of popular no-code platforms (e.g., Webflow, Bubble, Wix, Squarespace)",
+          "Understanding the no-code ecosystem",
+          "Identifying use cases for no-code development",
+          "Setting up your no-code environment",
+        ],
+      },
+      {
+        step: "2. Web Design Fundamentals",
+        bullets: [
+          "UI/UX principles",
+          "Layouts, typography, and color theory",
+          "Responsive design basics",
+          "Wireframing and prototyping tools (e.g., Figma, Adobe XD)",
+          "Designing for accessibility and inclusivity",
+        ],
+      },
+      {
+        step: "3. Building Websites with No-Code Tools",
+        bullets: [
+          "Platform walkthrough (e.g., Webflow or Bubble)",
+          "Creating pages, adding components, and styling",
+          "Integrating multimedia (images, videos)",
+          "Using templates and themes",
+          "Customizing designs with CSS (if applicable)",
+        ],
+      },
+      {
+        step: "4. Workflows and Logic",
+        bullets: [
+          "Setting up forms, buttons, and interactivity",
+          "Basic database setup (e.g., Airtable integration)",
+          "Automating workflows with tools like Zapier",
+          "Implementing user authentication and roles",
+          "Connecting APIs and external services",
+          "Testing and debugging no-code applications",
+        ],
+      },
+      {
+        step: "5. E-commerce and Advanced Features",
+        bullets: [
+          "Building online stores (e.g., Shopify integration)",
+          "Payment gateways and user authentication",
+          "Advanced features (e.g., dynamic content, user-generated content)",
+          "Integrating third-party services (e.g., email marketing, CRM)",
+          "Performance optimization and best practices",
+          "Security considerations in no-code development",
+        ],
+      },
+      {
+        step: "6. Publishing and Maintenance",
+        bullets: [
+          "Domain setup and hosting",
+          "SEO basics and analytics integration (e.g., Google Analytics)",
+          "Monitoring performance and user feedback",
+          "Regular updates and maintenance",
+          "Scaling no-code applications",
+          "Troubleshooting common issues",
+        ],
+      },
+      {
+        step: "7. Capstone Project",
+        bullets: [
+          "Build a fully functional website (e.g., portfolio, business site, or simple app)",
+          "Implement learned skills and tools",
+          "Present the project, including design choices and functionality",
+        ],
+      },
+    ],
+  },
+
   /* Add more course for data science & ai here */
 ];
 
@@ -1122,19 +2370,24 @@ const CourseDetail = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20 px-6 md:px-10">
       <div className="w-10/12 mx-auto space-y-10">
-      <div>
-        <img src="/course-details.svg" alt="course details" />
-      </div>
+        <div>
+          <img src="/course-details.svg" alt="course details" />
+        </div>
         <h1 className="text-4xl font-bold text-green-500">{course.title}</h1>
         <p className="text-lg text-gray-300">{course.description}</p>
         <div className=" flex flex-col gap-4 text-md">
-          <span className="bg-white w-80 py-2 p-2 rounded-md shadow font-medium text-black">{course.currentStudents}</span>
-          <span className="bg-white w-44 py-2 p-2 rounded-md shadow font-medium text-black">{course.duration}</span>
+          <span className="bg-white w-80 py-2 p-2 rounded-md shadow font-medium text-black">
+            {course.currentStudents}
+          </span>
+          <span className="bg-white w-44 py-2 p-2 rounded-md shadow font-medium text-black">
+            {course.duration}
+          </span>
         </div>
         {/* Enroll Button */}
         <button
-        onClick={() => setShowCongrats(true)}
-        className="bg-[#39B54A] text-white px-8 py-3 rounded-lg font-semibold">
+          onClick={() => setShowCongrats(true)}
+          className="bg-[#39B54A] text-white px-8 py-3 rounded-lg font-semibold"
+        >
           {course.enrollButton}
         </button>
 
@@ -1160,9 +2413,9 @@ const CourseDetail = () => {
       {/* Congrats Modal */}
       {showCongrats && (
         <CongratsPopup
-        type="enroll"
-        course={course.title}
-        onClose={() => setShowCongrats(false)}
+          type="enroll"
+          course={course.title}
+          onClose={() => setShowCongrats(false)}
         />
       )}
     </div>

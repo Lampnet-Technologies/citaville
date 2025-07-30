@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { u } from "framer-motion/client";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -32,43 +33,41 @@ const data = {
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
-    /*  {
+    {
       id: 4,
-      slug: "product-design-4",
-      title: "Product Desgin",
-      description:
-        "Text goes here...",
+      slug: "social-media-marketing",
+      title: "Social Media Marketing",
+      description: "Master the art of reaching and engaging audiences on platforms like Instagram, Facebook, Twitter, and LinkedIn. Learn content creation, scheduling, ad campaigns, and analytics to build effective social strategies.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
     {
       id: 5,
-      slug: "product-design-5",
-      title: "Product Desgin",
-      description:
-        "Text goes here...",
+      slug: "brand-strategy-identity",
+      title: "Brand Strategy & Identity",
+      description: "Learn how to define, position, and express a brand across digital and physical platforms. This course explores logo design, brand voice, mission alignment, and visual consistency to help businesses stand out.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
     {
       id: 6,
-      slug: "product-design-6",
-      title: "Product Desgin",
-      description:
-        "Text goes here...",
+      slug: "copywriting-for-conversion",
+      title: "Copywriting For Conversion",
+      description: "Write compelling copy that drives action. This course covers persuasive writing techniques, emotional triggers, call-to-actions, and landing page optimization to boost sales, signups, or engagement.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
     },
     {
       id: 7,
-      slug: "product-design-7",
-      title: "Product Desgin",
-      description:
-        "Text goes here...",
+      slug: "seo-content-strategy",
+      title: "SEO & Content Strategy",
+      description: "Discover how to optimize content for search engines and users. Learn keyword research, on-page SEO, content planning, and performance analysis to improve visibility and organic traffic.",
       buttonText: "Learn more",
       image: "/digital-marketing.svg",
-    }, */
+    },
   ],
+
+  /* Next Course Contents */
 
   "Software & Cloud Engineering": [
     {
@@ -107,25 +106,45 @@ const data = {
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
-    /*  {
+    {
       id: 5,
-      slug: "software-engineering-5",
-      title: "Software Engineering",
+      slug: "devops-ci/cd-fundamentals",
+      title: "DevOps & CI/CD Fundamentals",
       description:
-        "Text goes here...",
+        "Streamline development and deployment with DevOps tools and practices. Learn about automation, continuous integration, continuous delivery (CI/CD), and infrastructure as code. A must-have skill set for modern software teams.",
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
     {
       id: 6,
-      slug: "software-engineering-6",
-      title: "Software Engineering",
+      slug: "version-control",
+      title: "Version Control With Git & GitHub",
       description:
-        "Text goes here...",
+        "Track, manage, and collaborate on code using the world’s most popular version control system. This hands-on course teaches you Git essentials, branching strategies, and GitHub workflows used by developers globally.",
       buttonText: "Learn more",
       image: "/product-design.svg",
-    }, */
+    },
+    {
+      id: 6,
+      slug: "software-testing",
+      title: "Software Testing & QA Basics",
+      description:
+        "Ensure software quality with structured testing techniques. Learn about unit testing, integration testing, test automation, and bug tracking. This course prepares you to identify defects early and deliver robust applications with confidence.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
+    {
+      id: 6,
+      slug: "backend-development",
+      title: "Backend Development",
+      description:
+        "Learn to build robust and scalable server-side applications using frameworks like Node.js, Django, or Laravel. Explore REST APIs, databases, authentication, and deployment — all essential to powering dynamic web applications.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
   ],
+
+  /* Next Course */
 
   "Networking & Hardware": [
     {
@@ -155,7 +174,45 @@ const data = {
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
+    {
+      id: 6,
+      slug: "internet-of-things-basics",
+      title: "Internet of Things (IoT) Basics",
+      description:
+        "Explore how everyday objects connect and communicate over the internet. Learn the basics of IoT architecture, sensors, embedded systems, and data exchange. A great introduction for those curious about smart devices and automation technologies.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
+     {
+      id: 6,
+      slug: "it-support-help-desk-skills",
+      title: "IT Support & Help Desk Skills",
+      description:
+        "Build a strong foundation in troubleshooting hardware, software, and network issues. This course trains you to handle real-world IT support tasks and communicate effectively with users — essential for entry-level IT roles.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
+    {
+      id: 6,
+      slug: "wireless-network-setup-security",
+      title: "Wireless Network Setup & Security",
+      description:
+        "Learn how to configure secure and efficient wireless networks for homes, offices, and public environments. This course covers protocols, encryption, signal optimization, and best practices for preventing unauthorized access.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
+     {
+      id: 6,
+      slug: "network-troubleshooting-techniques",
+      title: "Network Troubleshooting Techniques",
+      description:
+        "Gain practical skills in diagnosing and resolving network issues. From IP conflicts to DNS errors, you’ll learn the tools and methods used by professionals to keep networks running smoothly and securely.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
   ],
+
+  /* Next Course */
 
   "Data Science & AI": [
     {
@@ -185,6 +242,33 @@ const data = {
       buttonText: "Learn more",
       image: "/product-design.svg",
     },
+     {
+      id: 6,
+      slug: "sql-for-data-exploration",
+      title: "SQL for Data Exploration",
+      description:
+        "Master the language of data with our SQL course. Learn how to query databases, filter and group data, and derive insights using real-world datasets. Perfect for beginners and analysts looking to turn raw data into actionable knowledge.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
+    {
+      id: 6,
+      slug: "big-data-fundamentals",
+      title: "Big Data Fundamentals",
+      description:
+        "Understand the architecture and tools behind large-scale data processing. Learn how to store, manage, and analyze massive datasets using Hadoop, Spark, and other industry-standard platforms. This course is ideal for those looking to step into the world of data-driven decision-making at scale.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
+    {
+      id: 6,
+      slug: "natural-language-processing",
+      title: "Natural Language Processing (NLP)",
+      description:
+        "Dive into the world of human-language understanding by machines. Explore key NLP techniques like sentiment analysis, text classification, and language generation. This course equips you with practical skills to build applications that understand and process human language intelligently.",
+      buttonText: "Learn more",
+      image: "/product-design.svg",
+    },
   ],
 };
 
@@ -202,10 +286,9 @@ const Courses = () => {
 
   useEffect(() => {
     if (location.state?.from === "ourschool") {
-  window.scrollTo(0, 0);
-}
-}, [location.state]);
-
+      window.scrollTo(0, 0);
+    }
+  }, [location.state]);
 
   const [activeTab, setActiveTab] = useState(() => {
     const match = coursesTab.find(
