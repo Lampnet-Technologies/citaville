@@ -24,7 +24,8 @@ export const OurCourses = () => {
         title: "Product Design",
         description:
           "Master the art of user-centered design through research, wireframing, and interactive prototyping to create impactful digital products.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
         buttonText: "Learn more",
       },
       {
@@ -32,7 +33,8 @@ export const OurCourses = () => {
         title: "Graphic Design",
         description:
           "Build strong visual communication skills through color theory, typography, layout design, and real-world branding projects.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
         buttonText: "Learn more",
       },
       {
@@ -40,7 +42,8 @@ export const OurCourses = () => {
         title: "Digital Marketing",
         description:
           "Learn how to grow brands online with SEO, content strategy, social media campaigns, and performance marketing techniques.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/seo-content_mllhag.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/seo-content_mllhag.png",
         buttonText: "Learn more",
       },
     ],
@@ -50,7 +53,8 @@ export const OurCourses = () => {
         title: "Web Development",
         description:
           "Learn to build responsive websites using HTML, CSS, JavaScript, and modern frameworks like React and Node.js.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/web-dev_sl0ly5.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/web-dev_sl0ly5.png",
         buttonText: "Learn more",
       },
       {
@@ -58,7 +62,8 @@ export const OurCourses = () => {
         title: "Cloud Computing",
         description:
           "Explore cloud platforms like AWS and Azure while learning to deploy, scale, and secure cloud-based applications.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/cloud-computing_eu9cpg.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/cloud-computing_eu9cpg.png",
         buttonText: "Learn more",
       },
       {
@@ -66,7 +71,8 @@ export const OurCourses = () => {
         title: "Mobile App Development",
         description:
           "Design and develop mobile apps for Android and iOS using tools like Flutter, React Native, or Swift.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/mobile-dev_yldylz.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/mobile-dev_yldylz.png",
         buttonText: "Learn more",
       },
     ],
@@ -76,7 +82,8 @@ export const OurCourses = () => {
         title: "Network Administration",
         description:
           "Learn to configure, monitor, and troubleshoot computer networks using routers, switches, and network protocols.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/network_admin_fqafny.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/network_admin_fqafny.png",
         buttonText: "Learn more",
       },
       {
@@ -84,7 +91,8 @@ export const OurCourses = () => {
         title: "Cybersecurity",
         description:
           "Protect systems and data by learning ethical hacking, threat detection, penetration testing, and security best practices.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/cybersecurity_fwyqe2.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/cybersecurity_fwyqe2.png",
         buttonText: "Learn more",
       },
       {
@@ -92,7 +100,8 @@ export const OurCourses = () => {
         title: "Hardware Engineering",
         description:
           "Understand computer hardware systems, from basic circuit design and microcontrollers to assembling and testing devices.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/hardware-engineering_ugckpy.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/hardware-engineering_ugckpy.png",
         buttonText: "Learn more",
       },
     ],
@@ -102,7 +111,8 @@ export const OurCourses = () => {
         title: "Data Analysis",
         description:
           "Gain insights from data by learning to clean, analyze, and visualize datasets using Excel, Python, and Tableau.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/data-analysis_kpgonp.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/data-analysis_kpgonp.png",
         buttonText: "Learn more",
       },
       {
@@ -110,7 +120,8 @@ export const OurCourses = () => {
         title: "Machine Learning",
         description:
           "Learn to build predictive models using algorithms like regression, decision trees, and clustering with Python.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/machine-learning2_wcixwd.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/machine-learning2_wcixwd.png",
         buttonText: "Learn more",
       },
       {
@@ -118,7 +129,8 @@ export const OurCourses = () => {
         title: "Artificial Intelligence",
         description:
           "Explore how AI powers real-world applications using neural networks, computer vision, and natural language processing.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/ai2_afodbr.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/ai2_afodbr.png",
         buttonText: "Learn more",
       },
     ],
@@ -256,7 +268,7 @@ export const LearnLatestSkill = ({ onRegisterClick }) => {
       }}
       className="w-full bg-gray-800 py-12 text-white flex justify-center items-center"
     >
-      <div className="w-10/12  space-y-4 bg-opacity-50 py-20  rounded-lg">
+      <div className="w-10/12  space-y-4 bg-opacity-70 py-20  rounded-lg">
         <h2 className="text-4xl font-bold">Learn Latest Skills</h2>
         <p className="text-lg w-7/12">
           Embark on a journey of knowledge, and unlock a multitude of
@@ -266,8 +278,9 @@ export const LearnLatestSkill = ({ onRegisterClick }) => {
           take the right direction!
         </p>
         <button
-        onClick={onRegisterClick}
-        className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white">
+          onClick={onRegisterClick}
+          className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white"
+        >
           Register now
         </button>
       </div>
@@ -284,7 +297,8 @@ const latestNewsData = [
     title: "Graphic Design",
     description:
       "Explore the latest advancements in artificial intelligence and how they are shaping the future. Dive into modern design trends and discover how visual storytelling is evolving in the digital age.",
-    image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983775/Graphic-Design-Trends-2025_wyuk3f.png",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983775/Graphic-Design-Trends-2025_wyuk3f.png",
     year: "2025",
   },
   {
@@ -292,7 +306,8 @@ const latestNewsData = [
     title: "Digital Marketing",
     description:
       "Discover the latest trends in digital marketing and how to leverage them for your business. Uncover how brands are using AI, short-form video, and data-driven strategies to boost engagement.",
-    image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983774/11-A-2025-Digital-Marketing-Trends-Predictions-1-1200x675_iwhhnx.webp",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983774/11-A-2025-Digital-Marketing-Trends-Predictions-1-1200x675_iwhhnx.webp",
     year: "2025",
   },
   {
@@ -300,7 +315,8 @@ const latestNewsData = [
     title: "Data Science",
     description:
       "Learn about the latest tools and techniques in data science and how they can be applied to real-world problems. Explore how emerging tools and machine learning are transforming industries through smart data insights.",
-    image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983776/data-science-latest-news_ibsghp.jpg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983776/data-science-latest-news_ibsghp.jpg",
     year: "2025",
   },
 ];
@@ -433,11 +449,10 @@ export const OurOfferings = () => {
           </div>
 
           <Link to="/courses">
-          <button className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
-            Explore Courses
-          </button>
+            <button className="bg-gradient-to-tr from-[#375d34] to-[#51b848] text-white font-semibold px-6 py-2 rounded-xl hover:cursor-pointer">
+              Explore Courses
+            </button>
           </Link>
-
         </div>
       </div>
     </section>
@@ -449,59 +464,67 @@ export const OurOfferings = () => {
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Geneveve Adeola",
     feedback:
       "Our instructors can monitor your class progressand are easily accessible to provide direct assistance.can ask questions, ask for help, participate in class",
-    image: "/testimonial-01.svg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753985630/testimonal1_sktamo.jpg",
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Obiora Jude",
     feedback:
       "The courses are well-structured and the instructors are very knowledgeable. I learned a lot in a short time.",
-    image: "/testimonial-02.svg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753985621/testimonal2_btihhm.jpg",
   },
   {
     id: 3,
-    name: "Alice Johnson",
+    name: "Malik Khan",
     feedback:
       "I love the flexibility of learning at my own pace. The resources provided are top-notch and very helpful.",
-    image: "/testimonial-03.svg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753985620/testimonal3_chbdqs.jpg",
   },
   {
     id: 4,
-    name: "Bob Brown",
+    name: "Bob Olafemi",
     feedback:
       "The community support is amazing. I was able to connect with other learners and share experiences.",
-    image: "/testimonial-04.svg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753985618/testimonal4_bfdfkn.jpg",
   },
   {
     id: 5,
-    name: "Charlie Davis",
+    name: "Eve Wilson",
     feedback:
       "The hands-on projects really helped me apply what I learned. I feel more confident in my skills now.",
-    image: "/testimonial-05.svg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753985614/testimonal5_qf6pvj.jpg",
   },
   {
     id: 6,
-    name: "Eve Wilson",
+    name: "Charles Davis",
     feedback:
       "I appreciate the personalized feedback from instructors. It helped me improve my work significantly.",
-    image: "/testimonial-06.svg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753985613/testimonal6_w8m1p2.jpg",
   },
   {
     id: 7,
-    name: "David Lee",
+    name: "Sophia Kim",
     feedback:
       "The course content is relevant and up-to-date. I feel prepared for the job market after completing the course.",
-    image: "/testimonial-07.svg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753985613/testimonal7_upsgab.jpg",
   },
   {
     id: 8,
-    name: "Sophia Kim",
+    name: "David Lee",
     feedback:
       "I highly recommend this platform to anyone looking to enhance their skills. The learning experience is fantastic.",
-    image: "/testimonial-08.svg",
+    image:
+      "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753985627/testimonal8_fcgfvn.jpg",
   },
 ];
 
@@ -535,11 +558,15 @@ export const Testimonials = () => {
               >
                 <div className="bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] text-white p-4 rounded-lg mb-4 space-y-5 h-44 text-balance">
                   <p>{testimonials.feedback}</p>
-                  <p className="text-end">{testimonials.name}</p>
                 </div>
-                <div className="rounded-full w-20 h-20 bg-gray-200">
-                  <img src={testimonials.image} alt={testimonials.image} />
+                <div className="rounded-full w-24 h-24 overflow-hidden bg-gray-200">
+                  <img
+                    src={testimonials.image}
+                    alt={testimonials.image}
+                    className="w-full h-full object-cover rounded-full"
+                  />
                 </div>
+                <p className="text-end">{testimonials.name}</p>
               </div>
             ))}
           </div>
@@ -633,13 +660,13 @@ export const Investing = () => {
       className="w-full bg-gray-800 py-20  text-white "
     >
       <div className="w-10/12 mx-auto space-y-8">
-        <h2 className="font-extrabold text-3xl w-96 ">
+        <h2 className="font-extrabold text-3xl w-full">
           Start investing in yourself today!
         </h2>
         <Link to="/courses">
-        <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
-          Apply now
-        </button>
+          <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
+            Apply now
+          </button>
         </Link>
       </div>
     </section>

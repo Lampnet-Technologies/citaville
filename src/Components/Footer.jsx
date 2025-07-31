@@ -1,4 +1,5 @@
 import React from "react";
+import { LiaLinkedin, LiaInstagram, LiaTwitter } from "react-icons/lia";
 import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
@@ -38,13 +39,37 @@ const Footer = () => {
         {/* First column: Logo + Button */}
         <div className="flex flex-col gap-6 w-full sm:w-1/3 md:w-1/4">
           <img
-          src="https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979990/LCI_Logo_1_vrw1pj.png"
-          alt="LCI Logo"
-          className="w-30 h-30">
-          </img>
-          <div
-          className="text-bold">
-            Your Learning Partner
+            src="https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979990/LCI_Logo_1_vrw1pj.png"
+            alt="LCI Logo"
+            className="w-30 h-30"
+          ></img>
+          <div className="text-bold">Your Learning Partner</div>
+          {/* Added social media links here */}
+          <div className="flex gap-4 mt-2 text-2xl">
+            <a
+              href="https://www.linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-400 transition-colors duration-300"
+            >
+              <LiaLinkedin />
+            </a>
+            <a
+              href="https://www.instagram.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-pink-400 transition-colors duration-300"
+            >
+              <LiaInstagram />
+            </a>
+            <a
+              href="https://twitter.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-300 transition-colors duration-300"
+            >
+              <LiaTwitter />
+            </a>
           </div>
         </div>
 
@@ -83,7 +108,10 @@ const Footer = () => {
           <Link href="tel:+1234567890" className="hover:underline">
             📞 +1 (234) 567-890
           </Link>
-          <Link href="mailto:info.laptopcityonline@gmail.com" className="hover:underline">
+          <Link
+            href="mailto:info.laptopcityonline@gmail.com"
+            className="hover:underline"
+          >
             📧 Info.laptopcityonline@gmail.com
           </Link>
         </div>

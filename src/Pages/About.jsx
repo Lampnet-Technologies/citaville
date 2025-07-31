@@ -41,7 +41,7 @@ export const WhoWeAre = ({ onRegisterClick }) => {
               className="w-[570] h-[487px] mx-auto rounded-3xl "
             />
           </div>
-          <div className="bg-green-700 border-2  rounded-3xl px-10 py-5 w-8/12 mx-auto  -translate-y-1/2 items-center flex">
+          <div className="bg-green-700 border-2  rounded-3xl px-10 py-5 w-11/12 mx-auto  -translate-y-1/2 items-center flex">
             <p className="font-medium text-base">
               Here, at citaville we do not only train and coach, we provide
               personalized experience by holding your hands all through the
@@ -80,12 +80,12 @@ export const Subscribe = () => {
       className="w-full bg-gray-800 py-20  text-white "
     >
       <div className="w-10/12 mx-auto space-y-8">
-        <h2 className="font-extrabold text-3xl w-96 ">
+        <h2 className="font-extrabold text-3xl w-full">
           Subscribe to be the first to hear about our juicy offers
         </h2>
-        <form className="flex flex-col gap-6 w-96">
-          <label htmlFor="mailto:info.laptopcityonline@gmail.com">Email Address</label>
-          <input type="email" className="bg-white" />
+        <form className="flex flex-col gap-6 w-full">
+          <label className="semi-bold text-xl" htmlFor="mailto:info.laptopcityonline@gmail.com">Email Address</label>
+          <input type="email" className="bg-white px-4 py-2 text-black" />
           <button
           htmlFor="mailto:info.laptopcityonline@gmail.com"
           className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">

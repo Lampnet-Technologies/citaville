@@ -4,57 +4,59 @@ import { LiaInstagram, LiaLinkedin, LiaTwitter } from "react-icons/lia";
 import emailjs from "emailjs-com";
 import Footer from "../Components/Footer"
 
-const styles = {
+/* const styles = {
   icons:
     "w-12 h-12 flex items-center justify-center transition-colors duration-700 rounded-full bg-orange-400 hover:bg-white hover:text-black text-white",
-};
+}; */
 
 export const ContactUs = () => {
   return (
-    <section className="w-full bg-gray-800">
-      <div className="w-10/12 mx-auto py-20">
-        <div>
-          <img src="/course-details.svg" alt="course details" />
-        </div>
+   <section className="w-full bg-gray-800">
+  <div className="w-10/12 mx-auto py-20">
+    <div>
+      <img src="/course-details.svg" alt="course details" />
+    </div>
 
-        <div className="rounded-3xl px-10 py-5 w-8/12 mx-auto flex justify-between items-center -translate-y-1/2 flex-wrap gap-4">
-          {/* Phone */}
-          <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 rounded-md py-3 items-center gap-3">
-            <FiPhone className="text-white text-2xl" />
-            <div className="text-white">
-              <p>Call Us</p>
-              <p>+2340000000</p>
-            </div>
-          </div>
-
-          {/* Email */}
-          <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 rounded-md py-3 items-center gap-3">
-            <FiInbox className="text-white text-2xl" />
-            <div className="text-white">
-              <p>Email Us</p>
-              <p>info.laptopcityonline@gmail.com</p>
-            </div>
-          </div>
-
-          {/* Location */}
-          <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 rounded-md py-3 items-center gap-3">
-            <HiLocationMarker className="text-white text-2xl" />
-            <div className="text-white">
-              <p>Location</p>
-              <p>Lagos, Nigeria</p>
-            </div>
-          </div>
+    <div className="rounded-3xl px-6 py-6 w-full md:w-10/12 lg:w-8/12 mx-auto flex flex-wrap justify-center gap-4 md:-translate-y-1/2">
+      {/* Phone */}
+      <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 py-3 rounded-md items-center gap-3 w-full sm:w-auto">
+        <FiPhone className="text-white text-2xl" />
+        <div className="text-white">
+          <p>Call Us</p>
+          <p>+2340000000</p>
         </div>
       </div>
-    </section>
+
+      {/* Email */}
+      <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 py-3 rounded-md items-center gap-3 w-full sm:w-auto">
+        <FiInbox className="text-white text-2xl" />
+        <div className="text-white">
+          <p>Email Us</p>
+          <p>info.laptopcityonline@gmail.com</p>
+        </div>
+      </div>
+
+      {/* Location */}
+      <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] flex px-4 py-3 rounded-md items-center gap-3 w-full sm:w-auto">
+        <HiLocationMarker className="text-white text-2xl" />
+        <div className="text-white">
+          <p>Location</p>
+          <p>Lagos, Nigeria</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   );
 };
 
 import { useState, useRef } from "react";
 
-const formStyles = {
+// eslint-disable-next-line react-refresh/only-export-components
+export const formStyles = {
   icons:
-    "w-12 flex items-center justify-center transition-colors duration-700 h-12 rounded-full bg-orange-400 hover:bg-white hover:text-black text-white",
+    "w-10 h-10 flex items-center justify-center transition-colors duration-700 rounded-full bg-orange-400 hover:bg-white hover:text-black text-white",
 };
 
 export const ContactForm = () => {
