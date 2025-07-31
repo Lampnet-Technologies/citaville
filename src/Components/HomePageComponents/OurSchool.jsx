@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -9,7 +10,7 @@ const OurSchool = () => {
       title: "software & cloud engineering",
       description:
         "Build scalable applications and master cloud platforms like AWS and Azure to power the tech of tomorrow",
-      image: "/our-school-01.svg",
+      image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984403/software_cloud_engineering_u08dtm.jpg",
       buttonText: "Learn more",
       path: "/courses?tab=Software%20&%20Cloud%20Engineering",
     },
@@ -18,7 +19,7 @@ const OurSchool = () => {
       title: "networking & hardware",
       description:
         "Learn the essentials of computer networks, routers, and hardware systems that keep devices and data connected",
-      image: "/our-school-02.svg",
+      image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984402/hardwar_and_networking-training-1_zj0tk5.jpg",
       buttonText: "Learn more",
       path: "/courses?tab=Networking%20&%20Hardware",
     },
@@ -27,16 +28,16 @@ const OurSchool = () => {
       title: "design & digital marketing",
       description:
         "Explore visual design, branding, and digital strategies to create impactful campaigns that engage and convert",
-      image: "/our-school-03.svg",
+      image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984403/design_digital_marketing_abpvd1.jpg",
       buttonText: "Learn more",
       path: "/courses?tab=Design%20&%20Digital%20Marketing",
     },
     {
       id: 4,
-      title: "data science",
+      title: "data science & ai",
       description:
         "Turn raw data into powerful insights with tools like Python, SQL, and machine learning—fuel smarter decisions",
-      image: "/our-school-04.svg",
+      image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983775/Data-Science_h6xmri.jpg",
       buttonText: "Learn more",
       path: "/courses?tab=Data%20Science%20&%20AI",
     },
@@ -67,7 +68,7 @@ const OurSchool = () => {
           our schools
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-between items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-between items-center overflow-hidden">
           {schoolItems.map((item, index) => (
             <motion.div
               key={item.id}
@@ -80,7 +81,7 @@ const OurSchool = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full"
+                className="w-full h-48 object-cover"
               />
               <h3 className="uppercase font-semibold text-3xl">{item.title}</h3>
               <p className="text-justify">{item.description}</p>

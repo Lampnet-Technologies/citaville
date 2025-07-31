@@ -24,7 +24,7 @@ export const OurCourses = () => {
         title: "Product Design",
         description:
           "Master the art of user-centered design through research, wireframing, and interactive prototyping to create impactful digital products.",
-        image: "/courses-01.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
         buttonText: "Learn more",
       },
       {
@@ -32,7 +32,7 @@ export const OurCourses = () => {
         title: "Graphic Design",
         description:
           "Build strong visual communication skills through color theory, typography, layout design, and real-world branding projects.",
-        image: "/courses-02.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
         buttonText: "Learn more",
       },
       {
@@ -40,7 +40,7 @@ export const OurCourses = () => {
         title: "Digital Marketing",
         description:
           "Learn how to grow brands online with SEO, content strategy, social media campaigns, and performance marketing techniques.",
-        image: "/courses-03.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/seo-content_mllhag.png",
         buttonText: "Learn more",
       },
     ],
@@ -50,7 +50,7 @@ export const OurCourses = () => {
         title: "Web Development",
         description:
           "Learn to build responsive websites using HTML, CSS, JavaScript, and modern frameworks like React and Node.js.",
-        image: "/courses-01.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/web-dev_sl0ly5.png",
         buttonText: "Learn more",
       },
       {
@@ -58,7 +58,7 @@ export const OurCourses = () => {
         title: "Cloud Computing",
         description:
           "Explore cloud platforms like AWS and Azure while learning to deploy, scale, and secure cloud-based applications.",
-        image: "/courses-02.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/cloud-computing_eu9cpg.png",
         buttonText: "Learn more",
       },
       {
@@ -66,7 +66,7 @@ export const OurCourses = () => {
         title: "Mobile App Development",
         description:
           "Design and develop mobile apps for Android and iOS using tools like Flutter, React Native, or Swift.",
-        image: "/courses-03.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/mobile-dev_yldylz.png",
         buttonText: "Learn more",
       },
     ],
@@ -76,7 +76,7 @@ export const OurCourses = () => {
         title: "Network Administration",
         description:
           "Learn to configure, monitor, and troubleshoot computer networks using routers, switches, and network protocols.",
-        image: "/courses-01.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/network_admin_fqafny.png",
         buttonText: "Learn more",
       },
       {
@@ -84,7 +84,7 @@ export const OurCourses = () => {
         title: "Cybersecurity",
         description:
           "Protect systems and data by learning ethical hacking, threat detection, penetration testing, and security best practices.",
-        image: "/courses-02.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/cybersecurity_fwyqe2.png",
         buttonText: "Learn more",
       },
       {
@@ -92,7 +92,7 @@ export const OurCourses = () => {
         title: "Hardware Engineering",
         description:
           "Understand computer hardware systems, from basic circuit design and microcontrollers to assembling and testing devices.",
-        image: "/courses-03.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/hardware-engineering_ugckpy.png",
         buttonText: "Learn more",
       },
     ],
@@ -102,7 +102,7 @@ export const OurCourses = () => {
         title: "Data Analysis",
         description:
           "Gain insights from data by learning to clean, analyze, and visualize datasets using Excel, Python, and Tableau.",
-        image: "/courses-01.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/data-analysis_kpgonp.png",
         buttonText: "Learn more",
       },
       {
@@ -110,7 +110,7 @@ export const OurCourses = () => {
         title: "Machine Learning",
         description:
           "Learn to build predictive models using algorithms like regression, decision trees, and clustering with Python.",
-        image: "/courses-02.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/machine-learning2_wcixwd.png",
         buttonText: "Learn more",
       },
       {
@@ -118,7 +118,7 @@ export const OurCourses = () => {
         title: "Artificial Intelligence",
         description:
           "Explore how AI powers real-world applications using neural networks, computer vision, and natural language processing.",
-        image: "/courses-03.svg",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/ai2_afodbr.png",
         buttonText: "Learn more",
       },
     ],
@@ -284,7 +284,7 @@ const latestNewsData = [
     title: "Graphic Design",
     description:
       "Explore the latest advancements in artificial intelligence and how they are shaping the future. Dive into modern design trends and discover how visual storytelling is evolving in the digital age.",
-    image: "/latest-news-01.svg",
+    image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983775/Graphic-Design-Trends-2025_wyuk3f.png",
     year: "2025",
   },
   {
@@ -292,7 +292,7 @@ const latestNewsData = [
     title: "Digital Marketing",
     description:
       "Discover the latest trends in digital marketing and how to leverage them for your business. Uncover how brands are using AI, short-form video, and data-driven strategies to boost engagement.",
-    image: "/latest-news-02.svg",
+    image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983774/11-A-2025-Digital-Marketing-Trends-Predictions-1-1200x675_iwhhnx.webp",
     year: "2025",
   },
   {
@@ -300,7 +300,7 @@ const latestNewsData = [
     title: "Data Science",
     description:
       "Learn about the latest tools and techniques in data science and how they can be applied to real-world problems. Explore how emerging tools and machine learning are transforming industries through smart data insights.",
-    image: "/latest-news-02.svg",
+    image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983776/data-science-latest-news_ibsghp.jpg",
     year: "2025",
   },
 ];
@@ -576,13 +576,13 @@ export const Faqs = () => {
       id: 2,
       title: "What are the key principles of UX design?",
       description:
-        "The key principles of UX design include simplicity, consistency, clarity, and empathy. A good UX design should be simple and easy to use, consistent across different devices and platforms, clear in its messaging and instructions, and empathetic to the user’s needs and goals.",
+        "The key principles of UX design include simplicity, consistency, clarity, and empathy. A good UX design should be simple and easy to use, consistent across different devices and platforms, clear in its messaging and instructions, and empathetic to the user’s needs and goals. There are also other principles such as accessibility, usability, and performance that are important for creating effective UX designs.",
     },
     {
       id: 3,
       title: "What is the difference between UX and UI design?",
       description:
-        "UX design focuses on the overall experience of the user, including the ease of use, functionality, and emotional response to the product. UI design, on the other hand, focuses on the visual and interactive elements of the product, such as the layout, typography, and color scheme.",
+        "UX design focuses on the overall experience of the user, including the ease of use, functionality, and emotional response to the product. UI design, on the other hand, focuses on the visual and interactive elements of the product, such as the layout, typography, and color scheme. While UX design is about making the product easy to use and enjoyable, UI design is about making the product visually appealing and intuitive.",
     },
   ];
 

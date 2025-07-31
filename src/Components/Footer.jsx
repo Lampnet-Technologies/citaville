@@ -38,7 +38,7 @@ const Footer = () => {
         {/* First column: Logo + Button */}
         <div className="flex flex-col gap-6 w-full sm:w-1/3 md:w-1/4">
           <img
-          src="/LCI Logo 1.png"
+          src="https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979990/LCI_Logo_1_vrw1pj.png"
           alt="LCI Logo"
           className="w-30 h-30">
           </img>
