@@ -123,7 +123,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col gap-10 md:flex-row w-10/12 mx-auto rounded-2xl overflow-hidden">
+    <div className="flex flex-col gap-10 md:flex-row w-10/12 mx-auto rounded-2xl overflow-hidden mb-10">
       {/* Left Side - Social (no forced height) */}
       <div className="text-white bg-black w-full md:w-1/2 flex h-72 flex-col space-y-5 p-10">
         <h2 className="font-semibold text-4xl">Still have any Questions</h2>
@@ -249,7 +249,7 @@ export const ContactUsPage = () => {
     <div className="bg-gray-800">
       <ContactUs />
       <ContactForm />
-      <Footer/>
+      <Footer />
     </div>
   );
 };

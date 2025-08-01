@@ -10,7 +10,8 @@ const OurSchool = () => {
       title: "software & cloud engineering",
       description:
         "Build scalable applications and master cloud platforms like AWS and Azure to power the tech of tomorrow",
-      image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984403/software_cloud_engineering_u08dtm.jpg",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984403/software_cloud_engineering_u08dtm.jpg",
       buttonText: "Learn more",
       path: "/courses?tab=Software%20&%20Cloud%20Engineering",
     },
@@ -19,7 +20,8 @@ const OurSchool = () => {
       title: "networking & hardware",
       description:
         "Learn the essentials of computer networks, routers, and hardware systems that keep devices and data connected",
-      image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984402/hardwar_and_networking-training-1_zj0tk5.jpg",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984402/hardwar_and_networking-training-1_zj0tk5.jpg",
       buttonText: "Learn more",
       path: "/courses?tab=Networking%20&%20Hardware",
     },
@@ -28,7 +30,8 @@ const OurSchool = () => {
       title: "design & digital marketing",
       description:
         "Explore visual design, branding, and digital strategies to create impactful campaigns that engage and convert",
-      image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984403/design_digital_marketing_abpvd1.jpg",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984403/design_digital_marketing_abpvd1.jpg",
       buttonText: "Learn more",
       path: "/courses?tab=Design%20&%20Digital%20Marketing",
     },
@@ -37,7 +40,8 @@ const OurSchool = () => {
       title: "data science & ai",
       description:
         "Turn raw data into powerful insights with tools like Python, SQL, and machine learning—fuel smarter decisions",
-      image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983775/Data-Science_h6xmri.jpg",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983775/Data-Science_h6xmri.jpg",
       buttonText: "Learn more",
       path: "/courses?tab=Data%20Science%20&%20AI",
     },
@@ -58,7 +62,7 @@ const OurSchool = () => {
 
   return (
     <section id="our-school" className="w-full bg-gray-800 py-12">
-      <div className="w-10/12 mx-auto space-y-10">
+      <div className="w-11/12 mx-auto space-y-10">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,11 +72,11 @@ const OurSchool = () => {
           our schools
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-between items-center overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {schoolItems.map((item, index) => (
             <motion.div
               key={item.id}
-              className="space-y-4 text-white w-full"
+              className="space-y-4 text-white w-full min-h-[400px]"
               custom={index}
               initial="hidden"
               animate="visible"
@@ -81,14 +85,22 @@ const OurSchool = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover rounded-lg"
               />
-              <h3 className="uppercase font-semibold text-3xl">{item.title}</h3>
-              <p className="text-justify">{item.description}</p>
-              <Link to={item.path} state={{ from: "ourschool" }} className="w-full">
-              <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
-                {item.buttonText}
-              </button>
+              <h3 className="uppercase font-semibold text-xl sm:text-2xl md:text-2xl lg:text-3xl break-words">
+                {item.title}
+              </h3>
+              <p className="text-justify text-sm sm:text-base">
+                {item.description}
+              </p>
+              <Link
+                to={item.path}
+                state={{ from: "ourschool" }}
+                className="block w-full"
+              >
+                <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
+                  {item.buttonText}
+                </button>
               </Link>
             </motion.div>
           ))}

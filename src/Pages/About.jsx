@@ -1,9 +1,8 @@
-// Hero
-
+/* eslint-disable no-unused-vars */
 import { div, section } from "framer-motion/client";
 import { OurOfferings } from "../Components/HomePageComponents/OurCourses";
 import { Link } from "react-router-dom";
-import Footer from "../Components/Footer"
+import Footer from "../Components/Footer";
 
 export const Hero = () => {
   return (
@@ -28,37 +27,38 @@ export const Hero = () => {
   );
 };
 
+// WhoWeAre.jsx
 export const WhoWeAre = ({ onRegisterClick }) => {
   return (
-    <section className="w-full py-12 ">
-      <div className=" flex items-center gap-12 w-10/12 text-white mx-auto ">
-        {/* The Left side */}
-        <div className="  w-1/2 ">
-          <div className="  ">
-            <img
-              src="/who-we-are.jpg"
-              alt="hero-who-we-are.svg"
-              className="w-[570] h-[487px] mx-auto rounded-3xl "
-            />
-          </div>
-          <div className="bg-green-700 border-2  rounded-3xl px-10 py-5 w-11/12 mx-auto  -translate-y-1/2 items-center flex">
-            <p className="font-medium text-base">
-              Here, at citaville we do not only train and coach, we provide
-              personalized experience by holding your hands all through the
-              process
-            </p>
+    <section className="w-full py-16">
+      <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Left Side */}
+        <div className="relative w-full">
+          <img
+            src="/who-we-are.jpg"
+            alt="Who we are"
+            className="w-full h-auto rounded-3xl object-cover"
+          />
+          <div className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white text-sm md:text-base font-medium rounded-2xl px-6 py-4 w-11/12 absolute bottom-[-2rem] left-1/2 transform -translate-x-1/2 shadow-lg">
+            Here at Citaville, we don’t only train and coach — we provide a
+            personalized experience by holding your hand through the entire
+            process.
           </div>
         </div>
 
-        {/* The right side */}
-        <div className="w-1/2 space-y-12">
-          <h2 className="font-extrabold text-3xl ">Who we are</h2>
-          <p className="w-4/6">
-            At Citaville, we are a forward-thinking tech education hub committed to empowering individuals with industry-relevant digital skills. Through innovative learning experiences and hands-on training, we prepare learners to thrive in today’s fast-evolving digital world
+        {/* Right Side */}
+        <div className="text-white space-y-6">
+          <h2 className="font-extrabold text-3xl">Who we are</h2>
+          <p className="text-base leading-relaxed">
+            At Citaville, we are a forward-thinking tech education hub committed
+            to empowering individuals with industry-relevant digital skills.
+            Through innovative learning experiences and hands-on training, we
+            prepare learners to thrive in today’s fast-evolving digital world.
           </p>
           <button
-          onClick={onRegisterClick}
-          className="bg-green-600 hover:bg-green-700 transition px-6 py-2 rounded font-semibold text-white bg-gradient-to-tr from-[#446e40] to-[#83D47B]">
+            onClick={onRegisterClick}
+            className="bg-gradient-to-tr from-[#446e40] to-[#83D47B] hover:from-[#365d36] hover:to-[#6ac66a] text-white font-semibold px-6 py-2 rounded-md transition"
+          >
             Register now
           </button>
         </div>
@@ -84,11 +84,17 @@ export const Subscribe = () => {
           Subscribe to be the first to hear about our juicy offers
         </h2>
         <form className="flex flex-col gap-6 w-full">
-          <label className="semi-bold text-xl" htmlFor="mailto:info.laptopcityonline@gmail.com">Email Address</label>
+          <label
+            className="semi-bold text-xl"
+            htmlFor="mailto:info.laptopcityonline@gmail.com"
+          >
+            Email Address
+          </label>
           <input type="email" className="bg-white px-4 py-2 text-black" />
           <button
-          htmlFor="mailto:info.laptopcityonline@gmail.com"
-          className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
+            htmlFor="mailto:info.laptopcityonline@gmail.com"
+            className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold "
+          >
             submit
           </button>
         </form>
@@ -99,10 +105,9 @@ export const Subscribe = () => {
 
 export const WhatWeDo = () => {
   return (
-    <section className="w-full py-20 bg-[#17120F] text-white">
+    <section className="w-full py-20 bg-[#19181e9a] text-white">
       <div className="w-10/12 mx-auto flex flex-col md:flex-row gap-12">
-
-      {/* Right Side - Text and Custom Bullet List */}
+        {/* Right Side - Text and Custom Bullet List */}
         <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6">
           <h1 className="text-4xl font-bold">What we do in pictures</h1>
 
@@ -115,9 +120,9 @@ export const WhatWeDo = () => {
             ))}
           </ul>
           <Link to="/courses">
-          <button className="self-start mt-4 bg-gradient-to-tr from-[#446e40] to-[#83D47B] px-6 py-2 rounded font-semibold text-white hover:opacity-90 transition">
-            See our Courses
-          </button>
+            <button className="self-start mt-4 bg-gradient-to-tr from-[#446e40] to-[#83D47B] px-6 py-2 rounded font-semibold text-white hover:opacity-90 transition">
+              See our Courses
+            </button>
           </Link>
         </div>
 
@@ -154,10 +159,10 @@ export const About = ({ onRegisterClick }) => {
     <main className="bg-gray-800">
       <Hero />
       <WhoWeAre onRegisterClick={onRegisterClick} />
-      < WhatWeDo />
+      <WhatWeDo />
       <OurOfferings />
       <Subscribe />
-      <Footer/>
+      <Footer />
     </main>
   );
 };

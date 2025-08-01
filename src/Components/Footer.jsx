@@ -31,11 +31,8 @@ const Footer = () => {
   };
 
   return (
-    <footer
-      className="text-white py-10 bg-cover bg-center"
-      style={{ backgroundImage: "url('/footer-bg.png')" }}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-between">
+    <footer className="text-white py-10 bg-green-700">
+      <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-between flex-col-1">
         {/* First column: Logo + Button */}
         <div className="flex flex-col gap-6 w-full sm:w-1/3 md:w-1/4">
           <img
@@ -43,7 +40,8 @@ const Footer = () => {
             alt="LCI Logo"
             className="w-30 h-30"
           ></img>
-          <div className="text-bold">Your Learning Partner</div>
+          <div className="font-bold">Your Learning Partner</div>
+
           {/* Added social media links here */}
           <div className="flex gap-4 mt-2 text-2xl">
             <a

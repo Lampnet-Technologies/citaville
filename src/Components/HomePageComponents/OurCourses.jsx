@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -259,23 +260,26 @@ export const OurCourses = () => {
 export const LearnLatestSkill = ({ onRegisterClick }) => {
   return (
     <section
+      className="relative w-full text-white py-20 px-4"
       style={{
         backgroundImage: "url('/the-study.png')",
-        padding: "20px",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full bg-gray-800 py-12 text-white flex justify-center items-center"
     >
-      <div className="w-10/12  space-y-4 bg-opacity-70 py-20  rounded-lg">
-        <h2 className="text-4xl font-bold">Learn Latest Skills</h2>
-        <p className="text-lg w-7/12">
+      {/* Dark overlay to improve text contrast */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+
+      {/* Content container */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+        <h2 className="text-3xl md:text-4xl font-bold">Learn Latest Skills</h2>
+        <p className="text-base md:text-lg">
           Embark on a journey of knowledge, and unlock a multitude of
           opportunities, influencing your future in several ways. Whether you
-          are advancing or a total new-bie, our courses and resources are
-          crafted to suit your need Join Citaville and see your tech journey
-          take the right direction!
+          are advancing or a total newbie, our courses and resources are crafted
+          to suit your need. Join Citaville and see your tech journey take the
+          right direction!
         </p>
         <button
           onClick={onRegisterClick}
@@ -288,6 +292,7 @@ export const LearnLatestSkill = ({ onRegisterClick }) => {
   );
 };
 
+// Latest News
 import { FiCalendar } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -328,7 +333,7 @@ export const LatestNews = () => {
         <h2 className="text-center text-[#39B54A] capitalize font-extrabold text-4xl">
           Latest News
         </h2>
-        <div className="grid grid-cols-2 gap-10 justify-between items-center">
+        <div className="grid grid-cols-1 gap-10 justify-between items-center md:grid-cols-2">
           {latestNewsData.slice(0, visibleCount).map((item) => (
             <div key={item.id} className="space-y-4 text-white w-full">
               <img
@@ -360,96 +365,62 @@ export const LatestNews = () => {
   );
 };
 
+// Our Offers
 export const OurOfferings = () => {
   const style = {
-    image: "w-24 h-24",
-    p1: "font-bold text-2xl text-white",
-    p2: "font-medium text-xl text-white",
+    image: "w-20 h-20 sm:w-24 sm:h-24",
+    title: "font-bold text-xl sm:text-2xl text-white",
+    description: "text-white text-sm sm:text-base",
   };
+
+  const offerings = [
+    {
+      icon: "/learn-anywhere-icon.svg",
+      title: "Expert tutors",
+      desc: "Our courses are taught by people who know their onions and are ready to give a beautiful learning experience.",
+    },
+    {
+      icon: "/Tutor-icon.svg",
+      title: "Learn anywhere",
+      desc: "You can learn from home, at your shop, or even during your break at work.",
+    },
+    {
+      icon: "/Certificate-icon.svg",
+      title: "Course Certificate",
+      desc: "Our students undergo project-based learning and get certified upon completion.",
+    },
+    {
+      icon: "/Best-price-icon.svg",
+      title: "Affordable prices",
+      desc: "Our courses are for everybody — affordable, but still top quality.",
+    },
+  ];
+
   return (
-    <section className="bg-gradient-to-br from-[#446E40]  to-[#83D47B]  w-full">
-      <div className="w-9/12 mx-auto py-20">
-        <h1 className="text-center mb-20 font-extrabold capitalize text-white text-3xl">
-          Our Offering
+    <section className="bg-gradient-to-br from-[#446E40] to-[#83D47B] w-full py-16 px-4">
+      <div className="w-full max-w-6xl mx-auto space-y-12">
+        <h1 className="text-center text-white font-extrabold text-3xl sm:text-4xl capitalize">
+          Our Offerings
         </h1>
-        <div className="space-y-10">
-          {/* items one */}
-          <div className="space-y-2">
-            <div className="flex gap-10  items-center ">
-              <img
-                src="/learn-anywhere-icon.svg"
-                alt="Learn Anywhere"
-                className={style.image}
-              />
-              <p className="flex flex-col">
-                <span className={style.p1}>Expert tutors</span>
-                <span className={style.p2}>
-                  Our courses are taught by people who know their onions and
-                  ready to give a beautiful learning experience
-                </span>
-              </p>
-            </div>
-            <div className="bg-white w-full h-0.5"></div>
-          </div>
 
-          {/* items two */}
-          <div className="space-y-2">
-            <div className="flex gap-10  items-center ">
-              <img
-                src="/Tutor-icon.svg"
-                alt="Expert Tutor"
-                className={style.image}
-              />
-              <p className="flex flex-col">
-                <span className={style.p1}>Learn anywhere </span>
-                <span className={style.p2}>
-                  You can learn from home, at your shop or even during your
-                  break at work
-                </span>
-              </p>
+        <div className="grid gap-8 md:grid-cols-2">
+          {offerings.map((item, i) => (
+            <div
+              key={i}
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 bg-white/10 p-6 rounded-xl shadow-md"
+            >
+              <img src={item.icon} alt={item.title} className={style.image} />
+              <div>
+                <h3 className={style.title}>{item.title}</h3>
+                <p className={style.description}>{item.desc}</p>
+              </div>
             </div>
-            <div className="bg-white w-full h-0.5"></div>
-          </div>
-          {/* items three */}
-          <div className="space-y-2">
-            <div className="flex gap-10  items-center ">
-              <img
-                src="/Certificate-icon.svg"
-                alt="Expert Tutor"
-                className={style.image}
-              />
-              <p className="flex flex-col">
-                <span className={style.p1}>Course Certificate </span>
-                <span className={style.p2}>
-                  our students undergo project based learning where they produce
-                  and build what they are learning and get a certificate at the
-                  end
-                </span>
-              </p>
-            </div>
-            <div className="bg-white w-full h-0.5"></div>
-          </div>
-          {/* items Four */}
-          <div className="space-y-2">
-            <div className="flex gap-10  items-center ">
-              <img
-                src="/Best-price-icon.svg"
-                alt="Expert Tutor"
-                className={style.image}
-              />
-              <p className="flex flex-col">
-                <span className={style.p1}>Affordable prices</span>
-                <span className={style.p2}>
-                  Our courses are for everybody because of this we offer them at
-                  discounted prices and still deliver quality teaching.
-                </span>
-              </p>
-            </div>
-            <div className="bg-white w-full h-0.5"></div>
-          </div>
+          ))}
+        </div>
 
+        <div className="flex justify-center">
           <Link to="/courses">
-            <button className="bg-gradient-to-tr from-[#375d34] to-[#51b848] text-white font-semibold px-6 py-2 rounded-xl hover:cursor-pointer">
+            <button className="bg-white text-[#446E40] font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition">
               Explore Courses
             </button>
           </Link>
@@ -460,7 +431,6 @@ export const OurOfferings = () => {
 };
 
 // Testimonials Section
-
 const testimonials = [
   {
     id: 1,
@@ -544,50 +514,55 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="bg-gray-800 text-white w-full">
-      <div className="w-10/12 mx-auto py-20 space-y-10">
-        <h1 className="text-[#39b54a] font-extrabold text-center text-3xl ">
-          Hear from our learners
-        </h1>
-        <div className="">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-10/12 mx-auto ">
-            {testimonialsToShow.map((testimonials) => (
-              <div
-                key={testimonials.id}
-                className="flex flex-col items-center  p-6 rounded-lg space-y-4 mb-6"
-              >
-                <div className="bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] text-white p-4 rounded-lg mb-4 space-y-5 h-44 text-balance">
-                  <p>{testimonials.feedback}</p>
-                </div>
-                <div className="rounded-full w-24 h-24 overflow-hidden bg-gray-200">
-                  <img
-                    src={testimonials.image}
-                    alt={testimonials.image}
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-                <p className="text-end">{testimonials.name}</p>
-              </div>
-            ))}
+   <section className="bg-gray-800 text-white w-full">
+  <div className="w-11/12 max-w-6xl mx-auto py-20 space-y-12">
+    <h1 className="text-[#39b54a] font-extrabold text-center text-3xl">
+      Hear from our learners
+    </h1>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {testimonialsToShow.map((testimonial) => (
+        <div
+          key={testimonial.id}
+          className="flex flex-col items-center bg-white/10 p-6 rounded-xl space-y-4 shadow-md"
+        >
+          {/* Feedback Text */}
+          <div className="bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] text-white p-4 rounded-lg min-h-[140px] w-full text-sm text-justify">
+            <p className="">{testimonial.feedback}</p>
           </div>
 
-          {/* The Dot */}
-          <div className="flex gap-4 items-center justify-center">
-            {Array.from({ length: totalSlides }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => handleDotClick(index)}
-                className={`w-6 h-2 rounded-4xl ${
-                  index === currentIndex
-                    ? "bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B]"
-                    : "bg-gray-400"
-                }`}
-              ></button>
-            ))}
+          {/* Image */}
+          <div className="rounded-full w-24 h-24 overflow-hidden border-4 border-[#83D47B]">
+            <img
+              src={testimonial.image}
+              alt={`Photo of ${testimonial.name}`}
+              className="w-full h-full object-cover"
+            />
           </div>
+
+          {/* Name */}
+          <p className="text-center font-medium text-lg">{testimonial.name}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+
+    {/* Dot Navigation */}
+    <div className="flex gap-3 items-center justify-center mt-8">
+      {Array.from({ length: totalSlides }).map((_, index) => (
+        <button
+          key={index}
+          onClick={() => handleDotClick(index)}
+          className={`w-6 h-2 rounded-full transition-all duration-300 ${
+            index === currentIndex
+              ? "bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B]"
+              : "bg-gray-500"
+          }`}
+        ></button>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 };
 

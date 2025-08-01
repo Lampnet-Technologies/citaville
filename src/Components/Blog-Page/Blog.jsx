@@ -93,8 +93,8 @@ const Blog = () => {
             ))}
           </div>
         </Link>
-        <Footer/>
       </section>
+      <Footer/>
     </>
   );
 };
