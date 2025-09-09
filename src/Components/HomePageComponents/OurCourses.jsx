@@ -4,9 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export const OurCourses = () => {
-  const [activeButton, setActiveButton] = useState(
-    "Design & Digital Marketing"
-  );
+  const [activeButton, setActiveButton] = useState("Digital & SoftSkills");
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleButtonClick = (button) => {
@@ -19,129 +17,181 @@ export const OurCourses = () => {
   };
 
   const data = {
-    "Design & Digital Marketing": [
+    "Business Analytics": [
       {
         id: 1,
-        title: "Product Design",
-        description:
-          "Master the art of user-centered design through research, wireframing, and interactive prototyping to create impactful digital products.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
-        buttonText: "Learn more",
-      },
-      {
-        id: 2,
-        title: "Graphic Design",
-        description:
-          "Build strong visual communication skills through color theory, typography, layout design, and real-world branding projects.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
-        buttonText: "Learn more",
-      },
-      {
-        id: 3,
         title: "Digital Marketing",
         description:
-          "Learn how to grow brands online with SEO, content strategy, social media campaigns, and performance marketing techniques.",
+          "Comprehensive course covering SEO, WordPress, social media, analytics and content strategy.",
         image:
           "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/seo-content_mllhag.png",
         buttonText: "Learn more",
       },
-    ],
-    "Software & Cloud Engineering": [
-      {
-        id: 1,
-        title: "Web Development",
-        description:
-          "Learn to build responsive websites using HTML, CSS, JavaScript, and modern frameworks like React and Node.js.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/web-dev_sl0ly5.png",
-        buttonText: "Learn more",
-      },
       {
         id: 2,
-        title: "Cloud Computing",
+        title: "Social Media Marketing",
         description:
-          "Explore cloud platforms like AWS and Azure while learning to deploy, scale, and secure cloud-based applications.",
+          "Focused training on strategy, listening, content creation, ads and influencer collaboration for social growth.",
         image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/cloud-computing_eu9cpg.png",
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/social-marketing_hcgfeg.png",
         buttonText: "Learn more",
       },
       {
         id: 3,
-        title: "Mobile App Development",
+        title: "Branding and Promotions",
         description:
-          "Design and develop mobile apps for Android and iOS using tools like Flutter, React Native, or Swift.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/mobile-dev_yldylz.png",
+          "Learn storytelling, content strategy, brand identity and promotional tactics for effective brand building.",
+        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/brand-strategy_q3cf73.png",
         buttonText: "Learn more",
       },
     ],
-    "Networking & Hardware": [
+    "Data & Artificial Intelligence": [
       {
         id: 1,
-        title: "Network Administration",
+        title: "Data Analysis Fundamentals",
         description:
-          "Learn to configure, monitor, and troubleshoot computer networks using routers, switches, and network protocols.",
+          "Learn to transform raw data into actionable insights via practical exercises and build your first capstone project.",
         image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/network_admin_fqafny.png",
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Data_Analysis_Fundamentals_sriqs0.webp",
         buttonText: "Learn more",
       },
       {
         id: 2,
-        title: "Cybersecurity",
-        description:
-          "Protect systems and data by learning ethical hacking, threat detection, penetration testing, and security best practices.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/cybersecurity_fwyqe2.png",
-        buttonText: "Learn more",
+        title: "Advanced Data Analysis",
+      description:
+        "Focus on Python and SQL for industry-standard data extraction, manipulation, analysis and visualization.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/sql_iehpyu.png",
       },
       {
         id: 3,
-        title: "Hardware Engineering",
-        description:
-          "Understand computer hardware systems, from basic circuit design and microcontrollers to assembling and testing devices.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/hardware-engineering_ugckpy.png",
-        buttonText: "Learn more",
+       title: "Generative AI Fundamentals for Business",
+      description:
+        "Covers core generative AI concepts and business applications including content creation, automation, and data augmentation.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Generative_AI_Fundamentals_for_Business_hsigvg.png",
       },
     ],
-    "Data Science & AI": [
+    "Digital & SoftSkills": [
       {
         id: 1,
-        title: "Data Analysis",
-        description:
-          "Gain insights from data by learning to clean, analyze, and visualize datasets using Excel, Python, and Tableau.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/data-analysis_kpgonp.png",
-        buttonText: "Learn more",
+       title: "Frontend Web Development",
+      description:
+        "Learn HTML, CSS, JavaScript and React to create responsive, accessible web interfaces.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/web-dev_sl0ly5.png",
       },
       {
         id: 2,
-        title: "Machine Learning",
-        description:
-          "Learn to build predictive models using algorithms like regression, decision trees, and clustering with Python.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/machine-learning2_wcixwd.png",
-        buttonText: "Learn more",
+       title: "Mobile App Development using Flutter or React Native",
+      description:
+        "Project-based program teaching cross-platform mobile development with Flutter (Dart) or React Native. Build cross-platform mobile apps and deploy them to app stores.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/mobile-dev_yldylz.png",
       },
       {
         id: 3,
-        title: "Artificial Intelligence",
-        description:
-          "Explore how AI powers real-world applications using neural networks, computer vision, and natural language processing.",
-        image:
-          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/ai2_afodbr.png",
-        buttonText: "Learn more",
+        title: "Project Management - PMP [Prince2] Fundamentals",
+      description:
+        "Master core project management fundamentals covering PMP & Prince2 principles, planning, execution, monitoring and tools.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757429061/Project_Management_-_PMP_Prince2_Fundamentals_y1onwf.jpg",
+      },
+    ],
+    "Cloud & IT Infrastructure": [
+      {
+        id: 1,
+       title: "DevOps Engineering",
+      description:
+        "Progressive DevOps program covering CI/CD, containers, orchestration, IaC and cloud integration.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/devops_hds1t2.png",
+      },
+      {
+        id: 2,
+        title: "Cybersecurity Fundamentals",
+      description:
+        "Provides a strong foundation in cybersecurity, security frameworks, ethical hacking basics and practical defense skills.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/cybersecurity_fwyqe2.png",
+      },
+      {
+        id: 3,
+        title:
+        "Mobile Phone Engineering [Repair, Assembly & Maintenance for Android and iOS]",
+      description:
+        "Comprehensive program covering electronics basics, disassembly/assembly, hardware and software repair for modern mobile devices.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Mobile_Phone_Engineering_Repair_Assembly_Maintenance_for_Android_and_iOS_2_zwfeqr.avif",
+      },
+    ],
+    "Design & Creativity": [
+      {
+        id: 1,
+       title: "Basic Graphics Design & Video Editing",
+      description:
+        "Beginner course teaching visual design using Canva and video editing using CapCut for social and marketing content.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430220/Basic_Graphics_Design_Video_Editing_using_Canva_and_Capcut_m6pnnz.png",
+      },
+      {
+        id: 2,
+        title: "Product Design [UI/UX]",
+      description:
+        "Fundamental UI/UX course teaching research, wireframing, prototyping and usability testing using Figma and design thinking.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
+      },
+      {
+        id: 3,
+        title:
+        "Graphic Design & Video Editing",
+      description:
+        "Intensive course on professional design and motion graphics using industry tools (Photoshop, CorelDRAW, Premiere, After Effects).",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
+      },
+    ],
+    "Kids Programs": [
+      {
+        id: 1,
+       title: "Basic Kids Coding Class",
+      description:
+        "Fun, age-appropriate coding for children (ages 5–11) using block-based tools to teach logic and creativity. help kids think like coders.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428720/Basic_Kids_Coding_Class_lcmkjz.png",
+      },
+      {
+        id: 2,
+         title: "Basic Kids Design Class",
+      description:
+        "Creative design for children using beginner tools (Canva) to encourage expression and digital creativity. Let the kids start learning early.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428782/Basic_Kids_Design_Class_muyqai.png",
       },
     ],
   };
 
   const buttons = [
-    "Design & Digital Marketing",
-    "Software & Cloud Engineering",
-    "Networking & Hardware",
-    "Data Science & AI",
+    "Business Analytics",
+    "Data & Artificial Intelligence",
+    "Digital & SoftSkills",
+    "Cloud & IT Infrastructure",
+    "Design & Creativity",
+    "Kids Programs",
   ];
 
   const itemsToShow = data[activeButton].slice(0, visibleCount) || [];
@@ -155,7 +205,7 @@ export const OurCourses = () => {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-center text-[#39B54A] capitalize font-extrabold text-4xl">
-          Our courses
+          Most Popular Courses
         </h2>
       </motion.div>
 
@@ -295,6 +345,7 @@ export const LearnLatestSkill = ({ onRegisterClick }) => {
 // Latest News
 import { FiCalendar } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { image } from "framer-motion/client";
 
 const latestNewsData = [
   {
@@ -317,7 +368,7 @@ const latestNewsData = [
   },
   {
     id: 3,
-    title: "Data Science",
+    title: "Data & Artificial Intelligence",
     description:
       "Learn about the latest tools and techniques in data science and how they can be applied to real-world problems. Explore how emerging tools and machine learning are transforming industries through smart data insights.",
     image:
@@ -482,7 +533,7 @@ const testimonials = [
   },
   {
     id: 7,
-    name: "Sophia Kim",
+    name: "Sophia Kemmy",
     feedback:
       "The course content is relevant and up-to-date. I feel prepared for the job market after completing the course.",
     image:
@@ -490,7 +541,7 @@ const testimonials = [
   },
   {
     id: 8,
-    name: "David Lee",
+    name: "David OlaLekan",
     feedback:
       "I highly recommend this platform to anyone looking to enhance their skills. The learning experience is fantastic.",
     image:
@@ -514,55 +565,56 @@ export const Testimonials = () => {
   };
 
   return (
-   <section className="bg-gray-800 text-white w-full">
-  <div className="w-11/12 max-w-6xl mx-auto py-20 space-y-12">
-    <h1 className="text-[#39b54a] font-extrabold text-center text-3xl">
-      Hear from our learners
-    </h1>
+    <section className="bg-gray-800 text-white w-full">
+      <div className="w-11/12 max-w-6xl mx-auto py-20 space-y-12">
+        <h1 className="text-[#39b54a] font-extrabold text-center text-3xl">
+          Hear from our learners
+        </h1>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {testimonialsToShow.map((testimonial) => (
-        <div
-          key={testimonial.id}
-          className="flex flex-col items-center bg-white/10 p-6 rounded-xl space-y-4 shadow-md"
-        >
-          {/* Feedback Text */}
-          <div className="bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] text-white p-4 rounded-lg min-h-[140px] w-full text-sm text-justify">
-            <p className="">{testimonial.feedback}</p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {testimonialsToShow.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className="flex flex-col items-center bg-white/10 p-6 rounded-xl space-y-4 shadow-md"
+            >
+              {/* Feedback Text */}
+              <div className="bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] text-white p-4 rounded-lg min-h-[140px] w-full text-sm text-justify">
+                <p className="">{testimonial.feedback}</p>
+              </div>
 
-          {/* Image */}
-          <div className="rounded-full w-24 h-24 overflow-hidden border-4 border-[#83D47B]">
-            <img
-              src={testimonial.image}
-              alt={`Photo of ${testimonial.name}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
+              {/* Image */}
+              <div className="rounded-full w-24 h-24 overflow-hidden border-4 border-[#83D47B]">
+                <img
+                  src={testimonial.image}
+                  alt={`Photo of ${testimonial.name}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-          {/* Name */}
-          <p className="text-center font-medium text-lg">{testimonial.name}</p>
+              {/* Name */}
+              <p className="text-center font-medium text-lg">
+                {testimonial.name}
+              </p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
 
-    {/* Dot Navigation */}
-    <div className="flex gap-3 items-center justify-center mt-8">
-      {Array.from({ length: totalSlides }).map((_, index) => (
-        <button
-          key={index}
-          onClick={() => handleDotClick(index)}
-          className={`w-6 h-2 rounded-full transition-all duration-300 ${
-            index === currentIndex
-              ? "bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B]"
-              : "bg-gray-500"
-          }`}
-        ></button>
-      ))}
-    </div>
-  </div>
-</section>
-
+        {/* Dot Navigation */}
+        <div className="flex gap-3 items-center justify-center mt-8">
+          {Array.from({ length: totalSlides }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => handleDotClick(index)}
+              className={`w-6 h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex
+                  ? "bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B]"
+                  : "bg-gray-500"
+              }`}
+            ></button>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

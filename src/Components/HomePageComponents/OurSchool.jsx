@@ -7,43 +7,63 @@ const OurSchool = () => {
   const schoolItems = [
     {
       id: 1,
-      title: "software & cloud engineering",
+      title: "Business Analytics",
       description:
-        "Build scalable applications and master cloud platforms like AWS and Azure to power the tech of tomorrow",
+        "Our Business Analytics category embraces courses that cover a wide range of topics including ",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984403/software_cloud_engineering_u08dtm.jpg",
       buttonText: "Learn more",
-      path: "/courses?tab=Software%20&%20Cloud%20Engineering",
+      path: "/courses?tab=Business%20Analytics",
     },
     {
       id: 2,
-      title: "networking & hardware",
+      title: "Data & Artificial Intelligence",
       description:
-        "Learn the essentials of computer networks, routers, and hardware systems that keep devices and data connected",
+        "Data & Artificial Intelligence category comprises of various courses that help learners develop their data analysis and AI skills.",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984402/hardwar_and_networking-training-1_zj0tk5.jpg",
       buttonText: "Learn more",
-      path: "/courses?tab=Networking%20&%20Hardware",
+      path: "/courses?tab=Data%20&%20Artificial%20Intelligence",
     },
     {
       id: 3,
-      title: "design & digital marketing",
+      title: "Digital & SoftSkills",
       description:
-        "Explore visual design, branding, and digital strategies to create impactful campaigns that engage and convert",
+        "Our Digital & SoftSkills category contains various courses that help learners develop their digital skills and enhance their soft skills like communication, teamwork, coding, and leadership.",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753984403/design_digital_marketing_abpvd1.jpg",
       buttonText: "Learn more",
-      path: "/courses?tab=Design%20&%20Digital%20Marketing",
+      path: "/courses?tab=Digital%20&%20SoftSkills",
     },
     {
       id: 4,
-      title: "data science & ai",
+      title: "Cloud & IT Infrastructure",
       description:
-        "Turn raw data into powerful insights with tools like Python, SQL, and machine learning—fuel smarter decisions",
+        "Our Cloud & IT Infrastructure category includes various courses ranging from hardware engineering, networking, cloud computing, IT certifications and many more related courses.",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753983775/Data-Science_h6xmri.jpg",
       buttonText: "Learn more",
-      path: "/courses?tab=Data%20Science%20&%20AI",
+      path: "/courses?tab=Cloud%20&%20IT%20Infrastructure",
+    },
+     {
+      id: 5,
+      title: "Design & Creativity",
+      description:
+        "Our Design & Creativity category includes various Design and Graphics related courses that help learners develop their creative skills and enhance their design capabilities.",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
+      buttonText: "Learn more",
+      path: "/courses?tab=Design%20&%20Creativity",
+    },
+     {
+      id: 6,
+      title: "Kids Programs",
+      description:
+        "The Kids Programs category contains fun and educational courses designed specifically for children to introduce them to the world of technology and creativity.",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428720/Basic_Kids_Coding_Class_lcmkjz.png",
+      buttonText: "Learn more",
+      path: "/courses?tab=Kids%20Programs",
     },
   ];
 
@@ -72,7 +92,7 @@ const OurSchool = () => {
           our schools
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {schoolItems.map((item, index) => (
             <motion.div
               key={item.id}

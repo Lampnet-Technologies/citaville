@@ -1,23 +1,51 @@
-import React, { useState } from 'react';
-import CongratsPopup from './CongratsPopup';
+import React, { useState, useRef } from "react";
+import emailjs from "emailjs-com";
+import CongratsPopup from "./CongratsPopup";
 
 const Register = ({ onClose }) => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    course: ''
-  });
-  const [showCongrats, setShowCongrats] = useState(false);
+  const formRef = useRef(null);
 
-  const handleChange = e => {
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    user_phone: "",
+    message: "",
+    selected_course: "",
+  });
+
+  const [showCongrats, setShowCongrats] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setShowCongrats(true);
+    setIsSubmitting(true);
+    setError(null);
+
+    // Using sandboxdemo365@gmail.com emailJs for testing
+    emailjs
+      .sendForm(
+        "service_n8u5fm8",
+        "template_t5ypt5s",
+        formRef.current,
+        "UzV5sbxOOLKURj0-V"
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          setShowCongrats(true);
+          setIsSubmitting(false);
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+          setError("Something went wrong. Please try again.");
+          setIsSubmitting(false);
+        }
+      );
   };
 
   return (
@@ -31,74 +59,180 @@ const Register = ({ onClose }) => {
             &times;
           </button>
 
-          <h2 className="text-2xl font-bold mb-6 text-center text-green-400">Register</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center text-green-400">
+            Register
+          </h2>
 
-          <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="grid grid-cols-2 gap-4"
+          >
             <input
               type="text"
-              name="firstName"
-              placeholder="First Name"
+              name="user_name"
+              placeholder="Full Name"
               className="bg-transparent border border-white text-white p-2 rounded col-span-1 placeholder-white focus:outline-none focus:border-green-400"
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Last Name"
-              className="bg-transparent border border-white text-white p-2 rounded col-span-1 placeholder-white focus:outline-none focus:border-green-400"
+              value={formData.user_name}
               onChange={handleChange}
               required
             />
             <input
               type="email"
-              name="email"
+              name="user_email"
               placeholder="Email Address"
               className="bg-transparent border border-white text-white p-2 rounded col-span-1 placeholder-white focus:outline-none focus:border-green-400"
+              value={formData.user_email}
               onChange={handleChange}
               required
             />
             <input
               type="tel"
-              name="phone"
+              name="user_phone"
               placeholder="Phone Number"
               className="bg-transparent border border-white text-white p-2 rounded col-span-1 placeholder-white focus:outline-none focus:border-green-400"
+              value={formData.user_phone}
               onChange={handleChange}
               required
             />
+            <input
+              type="text"
+              name="message"
+              placeholder="Your Message"
+              className="bg-transparent border border-white text-white p-2 rounded col-span-1 placeholder-white focus:outline-none focus:border-green-400"
+              value={formData.message}
+              onChange={handleChange}
+            />
+
             <select
-              name="course"
+              name="selected_course"
               className="bg-gray-800 text-white border border-white p-2 rounded col-span-2 focus:outline-none focus:border-green-400"
+              value={formData.selected_course}
               onChange={handleChange}
               required
             >
               <option value="">Select Course</option>
-              <option value="Web Development">Web Development</option>
-              <option value="UI/UX Design">UI/UX Design</option>
-              <option value="Data Science">Data Science</option>
-              <option value="Cybersecurity">Cybersecurity</option>
-              <option value="Product Design">Product Design</option>
-              <option value="Graphic Design">Graphic Design</option>
+
+              {/* Business & Leadership */}
+              <option value="Business & Leadership">
+                Business & Leadership
+              </option>
+              <option value="Project Management – PMP [Prince2] Fundamentals">
+                Project Management – PMP [Prince2] Fundamentals
+              </option>
+              <option value="Branding and Promotions">
+                Branding and Promotions
+              </option>
               <option value="Digital Marketing">Digital Marketing</option>
-              <option value="Hardware Engineering">Hardware Engineering</option>
-              <option value="Mobile App Development">Mobile App Dev</option>
-              <option value="Network Administration">Network Admin</option>
-              <option value="Machine Learning">Machine Learning</option>
+              <option value="Social Media Marketing">
+                Social Media Marketing
+              </option>
+
+              {/* Data & Artificial Intelligence */}
+              <option value="Data Analysis Fundamentals: PowerBI & Excel">
+                Data Analysis Fundamentals: PowerBI & Excel
+              </option>
+              <option value="Advanced Data Analysis: PowerBI & Excel">
+                Advanced Data Analysis: PowerBI & Excel
+              </option>
+              <option value="Advanced Data Analysis: Python & SQL">
+                Advanced Data Analysis: Python & SQL
+              </option>
+              <option value="Big Data Fundamentals">
+                Big Data Fundamentals
+              </option>
+              <option value="AI & Machine Learning">
+                AI & Machine Learning
+              </option>
+              <option value="Generative AI Fundamentals for Business">
+                Generative AI Fundamentals for Business
+              </option>
+              <option value="Generative AI, Vibe Coding & ML Fundamentals">
+                Generative AI, Vibe Coding & ML Fundamentals
+              </option>
+              <option value="AI & Automation">AI & Automation</option>
+
+              {/* Software & Development */}
+              <option value="Software Engineering with Python">
+                Software Engineering with Python
+              </option>
+              <option value="Frontend Web Development">
+                Frontend Web Development
+              </option>
+              <option value="Fullstack Web Development (ReactJS, NextJS, NodeJS)">
+                Fullstack Web Development (ReactJS, NextJS, NodeJS)
+              </option>
+              <option value="Mobile App Development (Flutter or React Native)">
+                Mobile App Development (Flutter or React Native)
+              </option>
+
+              {/* Cloud & IT Infrastructure */}
+              <option value="Cloud Computing & Administration (AWS, Azure, GCP)">
+                Cloud Computing & Administration (AWS, Azure, GCP)
+              </option>
+              <option value="DevOps Engineering">DevOps Engineering</option>
+              <option value="Software Testing & QA Basics">
+                Software Testing & QA Basics
+              </option>
+              <option value="Network Administration">
+                Network Administration
+              </option>
+              <option value="Cybersecurity Fundamentals">
+                Cybersecurity Fundamentals
+              </option>
+              <option value="Hardware Engineering Fundamentals">
+                Hardware Engineering Fundamentals
+              </option>
+              <option value="Mobile Phone Engineering (Repair & Maintenance)">
+                Mobile Phone Engineering (Repair & Maintenance)
+              </option>
+              <option value="CompTIA A+">CompTIA A+</option>
+
+              {/* Design & Creativity */}
+              <option value="Basic Graphics Design & Video Editing (Canva & Capcut)">
+                Basic Graphics Design & Video Editing (Canva & Capcut)
+              </option>
+              <option value="Graphic Design & Video Editing (Photoshop, CorelDRAW, Premiere, After Effects)">
+                Graphic Design & Video Editing (Photoshop, CorelDRAW, Premiere,
+                After Effects)
+              </option>
+              <option value="Product Design (UI/UX)">
+                Product Design (UI/UX)
+              </option>
+
+              {/* Kids Programs */}
+              <option value="Basic Kids Coding Class">
+                Basic Kids Coding Class
+              </option>
+              <option value="Basic Kids Design Class">
+                Basic Kids Design Class
+              </option>
+
+              {/* Digital Literacy */}
+              <option value="Desktop Publishing & Microsoft Office: Basic Computer Operation">
+                Desktop Publishing & Microsoft Office: Basic Computer Operation
+              </option>
             </select>
+
             <button
               type="submit"
-              className="col-span-2 bg-green-600 hover:bg-green-700 text-white py-2 rounded font-semibold transition"
+              disabled={isSubmitting}
+              className="col-span-2 bg-green-600 hover:bg-green-700 text-white py-2 rounded font-semibold transition disabled:opacity-50"
             >
-              Register Now
+              {isSubmitting ? "Submitting..." : "Register Now"}
             </button>
           </form>
+
+          {error && (
+            <p className="mt-4 text-red-400 text-center text-sm">{error}</p>
+          )}
         </div>
       </div>
 
       {showCongrats && (
         <CongratsPopup
           type="registration"
-          course={formData.course}
+          course={formData.selected_course}
           onClose={() => {
             setShowCongrats(false);
             onClose();

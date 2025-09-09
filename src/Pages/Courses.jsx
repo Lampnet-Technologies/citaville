@@ -5,310 +5,335 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const data = {
-  "Design & Digital Marketing": [
+  "Business Analytics": [
     {
       id: 1,
-      slug: "product-design",
-      title: "Product Desgin",
+      slug: "desktop-publishing-microsoft-office-basic-computer-operation",
+      title: "Desktop Publishing & Microsoft Office: Basic Computer Operation",
       description:
-        "From mastering the principles of product design to understanding the intricacies of digital marketing strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive landscape.",
+        "Comprehensive intro to computer fundamentals, MS Office (Word, Excel, PowerPoint) and desktop publishing for personal and business use. Gain confident use of MS Office and complete document packages.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757429051/Desktop_Publishing_Microsoft_Office_bwlgv2.jpg",
     },
     {
       id: 2,
-      slug: "digital-marketing",
-      title: "Digital Marketing",
+      slug: "branding-and-promotions",
+      title: "Branding and Promotions",
       description:
-        "The digital marketing landscape is constantly changing, and our courses are designed to keep you ahead of the curve. From mastering SEO techniques to understanding social media strategies, we provide a comprehensive learning experience that equips you with the skills needed to thrive in today's competitive digital world.",
+        "Learn storytelling, content strategy, brand identity and promotional tactics for effective brand building. Create compelling brand stories and develop comprehensive promotional strategies that resonate with your target audience.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/seo-content_mllhag.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/brand-strategy_q3cf73.png",
     },
     {
       id: 3,
-      slug: "graphic-design",
-      title: "Graphic Design",
+      slug: "digital-marketing",
+      title: "Digital Marketing",
       description:
-        "Our courses are designed to provide you with a solid foundation in graphic design principles, from typography to color theory. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the creative industry.",
+        "Comprehensive course covering SEO, WordPress, social media, analytics and content strategy. Learn to plan and execute multi-channel digital campaigns that drive engagement, traffic, and conversions across various platforms.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/seo-content_mllhag.png",
     },
     {
       id: 4,
       slug: "social-media-marketing",
       title: "Social Media Marketing",
       description:
-        "Master the art of reaching and engaging audiences on platforms like Instagram, Facebook, Twitter, and LinkedIn. Learn content creation, scheduling, ad campaigns, and analytics to build effective social strategies.",
+        "Focused training on strategy, listening, content creation, ads and influencer collaboration for social growth. Master the art of reaching and engaging audiences across all major social media platforms.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/social-marketing_hcgfeg.png",
     },
+  ],
+
+  "Data & Artificial Intelligence": [
     {
-      id: 5,
-      slug: "brand-strategy-identity",
-      title: "Brand Strategy & Identity",
+      id: 1,
+      slug: "data-analysis-fundamentals-powerbi-excel",
+      title: "Data Analysis Fundamentals: Introduction to PowerBI & Excel",
       description:
-        "Learn how to define, position, and express a brand across digital and physical platforms. This course explores logo design, brand voice, mission alignment, and visual consistency to help businesses stand out.",
+        "A hands-on introduction to data analysis focused on Excel and Power BI. Learn to transform raw data into actionable insights via practical exercises and build your first capstone project.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/brand-strategy_q3cf73.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Data_Analysis_Fundamentals_sriqs0.webp",
+    },
+    {
+      id: 2,
+      slug: "advanced-data-analysis-powerbi-excel",
+      title: "Advanced Data Analysis Using PowerBI & Excel",
+      description:
+        "Build on fundamentals to learn advanced Power Query, DAX, modelling and enterprise visualization techniques for complex business problems. Develop enterprise-grade BI models and dashboards.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/data-analysis_kpgonp.png",
+    },
+    {
+      id: 3,
+      slug: "advanced-data-analysis-python-sql",
+      title: "Advanced Data Analysis Using Python & SQL",
+      description:
+        "Focus on Python and SQL for industry-standard data extraction, manipulation, analysis and visualization. Gain competence in querying databases and using Python for comprehensive data analysis.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/sql_iehpyu.png",
+    },
+    {
+      id: 4,
+      slug: "big-data-fundamentals",
+      title: "Big Data Fundamentals",
+      description:
+        "Introduces Big Data principles, technologies (Hadoop, Spark) and workflows for handling large datasets. Understand large-scale data processing and common big data tools.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/big-data_xzxi9v.png",
+    },
+    {
+      id: 5,
+      slug: "ai-machine-learning",
+      title: "AI & Machine Learning",
+      description:
+        "Comprehensive introduction to ML concepts and practical model building from data prep to deployment. Build, evaluate and explain ML models with hands-on capstone project experience.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/machine-learning2_wcixwd.png",
     },
     {
       id: 6,
-      slug: "copywriting-for-conversion",
-      title: "Copywriting For Conversion",
+      slug: "generative-ai-fundamentals-business",
+      title: "Generative AI Fundamentals for Business",
       description:
-        "Write compelling copy that drives action. This course covers persuasive writing techniques, emotional triggers, call-to-actions, and landing page optimization to boost sales, signups, or engagement.",
+        "Covers core generative AI concepts and business applications including content creation, automation, and data augmentation. Learn to plan and execute generative AI solutions for business needs.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979971/copywriting_yv9yc3.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Generative_AI_Fundamentals_for_Business_hsigvg.png",
     },
     {
       id: 7,
-      slug: "seo-content-strategy",
-      title: "SEO & Content Strategy",
+      slug: "generative-ai-vibe-coding-ml-fundamentals",
+      title: "Generative AI, Vibe Coding & Machine Learning Fundamental",
       description:
-        "Discover how to optimize content for search engines and users. Learn keyword research, on-page SEO, content planning, and performance analysis to improve visibility and organic traffic.",
+        "Combines generative AI, creative coding ('vibe coding') and ML fundamentals to create immersive, generative projects. Build foundations for creative, AI-driven experiences.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/seo-data_fjf1xi.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/machine-learning_gkjy1y.png",
+    },
+    {
+      id: 8,
+      slug: "ai-automation",
+      title: "AI & Automation",
+      description:
+        "Focus on automating workflows using AI and integration tools (Zapier, n8n, Make), plus designing AI-enabled business processes. Learn to identify automation opportunities and implement AI-powered workflows.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/ai2_afodbr.png",
     },
   ],
 
-  /* Next Course Contents */
-
-  "Software & Cloud Engineering": [
+  "Digital & SoftSkills": [
     {
       id: 1,
-      slug: "software-engineering",
-      title: "Software Engineering",
+      slug: "software-engineering-python",
+      title: "Software Engineering with Python",
       description:
-        "Tech is the future, and software engineering is at the heart of it. Our courses are designed to provide you with a solid foundation in software development, from coding languages to software architecture. Whether you're a beginner or looking to enhance your skills, our curriculum is tailored to meet your needs and help you succeed in the tech industry.",
+        "Hands-on program covering Python, software engineering principles, version control, testing and web frameworks. Develop, test and deploy Python applications with industry best practices.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979990/software-engineering_iuuegg.png",
     },
     {
       id: 2,
-      slug: "web-development",
-      title: "Web Development",
+      slug: "frontend-web-development",
+      title: "Frontend Web Development",
       description:
-        "The web is the backbone of modern technology, and our web development courses are designed to equip you with the skills needed to build dynamic and responsive websites. From front-end design to back-end development, we provide a comprehensive learning experience that prepares you for a successful career in web development.",
+        "Learn HTML, CSS, JavaScript and React to create responsive, accessible web interfaces. Build and deploy responsive frontend applications with a complete portfolio project.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/web-dev_sl0ly5.png",
     },
     {
       id: 3,
-      slug: "cloud-computing",
-      title: "Cloud Computing",
+      slug: "fullstack-web-development-reactjs-nextjs-nodejs",
+      title: "Fullstack Web Development using ReactJS, NextJS & NodeJS",
       description:
-        "Harness the power of the cloud with our cloud computing courses. Learn how to deploy, manage, and scale applications in cloud environments like AWS and Azure. Our curriculum is designed to provide you with the skills needed to excel in the rapidly growing field of cloud computing.",
+        "In-depth program covering frontend (React/Next) and backend (Node/Express), plus databases and deployment. Build, secure and deploy complete fullstack web applications.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/cloud-computing_eu9cpg.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/backend_inpcp7.png",
     },
     {
       id: 4,
-      slug: "mobile-app-development",
-      title: "Mobile App Development",
+      slug: "mobile-app-development-flutter-react-native",
+      title: "Mobile App Development using Flutter or React Native",
       description:
-        "As mobile devices continue to dominate the tech landscape, our mobile app development courses are designed to equip you with the skills needed to create innovative and user-friendly applications. From iOS to Android development, we provide a comprehensive learning experience that prepares you for a successful career in mobile app development.",
+        "Project-based program teaching cross-platform mobile development with Flutter (Dart) or React Native. Build cross-platform mobile apps and deploy them to app stores.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/mobile-dev_yldylz.png",
     },
     {
       id: 5,
-      slug: "devops-ci/cd-fundamentals",
-      title: "DevOps & CI/CD Fundamentals",
+      slug: "project-management-pmp-prince2-fundamentals",
+      title: "Project Management - PMP [Prince2] Fundamentals",
       description:
-        "Streamline development and deployment with DevOps tools and practices. Learn about automation, continuous integration, continuous delivery (CI/CD), and infrastructure as code. A must-have skill set for modern software teams.",
+        "Master core project management fundamentals covering PMP & Prince2 principles, planning, execution, monitoring and tools. Develop practical project planning & execution skills and readiness for further PMP preparation.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757429061/Project_Management_-_PMP_Prince2_Fundamentals_y1onwf.jpg",
+    },
+  ],
+
+  "Cloud & IT Infrastructure": [
+    {
+      id: 1,
+      slug: "cloud-computing-administration-aws-azure-google",
+      title: "Cloud Computing and Administration (AWS, Azure & Google)",
+      description:
+        "Foundational cloud course covering core services across AWS, Azure and GCP, plus migration strategies and cloud deployment. Gain practical experience across major cloud providers.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/cloud-computing_eu9cpg.png",
+    },
+    {
+      id: 2,
+      slug: "devops-engineering",
+      title: "DevOps Engineering",
+      description:
+        "Progressive DevOps program covering CI/CD, containers, orchestration, IaC and cloud integration. Gain hands-on DevOps tooling experience and ability to automate deployments.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/devops_hds1t2.png",
     },
     {
-      id: 6,
-      slug: "version-control",
-      title: "Version Control With Git & GitHub",
-      description:
-        "Track, manage, and collaborate on code using the world’s most popular version control system. This hands-on course teaches you Git essentials, branching strategies, and GitHub workflows used by developers globally.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/version-control_ek5pax.png",
-    },
-    {
-      id: 6,
-      slug: "software-testing",
+      id: 3,
+      slug: "software-testing-qa-basics",
       title: "Software Testing & QA Basics",
       description:
-        "Ensure software quality with structured testing techniques. Learn about unit testing, integration testing, test automation, and bug tracking. This course prepares you to identify defects early and deliver robust applications with confidence.",
+        "Foundational testing course teaching manual and automated testing, test design, and defect management. Learn to write test cases and set up automated test suites.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/software-testing_zyihnb.png",
     },
     {
-      id: 6,
-      slug: "backend-development",
-      title: "Backend Development",
-      description:
-        "Learn to build robust and scalable server-side applications using frameworks like Node.js, Django, or Laravel. Explore REST APIs, databases, authentication, and deployment — all essential to powering dynamic web applications.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/backend_inpcp7.png",
-    },
-  ],
-
-  /* Next Course */
-
-  "Networking & Hardware": [
-    {
-      id: 1,
-      slug: "hardware-engineering",
-      title: "Hardware Engineering",
-      description:
-        "Our courses are designed to provide you with a deep understanding of hardware systems. Whether you're looking to build your own devices or enhance your knowledge in hardware development, our curriculum is tailored to equip you with the skills needed to excel in this field.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/hardware-engineering_ugckpy.png",
-    },
-    {
-      id: 2,
+      id: 4,
       slug: "network-administration",
       title: "Network Administration",
       description:
-        "Our network administration courses are designed to equip you with the skills needed to manage and maintain computer networks. From configuring routers to troubleshooting network issues, we provide a comprehensive learning experience that prepares you for a successful career in network administration.",
+        "Covers network fundamentals, TCP/IP, routing, security, and troubleshooting for SOHO and small enterprise networks. Configure and troubleshoot small networks and security settings.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/network_admin_fqafny.png",
     },
     {
-      id: 3,
-      slug: "cybersecurity",
-      title: "Cybersecurity",
+      id: 5,
+      slug: "cybersecurity-fundamentals",
+      title: "Cybersecurity Fundamentals",
       description:
-        "Join the fight against cyber threats with our cybersecurity courses. Learn how to protect systems, networks, and data from cyber attacks. Our curriculum is designed to provide you with the skills needed to excel in the rapidly growing field of cybersecurity.",
+        "Provides a strong foundation in cybersecurity, security frameworks, ethical hacking basics and practical defense skills. Build core cybersecurity awareness and entry-level hands-on skills.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/cybersecurity_fwyqe2.png",
     },
     {
       id: 6,
-      slug: "internet-of-things-basics",
-      title: "Internet of Things (IoT) Basics",
+      slug: "hardware-engineering-fundamentals-computer-repair-maintenance",
+      title:
+        "Hardware Engineering Fundamentals: Basic Computer Repair & Maintenance",
       description:
-        "Explore how everyday objects connect and communicate over the internet. Learn the basics of IoT architecture, sensors, embedded systems, and data exchange. A great introduction for those curious about smart devices and automation technologies.",
+        "Hands-on program on PC hardware, assembly/disassembly, troubleshooting and peripheral support. Gain practical skills in PC assembly, repair and maintenance.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/iot_we348u.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/hardware-engineering_ugckpy.png",
     },
     {
-      id: 6,
-      slug: "it-support-help-desk-skills",
-      title: "IT Support & Help Desk Skills",
+      id: 7,
+      slug: "mobile-phone-engineering-repair-assembly-maintenance",
+      title:
+        "Mobile Phone Engineering [Repair, Assembly & Maintenance for Android and iOS]",
       description:
-        "Build a strong foundation in troubleshooting hardware, software, and network issues. This course trains you to handle real-world IT support tasks and communicate effectively with users — essential for entry-level IT roles.",
+        "Comprehensive program covering electronics basics, disassembly/assembly, hardware and software repair for modern mobile devices. Develop competence in phone repair and maintenance.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Mobile_Phone_Engineering_Repair_Assembly_Maintenance_for_Android_and_iOS_2_zwfeqr.avif",
+    },
+    {
+      id: 8,
+      slug: "comptia-a-plus",
+      title: "CompTIA A+",
+      description:
+        "Prepares learners for CompTIA A+ certification with practical labs on hardware, OS, networking and troubleshooting. Build readiness for CompTIA A+ certification and hands-on support skills.",
       buttonText: "Learn more",
       image:
         "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/it-support_kplcpf.png",
     },
-    {
-      id: 6,
-      slug: "wireless-network-setup-security",
-      title: "Wireless Network Setup & Security",
-      description:
-        "Learn how to configure secure and efficient wireless networks for homes, offices, and public environments. This course covers protocols, encryption, signal optimization, and best practices for preventing unauthorized access.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979989/wireless-network_q59e83.png",
-    },
-    {
-      id: 6,
-      slug: "network-troubleshooting-techniques",
-      title: "Network Troubleshooting Techniques",
-      description:
-        "Gain practical skills in diagnosing and resolving network issues. From IP conflicts to DNS errors, you’ll learn the tools and methods used by professionals to keep networks running smoothly and securely.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/network-troubleshooting_sbiqvj.png",
-    },
   ],
 
-  /* Next Course */
-
-  "Data Science & AI": [
+  "Design & Creativity": [
     {
       id: 1,
-      slug: "data-analysis",
-      title: "Data Analysis",
+      slug: "basic-graphics-design-video-editing-canva-capcut",
+      title: "Basic Graphics Design & Video Editing using Canva and Capcut",
       description:
-        "Our data analysis courses are designed to provide you with the skills needed to turn raw data into actionable insights. From statistical analysis to data visualization techniques, we equip you with the tools to excel in this rapidly growing field.",
+        "Beginner course teaching visual design using Canva and video editing using CapCut for social and marketing content. Produce graphics and short videos for social platforms.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/data-analysis_kpgonp.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430220/Basic_Graphics_Design_Video_Editing_using_Canva_and_Capcut_m6pnnz.png",
     },
     {
       id: 2,
-      slug: "machine-learning",
-      title: "Machine Learning",
+      slug: "graphic-design-video-editing-photoshop-coreldraw-premiere-after-effects",
+      title:
+        "Graphic Design & Video Editing using Photoshop, CorelDRAW and Adobe Premiere/After Effects",
       description:
-        "Power your career with our machine learning courses. Learn how to build intelligent systems that can learn from data and make predictions. Our curriculum is designed to provide you with a solid foundation in machine learning algorithms and techniques.",
+        "Intensive course on professional design and motion graphics using industry tools (Photoshop, CorelDRAW, Premiere, After Effects). Create a portfolio of professional graphics and edited video content.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/machine-learning2_wcixwd.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
     },
     {
       id: 3,
-      slug: "artificial-intelligence",
-      title: "Artificial Intelligence",
+      slug: "product-design-ui-ux",
+      title: "Product Design [UI/UX]",
       description:
-        "Learn how to create intelligent systems that can mimic human behavior and decision-making. Our curriculum is designed to provide you with a deep understanding of AI concepts and applications, preparing you for a successful career in this cutting-edge field.",
+        "Fundamental UI/UX course teaching research, wireframing, prototyping and usability testing using Figma and design thinking. Develop a UI/UX portfolio piece and practical design process understanding.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979970/ai2_afodbr.png",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
+    },
+  ],
+
+  "Kids Programs": [
+    {
+      id: 1,
+      slug: "basic-kids-coding-class",
+      title: "Basic Kids Coding Class",
+      description:
+        "Fun, age-appropriate coding for children (ages 5–11) using block-based tools to teach logic and creativity. Develop basic computational thinking and create a simple game project.",
+      buttonText: "Learn more",
+      image:
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428720/Basic_Kids_Coding_Class_lcmkjz.png",
     },
     {
-      id: 6,
-      slug: "sql-for-data-exploration",
-      title: "SQL for Data Exploration",
+      id: 2,
+      slug: "basic-kids-design-class",
+      title: "Basic Kids Design Class",
       description:
-        "Master the language of data with our SQL course. Learn how to query databases, filter and group data, and derive insights using real-world datasets. Perfect for beginners and analysts looking to turn raw data into actionable knowledge.",
+        "Creative design for children using beginner tools (Canva) to encourage expression and digital creativity. Build a portfolio item and develop basic design skills.",
       buttonText: "Learn more",
       image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/sql_iehpyu.png",
-    },
-    {
-      id: 6,
-      slug: "big-data-fundamentals",
-      title: "Big Data Fundamentals",
-      description:
-        "Understand the architecture and tools behind large-scale data processing. Learn how to store, manage, and analyze massive datasets using Hadoop, Spark, and other industry-standard platforms. This course is ideal for those looking to step into the world of data-driven decision-making at scale.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/big-data_xzxi9v.png",
-    },
-    {
-      id: 6,
-      slug: "natural-language-processing",
-      title: "Natural Language Processing (NLP)",
-      description:
-        "Dive into the world of human-language understanding by machines. Explore key NLP techniques like sentiment analysis, text classification, and language generation. This course equips you with practical skills to build applications that understand and process human language intelligently.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753982410/nlp2_l4fw4q.jpg",
+        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428782/Basic_Kids_Design_Class_muyqai.png",
     },
   ],
 };
 
 const coursesTab = [
-  "Design & Digital Marketing",
-  "Software & Cloud Engineering",
-  "Networking & Hardware",
-  "Data Science & AI",
+  "Business Analytics",
+  "Data & Artificial Intelligence",
+  "Digital & SoftSkills",
+  "Cloud & IT Infrastructure",
+  "Design & Creativity",
+  "Kids Programs",
 ];
 
 const Courses = () => {
@@ -326,7 +351,7 @@ const Courses = () => {
     const match = coursesTab.find(
       (tab) => tab.toLowerCase() === queryTab?.toLowerCase()
     );
-    return match || "Design & Digital Marketing";
+    return match ||  "Business Analytics";
   });
 
   const handleTabClick = (course) => {
