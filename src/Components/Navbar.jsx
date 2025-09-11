@@ -32,8 +32,15 @@ const Navbar = ({ onRegisterClick }) => {
   return (
     <header className="bg-gray-800 w-full z-50 shadow-md">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center p-4 relative">
-        <Link to="/">
-          <h1 className="text-green-600 text-3xl md:text-5xl font-bold">
+        <Link to="/" className="flex flex-row gap-4">
+        <img
+              src="/LCI Logo 1.png"
+              alt="CitaVille Logo"
+              width={120}
+              height={80}
+              className="w-auto h-8 md:h-10 object-contain transition-transform hover:scale-105"
+            />
+          <h1 className="text-green-600 text-2xl md:text-3xl font-bold">
             Citavile
           </h1>
         </Link>
