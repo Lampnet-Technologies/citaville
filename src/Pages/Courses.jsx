@@ -3,6 +3,7 @@ import { u } from "framer-motion/client";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import BackButton from "../Components/BackButton";
 
 const data = {
   "Business Analytics": [
@@ -131,7 +132,7 @@ const data = {
     },
   ],
 
-  "Digital & SoftSkills": [
+  "Digital & Soft Skills": [
     {
       id: 1,
       slug: "software-engineering-python",
@@ -330,7 +331,7 @@ const data = {
 const coursesTab = [
   "Business Analytics",
   "Data & Artificial Intelligence",
-  "Digital & SoftSkills",
+  "Digital & Soft Skills",
   "Cloud & IT Infrastructure",
   "Design & Creativity",
   "Kids Programs",
@@ -351,7 +352,7 @@ const Courses = () => {
     const match = coursesTab.find(
       (tab) => tab.toLowerCase() === queryTab?.toLowerCase()
     );
-    return match ||  "Business Analytics";
+    return match || "Business Analytics";
   });
 
   const handleTabClick = (course) => {
@@ -370,7 +371,9 @@ const Courses = () => {
   }, [queryTab]);
 
   return (
-    <section className="bg-gray-800 py-20">
+    <section className="bg-gray-800 py-16 sm:py-20">
+      <BackButton className="bg-white" />
+      {/* Hero */}
       <div
         style={{
           backgroundImage:
@@ -379,52 +382,65 @@ const Courses = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        className="h-32  w-10/12 mx-auto flex items-center justify-center"
+        className="h-32 w-11/12 sm:w-10/12 mx-auto flex items-center justify-center rounded-lg shadow-lg"
       >
-        <h2 className="font-bold text-white text-4xl py-20 text center ">
+        <h2 className="font-bold text-white text-3xl sm:text-4xl text-center">
           Our Courses
         </h2>
       </div>
 
-      <div>
-        {/* Buttons */}
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 w-11/12 mx-auto py-6">
-          {coursesTab.map((tab, index) => (
-            <button
-              key={index}
-              onClick={() => handleTabClick(tab)}
-              className={`px-6 py-4 rounded-lg text-lg sm:text-2xl font-bold transition-colors duration-700 ${
-                activeTab === tab
-                  ? "bg-white text-[#39B54A]"
-                  : " text-white hover:bg-white hover:text-[#39B54A]"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-between items-center w-11/12 text-white mx-auto py-12">
-          {cardToShow.map((course) => (
-            <div key={course.slug} className="space-y-4">
-              <div className="w-full h-48 overflow-hidden">
-                <img
-                  src={course.image}
-                  alt={course.title}
-                  className="w-full h-full object-cover"
-                />
+      {/* Tabs */}
+      <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 w-12/12 mx-auto py-6">
+        {coursesTab.map((tab, index) => (
+          <button
+            key={index}
+            onClick={() => handleTabClick(tab)}
+            className={`px-3 py-3 rounded-lg text-base sm:text-lg font-bold transition-colors duration-500 ${
+              activeTab === tab
+                ? "bg-white text-[#39B54A]"
+                : "text-white hover:bg-white hover:text-[#39B54A]"
+            }`}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
+
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 w-11/12 mx-auto py-10">
+        {cardToShow.map((course) => (
+          <div
+            key={course.slug}
+            className="bg-gray-900 rounded-xl overflow-hidden flex flex-col justify-between shadow-lg hover:shadow-2xl transition-shadow duration-500 h-[480px] sm:h-[500px]"
+          >
+            {/* Image */}
+            <div className="w-full h-44 sm:h-48 overflow-hidden">
+              <img
+                src={course.image}
+                alt={course.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-4 flex flex-col justify-between flex-1">
+              <div className="space-y-2">
+                <h3 className="uppercase font-semibold text-lg sm:text-xl text-white">
+                  {course.title}
+                </h3>
+                <p className="text-white text-sm sm:text-base line-clamp-4">
+                  {course.description}
+                </p>
               </div>
-              <h3 className="uppercase font-semibold text-2xl sm:text-3xl">
-                {course.title}
-              </h3>
-              <p className="text-justify">{course.description}</p>
+
               <Link to={`/CourseDetail/${course.slug}`}>
-                <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
+                <button className="w-full mt-4 bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-4 py-2 rounded-xl hover:scale-105 transition-transform duration-300">
                   {course.buttonText}
                 </button>
               </Link>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

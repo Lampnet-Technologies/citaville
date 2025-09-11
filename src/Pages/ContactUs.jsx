@@ -144,9 +144,9 @@ export const ContactForm = () => {
       </div>
 
       {/* Right Side - Form */}
-      <div className="w-full md:w-1/2 bg-gray-800">
+      <div className="w-full md:w-1/2 bg-gray-900">
         <form ref={formRef} onSubmit={handleSubmit}>
-          <div className="flex flex-col space-y-6 ">
+          <div className="flex flex-col space-y-6 bg-gray-900 p-4">
             {/* Name Fields */}
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1">

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export const OurCourses = () => {
-  const [activeButton, setActiveButton] = useState("Digital & SoftSkills");
+  const [activeButton, setActiveButton] = useState("Digital & Soft Skills");
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleButtonClick = (button) => {
@@ -21,6 +21,7 @@ export const OurCourses = () => {
       {
         id: 1,
         title: "Digital Marketing",
+        slug: "digital-marketing",
         description:
           "Comprehensive course covering SEO, WordPress, social media, analytics and content strategy.",
         image:
@@ -30,6 +31,7 @@ export const OurCourses = () => {
       {
         id: 2,
         title: "Social Media Marketing",
+        slug: "social-media-marketing",
         description:
           "Focused training on strategy, listening, content creation, ads and influencer collaboration for social growth.",
         image:
@@ -39,9 +41,11 @@ export const OurCourses = () => {
       {
         id: 3,
         title: "Branding and Promotions",
+        slug: "branding-and-promotions",
         description:
           "Learn storytelling, content strategy, brand identity and promotional tactics for effective brand building.",
-        image: "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/brand-strategy_q3cf73.png",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/brand-strategy_q3cf73.png",
         buttonText: "Learn more",
       },
     ],
@@ -49,6 +53,7 @@ export const OurCourses = () => {
       {
         id: 1,
         title: "Data Analysis Fundamentals",
+        slug: "data-analysis-fundamentals-powerbi-excel",
         description:
           "Learn to transform raw data into actionable insights via practical exercises and build your first capstone project.",
         image:
@@ -58,129 +63,141 @@ export const OurCourses = () => {
       {
         id: 2,
         title: "Advanced Data Analysis",
-      description:
-        "Focus on Python and SQL for industry-standard data extraction, manipulation, analysis and visualization.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/sql_iehpyu.png",
+        slug: "advanced-data-analysis-python-sql",
+        description:
+          "Focus on Python and SQL for industry-standard data extraction, manipulation, analysis and visualization.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/sql_iehpyu.png",
       },
       {
         id: 3,
-       title: "Generative AI Fundamentals for Business",
-      description:
-        "Covers core generative AI concepts and business applications including content creation, automation, and data augmentation.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Generative_AI_Fundamentals_for_Business_hsigvg.png",
+        title: "Generative AI Fundamentals for Business",
+        slug: "generative-ai-fundamentals-business",
+        description:
+          "Covers core generative AI concepts and business applications including content creation, automation, and data augmentation.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Generative_AI_Fundamentals_for_Business_hsigvg.png",
       },
     ],
-    "Digital & SoftSkills": [
+    "Digital & Soft Skills": [
       {
         id: 1,
-       title: "Frontend Web Development",
-      description:
-        "Learn HTML, CSS, JavaScript and React to create responsive, accessible web interfaces.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/web-dev_sl0ly5.png",
+        title: "Frontend Web Development",
+        slug: "frontend-web-development",
+        description:
+          "Learn HTML, CSS, JavaScript and React to create responsive, accessible web interfaces.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979975/web-dev_sl0ly5.png",
       },
       {
         id: 2,
-       title: "Mobile App Development using Flutter or React Native",
-      description:
-        "Project-based program teaching cross-platform mobile development with Flutter (Dart) or React Native. Build cross-platform mobile apps and deploy them to app stores.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/mobile-dev_yldylz.png",
+        title: "Mobile App Development using Flutter or React Native",
+        slug: "mobile-app-development-flutter-react-native",
+        description:
+          "Project-based program teaching mobile development with Flutter (Dart) or React Native. Build cross-platform mobile apps and deploy them.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979973/mobile-dev_yldylz.png",
       },
       {
         id: 3,
         title: "Project Management - PMP [Prince2] Fundamentals",
-      description:
-        "Master core project management fundamentals covering PMP & Prince2 principles, planning, execution, monitoring and tools.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757429061/Project_Management_-_PMP_Prince2_Fundamentals_y1onwf.jpg",
+        slug: "project-management-pmp-prince2-fundamentals",
+        description:
+          "Master core project management fundamentals covering PMP & Prince2 principles, planning, execution, monitoring and tools.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757429061/Project_Management_-_PMP_Prince2_Fundamentals_y1onwf.jpg",
       },
     ],
     "Cloud & IT Infrastructure": [
       {
         id: 1,
-       title: "DevOps Engineering",
-      description:
-        "Progressive DevOps program covering CI/CD, containers, orchestration, IaC and cloud integration.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/devops_hds1t2.png",
+        title: "DevOps Engineering",
+        slug: "devops-engineering",
+        description:
+          "Progressive DevOps program covering CI/CD, containers, orchestration, IaC and cloud integration.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/devops_hds1t2.png",
       },
       {
         id: 2,
         title: "Cybersecurity Fundamentals",
-      description:
-        "Provides a strong foundation in cybersecurity, security frameworks, ethical hacking basics and practical defense skills.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/cybersecurity_fwyqe2.png",
+        slug: "cybersecurity-fundamentals",
+        description:
+          "Provides a strong foundation in cybersecurity, security frameworks, ethical hacking basics and practical defense skills.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979972/cybersecurity_fwyqe2.png",
       },
       {
         id: 3,
         title:
-        "Mobile Phone Engineering [Repair, Assembly & Maintenance for Android and iOS]",
-      description:
-        "Comprehensive program covering electronics basics, disassembly/assembly, hardware and software repair for modern mobile devices.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Mobile_Phone_Engineering_Repair_Assembly_Maintenance_for_Android_and_iOS_2_zwfeqr.avif",
+          "Mobile Phone Engineering [Repair, Assembly & Maintenance for Android and iOS]",
+        slug: "mobile-phone-engineering-repair-assembly-maintenance",
+        description:
+          "Comprehensive program covering electronics basics, disassembly/assembly, hardware and software repair for modern mobile devices.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430219/Mobile_Phone_Engineering_Repair_Assembly_Maintenance_for_Android_and_iOS_2_zwfeqr.avif",
       },
     ],
     "Design & Creativity": [
       {
         id: 1,
-       title: "Basic Graphics Design & Video Editing",
-      description:
-        "Beginner course teaching visual design using Canva and video editing using CapCut for social and marketing content.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430220/Basic_Graphics_Design_Video_Editing_using_Canva_and_Capcut_m6pnnz.png",
+        title: "Basic Graphics Design & Video Editing",
+        slug: "basic-graphics-design-video-editing-canva-capcut",
+        description:
+          "Beginner course teaching visual design using Canva and video editing using CapCut for social and marketing content.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757430220/Basic_Graphics_Design_Video_Editing_using_Canva_and_Capcut_m6pnnz.png",
       },
       {
         id: 2,
         title: "Product Design [UI/UX]",
-      description:
-        "Fundamental UI/UX course teaching research, wireframing, prototyping and usability testing using Figma and design thinking.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
+        slug: "product-design-ui-ux",
+        description:
+          "Fundamental UI/UX course teaching research, wireframing, prototyping and usability testing using Figma and design thinking.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979974/nlp_dnxl9z.png",
       },
       {
         id: 3,
-        title:
-        "Graphic Design & Video Editing",
-      description:
-        "Intensive course on professional design and motion graphics using industry tools (Photoshop, CorelDRAW, Premiere, After Effects).",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
+        title: "Graphic Design & Video Editing",
+        slug: "graphic-design-video-editing-photoshop-coreldraw-premiere-after-effects",
+        description:
+          "Intensive course on professional design and motion graphics using industry tools (Photoshop, CorelDRAW, Premiere, After Effects).",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1753979969/graphic-design_vz0jbu.png",
       },
     ],
     "Kids Programs": [
       {
         id: 1,
-       title: "Basic Kids Coding Class",
-      description:
-        "Fun, age-appropriate coding for children (ages 5–11) using block-based tools to teach logic and creativity. help kids think like coders.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428720/Basic_Kids_Coding_Class_lcmkjz.png",
+        title: "Basic Kids Coding Class",
+        slug: "basic-kids-coding-class",
+        description:
+          "Fun, age-appropriate coding for children (ages 5–11) using block-based tools to teach logic and creativity. help kids think like coders.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428720/Basic_Kids_Coding_Class_lcmkjz.png",
       },
       {
         id: 2,
-         title: "Basic Kids Design Class",
-      description:
-        "Creative design for children using beginner tools (Canva) to encourage expression and digital creativity. Let the kids start learning early.",
-      buttonText: "Learn more",
-      image:
-        "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428782/Basic_Kids_Design_Class_muyqai.png",
+        title: "Basic Kids Design Class",
+        slug: "basic-kids-design-class",
+        description:
+          "Creative design for children using beginner tools (Canva) to encourage expression and digital creativity. Let the kids start learning early.",
+        buttonText: "Learn more",
+        image:
+          "https://res.cloudinary.com/dnoycjq2q/image/upload/v1757428782/Basic_Kids_Design_Class_muyqai.png",
       },
     ],
   };
@@ -188,7 +205,7 @@ export const OurCourses = () => {
   const buttons = [
     "Business Analytics",
     "Data & Artificial Intelligence",
-    "Digital & SoftSkills",
+    "Digital & Soft Skills",
     "Cloud & IT Infrastructure",
     "Design & Creativity",
     "Kids Programs",
@@ -204,33 +221,29 @@ export const OurCourses = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-center text-[#39B54A] capitalize font-extrabold text-4xl">
+        <h2 className="text-center text-[#39B54A] capitalize font-extrabold text-4xl mb-6">
           Most Popular Courses
         </h2>
       </motion.div>
 
-      {/* Button Grids */}
+      {/* Button Grid */}
       <motion.div
         className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 w-11/12 mx-auto py-6"
         initial="hidden"
         animate="visible"
         variants={{
           hidden: {},
-          visible: {
-            transition: {
-              staggerChildren: 0.1,
-            },
-          },
+          visible: { transition: { staggerChildren: 0.1 } },
         }}
       >
-        {buttons.map((btn, i) => (
+        {buttons.map((btn) => (
           <motion.button
             key={btn}
             onClick={() => handleButtonClick(btn)}
-            className={`px-6 py-4 rounded-lg text-lg sm:text-2xl font-bold transition-colors duration-700 ${
+            className={`px-3 py-3 rounded-lg text-base sm:text-lg font-bold transition-colors duration-500 ${
               activeButton === btn
                 ? "bg-white text-[#39B54A]"
-                : " text-white hover:bg-white hover:text-[#39B54A]"
+                : "text-white hover:bg-white hover:text-[#39B54A]"
             }`}
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -244,49 +257,48 @@ export const OurCourses = () => {
 
       {/* Display Cards */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-between items-center w-11/12 mx-auto py-12"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-11/12 mx-auto py-12"
         initial="hidden"
         animate="visible"
         variants={{
           hidden: {},
-          visible: {
-            transition: {
-              staggerChildren: 0.15,
-            },
-          },
+          visible: { transition: { staggerChildren: 0.15 } },
         }}
       >
-        {itemsToShow.map((items, i) => (
+        {itemsToShow.map((item) => (
           <motion.div
-            key={items.id}
-            className="space-y-4 text-white w-full"
+            key={item.slug}
+            className="bg-gray-900 rounded-xl shadow-lg overflow-hidden flex flex-col h-full"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <img
-              src={items.image}
-              alt={items.title}
-              className="w-full h-full"
-            />
-            <h3 className="uppercase font-semibold text-2xl sm:text-3xl">
-              {items.title}
-            </h3>
-            <p className="text-justify">{items.description}</p>
-            <Link
-              to={`/courses?tab=${encodeURIComponent(activeButton)}`}
-              className="w-full inline-block"
-            >
-              <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl">
-                {items.buttonText}
-              </button>
-            </Link>
+            <div className="w-full h-48 sm:h-56 md:h-60 overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-col flex-1 p-4">
+              <h3 className="uppercase font-semibold text-lg sm:text-xl mb-2">
+                {item.title}
+              </h3>
+              <p className="text-white text-sm sm:text-base flex-1">
+                {item.description}
+              </p>
+              <Link to={`/CourseDetail/${item.slug}`}>
+                <button className="w-full bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold px-6 py-2 rounded-xl hover:from-[#39B54A] hover:to-[#6FCF97] transition">
+                  {item.buttonText}
+                </button>
+              </Link>
+            </div>
           </motion.div>
         ))}
       </motion.div>
 
-      {/* See more Button */}
+      {/* See More Button */}
       {visibleCount < data[activeButton]?.length && (
         <motion.div
           className="text-center"
@@ -377,40 +389,61 @@ const latestNewsData = [
   },
 ];
 export const LatestNews = () => {
-  const [visibleCount, setVisibleCount] = useState(2);
+  const [visibleCount, setVisibleCount] = useState(3);
   return (
-    <section className="w-full bg-gray-800 py-12">
-      <div className="w-10/12 mx-auto space-y-10">
-        <h2 className="text-center text-[#39B54A] capitalize font-extrabold text-4xl">
+    <section className="w-full bg-gray-900 py-16">
+      <div className="w-11/12 max-w-6xl mx-auto space-y-12">
+        {/* Heading */}
+        <h2 className="text-center text-[#39B54A] capitalize font-extrabold text-3xl sm:text-4xl">
           Latest News
         </h2>
-        <div className="grid grid-cols-1 gap-10 justify-between items-center md:grid-cols-2">
-          {latestNewsData.slice(0, visibleCount).map((item) => (
-            <div key={item.id} className="space-y-4 text-white w-full">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full"
-              />
-              <h3 className="uppercase font-semibold text-3xl">{item.title}</h3>
-              <p className="text-justify">{item.description}</p>
-              <div className="flex items-center gap-2">
-                <FiCalendar size={20} />
-                <span>{item.year}</span>
+
+        {/* Show only 3 posts */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {latestNewsData.slice(0, 3).map((item) => (
+            <Link
+              key={item.id}
+              /* to={`/blog/${item.slug}`} */ // ✅ links to blog post detail
+              className="flex flex-col bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+            >
+              {/* Image */}
+              <div className="w-full h-48 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
+                />
               </div>
-            </div>
+
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-grow justify-between space-y-4">
+                <div className="space-y-3">
+                  <h3 className="uppercase font-bold text-xl sm:text-2xl text-white line-clamp-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/80 text-sm sm:text-base line-clamp-3 text-justify">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Footer */}
+                <div className="flex items-center gap-2 text-white/70 text-sm mt-4">
+                  <FiCalendar size={18} className="text-[#83D47B]" />
+                  <span>{item.year}</span>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
-        {visibleCount < latestNewsData.length && (
-          <div className="text-center mt-6">
-            <button
-              onClick={() => setVisibleCount((prev) => prev + 1)}
-              className="px-6 py-2 bg-green-700 text-white rounded hover:bg-green-800 transition"
-            >
-              See more
+
+        {/* CTA */}
+        <div className="text-center">
+          <Link to="/blog">
+            <button className="px-8 py-3 bg-gradient-to-tr from-[#446e40] to-[#83D47B] text-white font-semibold rounded-xl hover:scale-105 hover:shadow-lg transition duration-300">
+              See all news
             </button>
-          </div>
-        )}
+          </Link>
+        </div>
       </div>
     </section>
   );
@@ -450,28 +483,39 @@ export const OurOfferings = () => {
   return (
     <section className="bg-gradient-to-br from-[#446E40] to-[#83D47B] w-full py-16 px-4">
       <div className="w-full max-w-6xl mx-auto space-y-12">
-        <h1 className="text-center text-white font-extrabold text-3xl sm:text-4xl capitalize">
+        {/* Section Header */}
+        <h1 className="text-center text-white font-extrabold text-2xl sm:text-3xl md:text-4xl capitalize tracking-wide">
           Our Offerings
         </h1>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        {/* Offerings Grid */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {offerings.map((item, i) => (
             <div
               key={i}
-              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 bg-white/10 p-6 rounded-xl shadow-md"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-6 bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1 hover:scale-[1.02]"
             >
-              <img src={item.icon} alt={item.title} className={style.image} />
+              <img
+                src={item.icon}
+                alt={item.title}
+                className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+              />
               <div>
-                <h3 className={style.title}>{item.title}</h3>
-                <p className={style.description}>{item.desc}</p>
+                <h3 className="text-white font-bold text-xl sm:text-2xl mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-white/80 text-sm sm:text-base leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex justify-center">
+        {/* Explore Courses Button */}
+        <div className="flex justify-center mt-8">
           <Link to="/courses">
-            <button className="bg-white text-[#446E40] font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition">
+            <button className="bg-white text-[#446E40] font-semibold px-8 py-3 rounded-2xl shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300">
               Explore Courses
             </button>
           </Link>
@@ -565,25 +609,27 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="bg-gray-800 text-white w-full">
+    <section className="bg-gray-900 text-white w-full">
       <div className="w-11/12 max-w-6xl mx-auto py-20 space-y-12">
-        <h1 className="text-[#39b54a] font-extrabold text-center text-3xl">
+        {/* Heading */}
+        <h1 className="text-[#39b54a] font-extrabold text-center text-3xl sm:text-4xl md:text-5xl">
           Hear from our learners
         </h1>
 
+        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {testimonialsToShow.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex flex-col items-center bg-white/10 p-6 rounded-xl space-y-4 shadow-md"
+              className="flex flex-col items-center bg-white/5 backdrop-blur-sm p-6 rounded-2xl space-y-6 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1"
             >
-              {/* Feedback Text */}
-              <div className="bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] text-white p-4 rounded-lg min-h-[140px] w-full text-sm text-justify">
-                <p className="">{testimonial.feedback}</p>
+              {/* Feedback Bubble */}
+              <div className="bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] text-white p-5 rounded-xl min-h-[140px] w-full text-sm sm:text-base text-justify shadow-md">
+                <p>{testimonial.feedback}</p>
               </div>
 
-              {/* Image */}
-              <div className="rounded-full w-24 h-24 overflow-hidden border-4 border-[#83D47B]">
+              {/* Avatar */}
+              <div className="rounded-full w-24 h-24 overflow-hidden border-4 border-[#83D47B] shadow-md">
                 <img
                   src={testimonial.image}
                   alt={`Photo of ${testimonial.name}`}
@@ -592,7 +638,7 @@ export const Testimonials = () => {
               </div>
 
               {/* Name */}
-              <p className="text-center font-medium text-lg">
+              <p className="text-center font-semibold text-lg sm:text-xl tracking-wide">
                 {testimonial.name}
               </p>
             </div>
@@ -600,15 +646,15 @@ export const Testimonials = () => {
         </div>
 
         {/* Dot Navigation */}
-        <div className="flex gap-3 items-center justify-center mt-8">
+        <div className="flex gap-3 items-center justify-center mt-10">
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
               key={index}
               onClick={() => handleDotClick(index)}
               className={`w-6 h-2 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? "bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B]"
-                  : "bg-gray-500"
+                  ? "bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] scale-110 shadow-md"
+                  : "bg-gray-500 hover:bg-gray-400"
               }`}
             ></button>
           ))}
@@ -679,19 +725,22 @@ export const Investing = () => {
     <section
       style={{
         backgroundImage: "url('/Frame 1000001375.png')",
-
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full bg-gray-800 py-20  text-white "
+      className="w-full py-20 text-white relative"
     >
-      <div className="w-10/12 mx-auto space-y-8">
-        <h2 className="font-extrabold text-3xl w-full">
+      {/* Overlay for better contrast */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      <div className="relative w-10/12 mx-auto flex flex-col items-center text-center space-y-8 z-10">
+        <h2 className="font-extrabold text-3xl md:text-5xl leading-snug max-w-3xl">
           Start investing in yourself today!
         </h2>
+
         <Link to="/courses">
-          <button className="px-6 py-2 rounded bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold ">
+          <button className="px-8 py-3 rounded-2xl bg-gradient-to-tr from-[#446e40] via-[#619b5c] to-[#83D47B] font-extrabold text-lg shadow-lg hover:scale-105 transition-transform duration-300">
             Apply now
           </button>
         </Link>

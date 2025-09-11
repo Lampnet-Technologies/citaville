@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import client from "../../client";
 import { toPlainText } from "@portabletext/react";
 import { LatestNews, OurCourses } from "../HomePageComponents/OurCourses";
+import Footer from "../Footer"
 
 export const BlogDetails = () => {
   const [singlePost, setSinglePost] = useState(null);
@@ -122,21 +123,19 @@ export const BlogDetails = () => {
   );
 };
 
-export const YouMayAlsoLike = ({ posts }) => {
+export const YouMayAlsoLike = () => {
   return (
     <section className="w-full bg-gray-800">
       <div className="w-10/12 mx-auto py-20 ">
-        <h2 className="text-3xl font-bold mb-6 text-white">You may also like</h2>
-        <LatestNews/>
+        <LatestNews />
       </div>
     </section>
   );
 };
-export const PopularCourses = ({ posts }) => {
+export const PopularCourses = () => {
   return (
     <section className="w-full bg-gray-800">
       <div className="w-10/12 mx-auto py-20 ">
-        <h2 className="text-3xl font-bold mb-6 text-white">Popular Courses</h2>
         <OurCourses />
       </div>
     </section>
@@ -147,8 +146,9 @@ export const SinglePost = () => {
   return (
     <div>
       <BlogDetails />
-      <YouMayAlsoLike /> 
+      <YouMayAlsoLike />
       <PopularCourses />
+      <Footer />
     </div>
   );
 };

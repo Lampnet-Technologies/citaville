@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CongratsPopup from "../Components/CongratsPopup";
+import Register from "../Components/Register";
+import Footer from "../Components/Footer";
+import BackButton from "../Components/BackButton";
 
 /* ================================
    COURSE DATA
@@ -16,7 +18,8 @@ const data = [
     currentStudents: "150 students currently taking this course",
     duration: "Duration: 4 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Desktop Publishing & Microsoft Office_ Basic Computer Operation.pdf",
+    downloadBrochure:
+      "/brochures/Desktop Publishing & Microsoft Office_ Basic Computer Operation.pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -296,7 +299,8 @@ const data = [
     currentStudents: "200 students currently taking this course",
     duration: "Duration: 5-6 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Data Analysis Fundamentals_ Introduction to PowerBI & Excel.pdf",
+    downloadBrochure:
+      "/brochures/Data Analysis Fundamentals_ Introduction to PowerBI & Excel.pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -365,7 +369,8 @@ const data = [
     currentStudents: "140 students currently taking this course",
     duration: "Duration: 6-8 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Advanced Data Analysis using PowerBI & Excel.pdf",
+    downloadBrochure:
+      "/brochures/Advanced Data Analysis using PowerBI & Excel.pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -434,7 +439,8 @@ const data = [
     currentStudents: "120 students currently taking this course",
     duration: "Duration: 8 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Advanced Data Analysis using Python & SQL.pdf",
+    downloadBrochure:
+      "/brochures/Advanced Data Analysis using Python & SQL.pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -710,7 +716,8 @@ const data = [
     currentStudents: "130 students currently taking this course",
     duration: "Duration: 8 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Generative AI, Vibe Coding & ML Fundamentals.pdf",
+    downloadBrochure:
+      "/brochures/Generative AI, Vibe Coding & ML Fundamentals.pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -883,7 +890,7 @@ const data = [
     ],
   },
 
-  /* ===== Digital Marketing & SoftSkills ===== */
+  /* ===== Digital & Soft Skills ===== */
   {
     slug: "project-management-pmp-prince2-fundamentals",
     title: "Project Management - PMP [Prince2] Fundamentals",
@@ -892,8 +899,9 @@ const data = [
     currentStudents: "180 students currently taking this course",
     duration: "Duration: 6-8 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Project Management Professional (PMP®) Certification Training.pdf",
-      /* "https://docs.google.com/document/d/1UK47kC7TCpVdDdu1BfCmnt5nKJBmWFtnVRTMsfRpBeo/export?format=pdf", To use Google Doc Directly add /export?format=pdf */
+    downloadBrochure:
+      "/brochures/Project Management Professional (PMP®) Certification Training.pdf",
+    /* "https://docs.google.com/document/d/1UK47kC7TCpVdDdu1BfCmnt5nKJBmWFtnVRTMsfRpBeo/export?format=pdf", To use Google Doc Directly add /export?format=pdf */
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -1100,7 +1108,8 @@ const data = [
     currentStudents: "230 students currently taking this course",
     duration: "Duration: 10-12 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Fullstack Web Development (ReactJS, NextJS, NodeJS).pdf",
+    downloadBrochure:
+      "/brochures/Fullstack Web Development (ReactJS, NextJS, NodeJS).pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -1169,7 +1178,8 @@ const data = [
     currentStudents: "190 students currently taking this course",
     duration: "Duration: 8-10 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/_Mobile App Development (Flutter or React Native).pdf",
+    downloadBrochure:
+      "/brochures/_Mobile App Development (Flutter or React Native).pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -1240,7 +1250,8 @@ const data = [
     currentStudents: "160 students currently taking this course",
     duration: "Duration: 8-10 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Cloud Computing and Administration (AWS, Azure & Google).pdf",
+    downloadBrochure:
+      "/brochures/Cloud Computing and Administration (AWS, Azure & Google).pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -1656,7 +1667,8 @@ const data = [
     currentStudents: "110 students currently taking this course",
     duration: "Duration: 6 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Mobile Phone Engineering (Repair & Maintenance).pdf",
+    downloadBrochure:
+      "/brochures/Mobile Phone Engineering (Repair & Maintenance).pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -1796,7 +1808,8 @@ const data = [
     currentStudents: "200+ students currently taking this course",
     duration: "Duration: 6 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Basic Graphics Design & Video Editing (Canva & CapCut).pdf",
+    downloadBrochure:
+      "/brochures/Basic Graphics Design & Video Editing (Canva & CapCut).pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -1867,7 +1880,8 @@ const data = [
     currentStudents: "140 students currently taking this course",
     duration: "Duration: 6 weeks",
     enrollButton: "Enroll Now",
-    downloadBrochure: "/brochures/Advanced Graphics Design & Video Editing (CorelDraw, Photoshop & Premiere Pro).pdf",
+    downloadBrochure:
+      "/brochures/Advanced Graphics Design & Video Editing (CorelDraw, Photoshop & Premiere Pro).pdf",
     CourseTitle: "Curriculum Outline",
     curriculum: [
       {
@@ -2151,7 +2165,7 @@ const data = [
 const CourseDetail = () => {
   const { slug } = useParams();
   const [course, setCourse] = useState(null);
-  const [showCongrats, setShowCongrats] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
 
   useEffect(() => {
     if (slug) {
@@ -2166,77 +2180,81 @@ const CourseDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20 px-6 md:px-10">
-      <div className="w-10/12 mx-auto space-y-10">
-        {/* Header Image */}
-        <div>
-          <img src="/course-details.svg" alt="course details" />
-        </div>
+    <>
+     <BackButton />
+      <div className="min-h-screen bg-gray-900 text-white py-20 px-6 md:px-10">
+        <div className="w-10/12 mx-auto space-y-10">
+          {/* Header Image */}
+          <div>
+            <img src="/course-details.svg" alt="course details" />
+          </div>
 
-        {/* Course Title & Description */}
-        <h1 className="text-4xl font-bold text-green-500">{course.title}</h1>
-        <p className="text-lg text-gray-300">{course.description}</p>
+          {/* Course Title & Description */}
+          <h1 className="text-4xl font-bold text-green-500">{course.title}</h1>
+          <p className="text-lg text-gray-300">{course.description}</p>
 
-        {/* Course Meta Info */}
-        <div className="flex flex-col gap-4 text-md">
-          <span className="bg-white w-80 py-2 px-2 rounded-md shadow font-medium text-black">
-            {course.currentStudents}
-          </span>
-          <span className="bg-white w-44 py-2 px-2 rounded-md shadow font-medium text-black">
-            {course.duration}
-          </span>
-        </div>
+          {/* Course Meta Info */}
+          <div className="flex flex-col gap-4 text-md">
+            <span className="bg-white w-80 py-2 px-2 rounded-md shadow font-medium text-black">
+              {course.currentStudents}
+            </span>
+            <span className="bg-white w-44 py-2 px-2 rounded-md shadow font-medium text-black">
+              {course.duration}
+            </span>
+          </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-col items-start gap-3">
-          {/* Enroll Button */}
-          <button
-            onClick={() => setShowCongrats(true)}
-            className="bg-[#39B54A] text-white px-8 py-3 rounded-lg font-semibold"
-          >
-            {course.enrollButton}
-          </button>
+          {/* Action Buttons */}
+          <div className="flex flex-col items-start gap-3">
+            {/* Enroll Button */}
+            <button
+              onClick={() => setShowRegister(true)}
+              className="bg-green-600 text-white px-4 py-2 rounded-lg shadow font-semibold hover:bg-green-700"
+            >
+              {course.enrollButton}
+            </button>
 
-          {/* Download Brochure Button */}
-          <a
-            href={course.downloadBrochure}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700"
-          >
-            Download Brochure
-          </a>
-        </div>
+            {/* Download Brochure Button */}
+            <a
+              href={course.downloadBrochure}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-green-600 text-white rounded-lg shadow font-semibold hover:bg-green-700"
+            >
+              Download Brochure
+            </a>
+          </div>
 
-        {/* Curriculum Section */}
-        <div className="pt-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-            {course.CourseTitle}
-          </h2>
-          <div className="space-y-6">
-            {course.curriculum.map((item, index) => (
-              <div key={index}>
-                <h3 className="text-xl font-semibold">{item.step}</h3>
-                <ul className="list-disc list-inside ml-4 mt-2 text-gray-300 space-y-1">
-                  {item.bullets.map((bullet, idx) => (
-                    <li key={idx}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          {/* Curriculum Section */}
+          <div className="pt-12">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+              {course.CourseTitle}
+            </h2>
+            <div className="space-y-6">
+              {course.curriculum.map((item, index) => (
+                <div key={index}>
+                  <h3 className="text-xl font-semibold">{item.step}</h3>
+                  <ul className="list-disc list-inside ml-4 mt-2 text-gray-300 space-y-1">
+                    {item.bullets.map((bullet, idx) => (
+                      <li key={idx}>{bullet}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Congrats Modal */}
-      {showCongrats && (
-        <CongratsPopup
-          type="enroll"
-          course={course.title}
-          onClose={() => setShowCongrats(false)}
+      {/* Register Popup */}
+      {showRegister && (
+        <Register
+          preselectedCourse={course.title}
+          onClose={() => setShowRegister(false)}
         />
       )}
-    </div>
+
+      <Footer />
+    </>
   );
 };
 

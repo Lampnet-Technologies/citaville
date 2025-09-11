@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import CongratsPopup from "./CongratsPopup";
 
-const Register = ({ onClose }) => {
+const Register = ({ onClose, preselectedCourse }) => {
   const formRef = useRef(null);
 
   const [formData, setFormData] = useState({
@@ -10,7 +10,7 @@ const Register = ({ onClose }) => {
     user_email: "",
     user_phone: "",
     message: "",
-    selected_course: "",
+    selected_course: preselectedCourse || "", // pre-fill here
   });
 
   const [showCongrats, setShowCongrats] = useState(false);
